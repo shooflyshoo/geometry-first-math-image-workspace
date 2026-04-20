@@ -52,3 +52,10 @@ Conclusion: manuscript choice is **ambiguous** from repository artifacts alone a
 
 - Confirm which manuscript is authoritative (`Expanded_Intuition` vs `Visually_Informed_v3`).
 - Then run the pilot generation only (20 prompts, 3 variants each), QA that visual language, and proceed section-by-section.
+
+## Update, fresh manuscript received
+
+- Primary working manuscript is now `Geometry_First_Mathematics_Expanded_Intuition_Edition_Fresh.docx`.
+- This file was provided directly after the initial workspace setup and should be treated as the current editorial source for image alignment unless replaced by a newer revision.
+- Earlier manuscript ambiguity is now superseded for pilot work.
+

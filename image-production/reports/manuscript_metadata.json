@@ -1,83 +1,9 @@
 {
-  "records": [
-    {
-      "path": "Geometry_First_Mathematics_Expanded_Intuition_Edition.docx",
-      "kind": "docx",
-      "size_bytes": 61008,
-      "sha256": "3cc282a33c5f54e4bd57eeaed32264b1714999c063b56225b9bb9e18d13f9d12",
-      "mtime_utc_ns": "2026-04-20T00:32:07.900577+00:00",
-      "metadata": {
-        "title": "Geometry-First Mathematics from the Ground Up: Expanded intuition edition",
-        "subject": "Expanded geometry-first mathematics manuscript",
-        "creator": "OpenAI",
-        "created": "2026-04-18T01:57:48Z",
-        "modified": "2026-04-18T01:57:48Z",
-        "application": "Microsoft Word 12.0.0",
-        "pages": "1",
-        "words": "83"
-      },
-      "text_preview": "Geometry-First Mathematics from the Ground Up Expanded intuition edition for adult learners and visual thinkers What this revision thinks the original manuscript is really trying to do The original V3 is not merely “ geometry first. ” Its deeper thesis is more",
-      "text_word_count": 15287
-    },
-    {
-      "path": "Geometry_First_Mathematics_Visually_Informed_Expanded_Edition_v3.docx",
-      "kind": "docx",
-      "size_bytes": 724226,
-      "sha256": "1b2f4d30f1abfb810f747264c16683e02671f822ea77349693ded6b7709a1fc7",
-      "mtime_utc_ns": "2026-04-20T00:32:07.904577+00:00",
-      "metadata": {
-        "title": "Geometry-First Mathematics from the Ground Up: Expanded intuition edition",
-        "subject": "Expanded geometry-first mathematics manuscript",
-        "creator": "OpenAI",
-        "created": "2026-04-18T01:57:48Z",
-        "modified": "2026-04-18T01:57:48Z",
-        "application": "Microsoft Word 12.0.0",
-        "pages": "1",
-        "words": "83"
-      },
-      "text_preview": "Geometry-First Mathematics from the Ground Up Further expanded, visually informed intuition edition for adult learners and visual thinkers What this revision thinks the original manuscript is really trying to do The original V3 is not merely “ geometry first. ",
-      "text_word_count": 20932
-    },
-    {
-      "path": "Geometry_First_Mathematics_Expanded_Intuition_Edition.pdf",
-      "kind": "pdf",
-      "size_bytes": 628223,
-      "sha256": "e3bcf9d7e7223d6aad2cefbab5fb3a3f80ffa5ddfb7427f3c9c0c2571826cbee",
-      "mtime_utc_ns": "2026-04-20T00:32:07.904577+00:00",
-      "metadata": {
-        "title": "Geometry-First Mathematics from the Ground Up: Expanded intuition edition",
-        "subject": "Expanded geometry-first mathematics manuscript",
-        "author": "OpenAI",
-        "creator": "Writer",
-        "producer": "LibreOffice 25.2.3.2 (X86_64) / LibreOffice Community",
-        "creationdate": "Sat Apr 18 01:59:24 2026 UTC",
-        "custom_metadata": "no",
-        "metadata_stream": "yes",
-        "tagged": "yes",
-        "userproperties": "no",
-        "suspects": "no",
-        "form": "none",
-        "javascript": "no",
-        "pages": "48",
-        "encrypted": "no",
-        "page_size": "612 x 792 pts (letter)",
-        "page_rot": "0",
-        "file_size": "628223 bytes",
-        "optimized": "no",
-        "pdf_version": "1.7"
-      },
-      "text_preview": "Geometry-First Mathematics from the Ground Up Expanded intuition edition for adult learners and visual thinkers What this revision thinks the original manuscript is really trying to do The original V3 is not merely “geometry first.” Its deeper thesis is more r",
-      "text_word_count": 15441
-    }
-  ],
-  "inference": {
-    "primary_candidate": "Geometry_First_Mathematics_Expanded_Intuition_Edition.docx",
-    "confidence": "low",
-    "summary": "Primary candidate inferred with limited certainty; manuscript selection is ambiguous and should be confirmed by editorial owner.",
-    "evidence": [
-      "PDF-to-DOCX lexical similarity: [('Geometry_First_Mathematics_Expanded_Intuition_Edition.docx', 0.9714285714285714), ('Geometry_First_Mathematics_Visually_Informed_Expanded_Edition_v3.docx', 0.7894736842105263)]",
-      "Visually informed DOCX is longer (20932 words) than expanded intuition DOCX (15287 words).",
-      "Filename includes explicit version tag 'v3' only on visually informed DOCX."
-    ]
-  }
+  "primary_candidate": "image-production/sources/originals/Geometry_First_Mathematics_Expanded_Intuition_Edition_Fresh.docx",
+  "confidence": "owner-designated",
+  "summary": "Current working manuscript provided directly by the project owner after initial workspace setup.",
+  "evidence": [
+    "Fresh DOCX was uploaded directly by the project owner on 2026-04-19 America/Los_Angeles.",
+    "This file should be treated as the source of truth for pilot image alignment until superseded."
+  ]
 }
