@@ -1,0 +1,1666 @@
+{
+  "master_preamble": "Create a visually sophisticated illustration for an adult mathematics book written for neurodivergent visual thinkers learning from first principles. The image must clarify the concept rather than merely decorate it. Favor spatial legibility, tactile materials, intellectually serious editorial art direction, and one dominant idea per frame. Keep geometry believable, lighting restrained, and enough quiet negative space for a caption or later overlay.",
+  "negative_block": "No classroom clip art, no chalkboard wallpaper, no random floating equations, no childish mascots, no busy collage, no gibberish text, no impossible geometry, no decorative sci-fi fog, no glossy stock-photo students. If exact labels, axes, or theorem marks are needed, leave clean space for them to be overlaid later.",
+  "layout_codes": {
+    "F": "Full-page opener",
+    "B": "Bridge plate / wide in-flow conceptual image",
+    "H": "Half-page conceptual plate",
+    "D": "Hybrid diagram plate; overlay exact geometry/labels later if needed",
+    "S": "Split-screen corrective plate",
+    "V": "Historical vignette",
+    "M": "Margin or thought-experiment sketch"
+  },
+  "section_meta": {
+    "0. Geometry before numbers: magnitudes and sameness": {
+      "arc": "Tactile pre-numeric world. Warm materials, unlabeled objects, hands, rope, wood, stone, measured comparison before symbolism.",
+      "palette": "earth tones, parchment, walnut, brass, chalk white",
+      "motifs": [
+        "sticks",
+        "rope",
+        "compass",
+        "table edge",
+        "transparent overlays",
+        "unlabeled lengths"
+      ],
+      "default_style": "tactile workshop + quiet geometric overlay"
+    },
+    "1. The number line as geometry: oriented length": {
+      "arc": "The line becomes a frame after choices. Direction, origin, unit, balance, and sign emerge from orientation.",
+      "palette": "cool gray-blue, graphite, elevator steel, road paint, ledger ink",
+      "motifs": [
+        "horizon line",
+        "origin mark",
+        "arrows",
+        "steps",
+        "elevator shaft",
+        "road marker",
+        "ledger columns"
+      ],
+      "default_style": "clean linear stage with subtle embodied analogies"
+    },
+    "2. Addition and subtraction as geometry of motion": {
+      "arc": "Motion, path, choreography, composition of moves. Arrows become journeys and algebra becomes path structure.",
+      "palette": "charcoal, deep blue, amber trace lines",
+      "motifs": [
+        "paths",
+        "arrows",
+        "parallelogram",
+        "robot floor grid",
+        "bookkeeping marks",
+        "ghosted trajectories"
+      ],
+      "default_style": "dynamic motion diagram + editorial geometry"
+    },
+    "3. Fractions and rationals: partitioning and repeatability": {
+      "arc": "Partitioning, equal parts, musical rhythm, repeated structure, and the first shock of incommensurability.",
+      "palette": "ivory, terracotta, indigo, muted gold",
+      "motifs": [
+        "divided segment",
+        "parallel lines",
+        "claves/rhythm",
+        "measuring cords",
+        "fraction pieces"
+      ],
+      "default_style": "craft geometry with rhythmic repetition"
+    },
+    "4. Proportion theory: equality of ratios before multiplication": {
+      "arc": "Deep Greek rigor. Ratios as discrimination tests, stone geometry, parallel lines, and structure earned from comparisons.",
+      "palette": "marble white, ultramarine, sunlit limestone, bronze",
+      "motifs": [
+        "parallel transversals",
+        "nested comparisons",
+        "Eudoxus-style scales",
+        "fingerprint lines",
+        "similar triangles"
+      ],
+      "default_style": "classical geometric plate with philosophical gravity"
+    },
+    "5. Multiplication as scaling, not repeated chanting": {
+      "arc": "Resizing world. Dilations, light rays, drafting instruments, and similar triangles acting as a machine.",
+      "palette": "deep blue, brass, black ink, soft cream",
+      "motifs": [
+        "dilation from origin",
+        "rays",
+        "drafting table",
+        "optical projector",
+        "resizing grid"
+      ],
+      "default_style": "instrumental geometry + luminous construction"
+    },
+    "6. Division as inverse scaling: three distinct questions in one costume": {
+      "arc": "One algebra shell, three worlds: measurement, sharing, rate. Use triptychs and type-sensitive scenes.",
+      "palette": "slate, green, rust orange, neutral cream",
+      "motifs": [
+        "triptych",
+        "segment chunks",
+        "shared loaf/rope",
+        "slope line",
+        "unit types"
+      ],
+      "default_style": "conceptual triptych with strong type contrast"
+    },
+    "7. Constructing ratios geometrically: division before the slogan \u201cinvert and multiply\u201d": {
+      "arc": "Inverse scaling machine. Clean ratio constructions, zoom logic, undo-transformations.",
+      "palette": "indigo, cool silver, pale gray",
+      "motifs": [
+        "ratio machine",
+        "parallel line through 1",
+        "zoom dial",
+        "lens calibration"
+      ],
+      "default_style": "hybrid drafting plate with elegant machinery feel"
+    },
+    "8. Negatives and multiplication: symmetry, reversal, and why two wrong-way flips make a right-way result": {
+      "arc": "Mirrors, half-turns, reversal, orientation and symmetry composition.",
+      "palette": "midnight blue, silver, crimson accents",
+      "motifs": [
+        "mirror line",
+        "half-turn",
+        "flip arrows",
+        "orientation tags"
+      ],
+      "default_style": "symmetry theater, crisp and dramatic"
+    },
+    "9. Squares and square roots: two directions, inverse questions, and why Pythagoras changed everything": {
+      "arc": "Squares as repeated scaling and area, diagonals, tiled floors, inverse extraction.",
+      "palette": "stone gray, chalk, gold thread, muted blue",
+      "motifs": [
+        "square tiles",
+        "diagonal",
+        "area growth",
+        "unfolding root"
+      ],
+      "default_style": "architectural geometry with tactile surfaces"
+    },
+    "10. Exponents as iterated scaling, logarithms as counted resizings": {
+      "arc": "Growth ladders, multiplicative spacing, tables, compasses of growth, log transforms.",
+      "palette": "dark teal, amber, parchment, copper",
+      "motifs": [
+        "stair/ladder",
+        "growing intervals",
+        "log ruler",
+        "Napier tables",
+        "branching growth"
+      ],
+      "default_style": "editorial growth diagrams with historical instrumentation"
+    },
+    "11. Irrationals, completeness, and the point that survives infinite refinement": {
+      "arc": "Nested intervals, infinity disciplined, a point surviving successive narrowing. Slightly surreal but precise.",
+      "palette": "deep navy, pale silver, translucent white, soft violet",
+      "motifs": [
+        "nested frames",
+        "unit square diagonal",
+        "shrinking windows",
+        "single surviving point"
+      ],
+      "default_style": "conceptual refinement landscape + exact geometry"
+    },
+    "Interlude A. Angle, circle, and trigonometric thinking: turning, projection, and periodicity": {
+      "arc": "Turning, circles, shadows, astronomy, oscillation. Trigonometry as motion and projection, not mnemonic tables.",
+      "palette": "deep cobalt, moonlit silver, desert gold",
+      "motifs": [
+        "wheel",
+        "unit circle",
+        "shadow gnomon",
+        "sine wave",
+        "star paths"
+      ],
+      "default_style": "celestial-mechanical illustration"
+    },
+    "12. Complex numbers: when the line is too small and the plane becomes the right stage": {
+      "arc": "Plane as richer stage, rotation + scale, i as quarter-turn, Euler as rotating growth.",
+      "palette": "midnight, emerald, electric blue, warm gold",
+      "motifs": [
+        "complex plane",
+        "spirals",
+        "rotating compass",
+        "quarter-turn",
+        "unit circle"
+      ],
+      "default_style": "modernist mathematical cosmography"
+    },
+    "13. Vectors, norms, and matrices: directed magnitude leaves the line and grows a body": {
+      "arc": "Arrows in space, alignment, norms, transformation rooms, noncommuting rotations.",
+      "palette": "steel gray, cyan, white, graphite",
+      "motifs": [
+        "3D arrows",
+        "rotating book",
+        "transformation grids",
+        "projection shadows"
+      ],
+      "default_style": "clean spatial engineering illustration"
+    },
+    "Interlude B. Coordinates, equations, and the great translation between shape and symbol": {
+      "arc": "Mapmaking. Shape gets an address, equations become loci, solving becomes intersection.",
+      "palette": "graph-paper white, oxford blue, rust red",
+      "motifs": [
+        "coordinate grid",
+        "map pins",
+        "locus curves",
+        "intersecting lines",
+        "Descartes room"
+      ],
+      "default_style": "analytic-geometry atlas"
+    },
+    "14. Functions as geometric objects: rules, curves, and machines you can operate on": {
+      "arc": "Input-output machines, graphs as visible mappings, composition as feeding one machine into another.",
+      "palette": "glass blue, soft black, warm ivory",
+      "motifs": [
+        "machines",
+        "curves",
+        "feeding tubes",
+        "reflection across y=x"
+      ],
+      "default_style": "machine-cutaway + transparent graph layers"
+    },
+    "15. Polynomials: built from shifts, scalings, and repeated multiplication": {
+      "arc": "Constructed transformation recipes, zero crossings, dimension discipline, smooth curve architecture.",
+      "palette": "burgundy, navy, cream, graphite",
+      "motifs": [
+        "assembled curve machine",
+        "crossing x-axis",
+        "coefficients as knobs",
+        "dimension tags"
+      ],
+      "default_style": "editorial machinery + analytic curves"
+    },
+    "16. Calculus: the ratio machine at infinite zoom": {
+      "arc": "Zoom, tangent emergence, rate, accumulation, local linearity, Taylor reconstruction.",
+      "palette": "indigo, white, amber, soft green",
+      "motifs": [
+        "zoom lens",
+        "secant to tangent",
+        "rectangle refinements",
+        "microscope of curves"
+      ],
+      "default_style": "precision optics + flowing analytic forms"
+    },
+    "17. E = mc^2 and the geometry of invariants": {
+      "arc": "Modern austere physics. Symmetry groups shift, invariants survive, spacetime geometry replaces naive space-time separation.",
+      "palette": "black, silver, deep red, electric blue",
+      "motifs": [
+        "Minkowski grid",
+        "light cone",
+        "4-vector",
+        "Lorentz warp",
+        "mass-energy glow"
+      ],
+      "default_style": "austere modernist physics plate"
+    },
+    "18. Where to go next: strengthening the joints": {
+      "arc": "Doors opening into deeper territories. A branching atlas rather than a fog of advanced math.",
+      "palette": "forest green, gold, cream, midnight blue",
+      "motifs": [
+        "doors",
+        "bridges",
+        "branching paths",
+        "tools being sharpened"
+      ],
+      "default_style": "atlas of further study"
+    },
+    "19. A modern continuation: the same scaffold after calculus": {
+      "arc": "Modern map of mathematics. Symmetry, topology, curvature, analysis, information, computation as connected territories.",
+      "palette": "midnight blue, violet, copper, pale gray",
+      "motifs": [
+        "network map",
+        "manifold surfaces",
+        "knots",
+        "group symmetries",
+        "information streams"
+      ],
+      "default_style": "contemporary conceptual atlas"
+    }
+  },
+  "subsections": {
+    "0.1 Magnitudes are older than numerals": {
+      "role": "Separate the raw geometric thing from the later numeric report. The learner should feel that length exists before counting.",
+      "format": "H",
+      "style": "tactile workshop + quiet geometric overlay",
+      "prompt": "On a warm drafting table, show three unlabeled objects whose lengths can be felt immediately: a wooden dowel, a loop of rope pulled straight, and the edge of a steel square. No numerals anywhere. A faint translucent geometric overlay should reveal that all three are instances of extension between endpoints, with one object cast in sharp focus and the others echoing it as physical thing, relation, and eventual measurement. Serious editorial illustration, tactile materials, calm lighting, generous negative space, adult and elegant, not schoolish.",
+      "caption": "Length exists before its label.",
+      "overlay": ""
+    },
+    "0.2 Congruence: sameness without counting": {
+      "role": "Make sameness feel operational: two lengths are the same because rigid motion can carry one onto the other.",
+      "format": "D",
+      "style": "hybrid diagrammatic plate with tactile materials",
+      "prompt": "Create a precise yet artistic scene of two line segments on translucent vellum being slid and rotated until they coincide perfectly. Include a brass compass, a rigid metal rod, and a ghosted sequence of motions showing slide, rotation, and flip, with the final perfect overlap glowing subtly. The image should communicate preservation under rigid motion more strongly than any ruler would. No text embedded; keep geometry clean enough for optional vector labels later.",
+      "caption": "Sameness is what survives the allowed motion.",
+      "overlay": "Light vector overlays for endpoints and motion arrows recommended."
+    },
+    "0.3 The first honest act of measurement: choose a unit": {
+      "role": "Show measurement as a pipeline from thing to chosen standard to ratio to written label.",
+      "format": "D",
+      "style": "clean conceptual pipeline plate",
+      "prompt": "Compose a four-stage visual pipeline moving left to right: an unlabeled segment as raw magnitude, a deliberately chosen reference stick highlighted in brass as the unit, a comparison stage where copies of the unit are being laid against the segment, and finally a clean symbolic tag floating as the last compressed report. Make clear that the chosen unit is itself a length while the comparison ratio is abstract. Elegant editorial infographic feel, but painterly enough to feel like art rather than software UI. No text inside the image except optional simple tick marks that can be added later.",
+      "caption": "Object, standard, comparison, report are not the same thing.",
+      "overlay": "Best as AI base plus vector overlay for arrows and tick marks."
+    },
+    "0.4 Comparison before multiplication": {
+      "role": "Anchor arithmetic in simpler acts: compare, concatenate, compare again.",
+      "format": "H",
+      "style": "tactile comparative still life",
+      "prompt": "Show three stripped-down wooden sticks on a dark tabletop. One pair is placed end to end to form a longer combined length, while a third lies nearby as the comparison target. The composition should make it visually obvious that you can decide shorter, longer, or equal without any numbers at all. Add subtle ghosted hands or transparent overlays suggesting the act of placing and joining. Quiet, rigorous, almost Euclidean in spirit.",
+      "caption": "Comparison and concatenation come before multiplication.",
+      "overlay": ""
+    },
+    "0.5 What school usually hides here": {
+      "role": "Correct the common collapse of point, distance, unit, coordinate, and signed displacement into one blur.",
+      "format": "S",
+      "style": "split-screen conceptual corrective",
+      "prompt": "Design a split-panel image. On the left, a blurred chaotic classroom-style collapse: point, ruler mark, arrow, unit stick, and coordinate label visually tangled together. On the right, the same five layers separated into clean stacked transparent planes: a point, a segment, a chosen unit, a coordinate readout, and a directed arrow. Make the right side crisp, humane, and relieving, as if mental fog has lifted. Sophisticated graphic-editorial style, adult mathematics book, no childish icons.",
+      "caption": "Do not confuse the object with the report about the object.",
+      "overlay": ""
+    },
+    "0.6 Historical note: why the Greeks cared so much": {
+      "role": "Humanize the historical pressure that pushed mathematics from computation toward justification.",
+      "format": "V",
+      "style": "historical tableau with measured restraint",
+      "prompt": "Create an atmospheric scene in the ancient Mediterranean at golden hour: survey ropes, tablets, carved stone diagrams, and two thinkers confronting a square and its diagonal with visible seriousness. The mood should suggest a civilization moving from practical measurement toward proof because certain lengths refuse to fit tidy counting. Avoid costume-drama clich\u00e9; make it feel like real intellectual pressure, not mythology. Dust, sunlight, limestone, disciplined composition.",
+      "caption": "Irrationality forced a deeper foundation than mere calculation.",
+      "overlay": ""
+    },
+    "0.7 Thought experiments": {
+      "role": "Invite the reader to rehearse the section with physical imagination rather than procedure.",
+      "format": "M",
+      "style": "quiet minimal thought-experiment sketch",
+      "prompt": "Make a contemplative desk scene arranged like a mental exercise sheet without words: two pencils being compared by overlay, a unit stick swapped for a different longer unit, and a measured object remaining unchanged while only the report shifts. The scene should feel sparse and meditative, with each object separated enough that a reader can mentally run the experiment. Soft top light, minimal clutter, almost monastic clarity.",
+      "caption": "Switch the standard, not the thing, and watch what changes.",
+      "overlay": ""
+    },
+    "0.8 Common confusion to kill early": {
+      "role": "Visually kill the conflation of magnitude, unit, and numeral before it spreads into later chapters.",
+      "format": "S",
+      "style": "transparent-layer corrective plate",
+      "prompt": "Show a single table edge or rod seen through three transparent stacked panels. The bottom panel is the actual magnitude, the middle panel is a chosen unit repeatedly compared against it, and the top panel is a clean symbolic token hovering like a caption. The misreading to avoid should be visually implied by trying to collapse the layers into one flat mistaken image at the far edge. Elegant, layered, high-contrast, concept-first.",
+      "caption": "A thing, a standard, and a number are related but not interchangeable.",
+      "overlay": ""
+    },
+    "1.1 A line becomes a number line only after choices": {
+      "role": "Show that a number line is not given by nature; it is created by fixing an origin, a direction, and a unit.",
+      "format": "D",
+      "style": "linear stage with frame-setting gesture",
+      "prompt": "Illustrate a bare horizontal line gradually becoming a number line through three deliberate interventions: a hand pins an origin, an arrow establishes positive direction, and a brass unit segment is stepped off to set scale. The composition should make the frame-building act visible, almost like preparing a stage before a performance. Crisp linework, subtle depth, restrained palette of graphite and blue, plenty of room for later labels.",
+      "caption": "Coordinates need a frame before they can speak.",
+      "overlay": "Vector overlay for origin and arrows recommended."
+    },
+    "1.2 Directed segments: where negatives actually come from": {
+      "role": "Replace the vague idea of 'below zero' with opposition of direction.",
+      "format": "H",
+      "style": "symmetry on a line with embodied arrows",
+      "prompt": "Show an origin at center with equal arrows extending right and left, the left-pointing arrow rendered as the exact directional reversal of the right-pointing one. Add a faint half-turn arc around the origin to suggest that negation is a reversal symmetry, not a mystical anti-number. The scene should feel spatially honest and almost physical, as though arrows are rigid displacements on a rail. Sophisticated, spare, no text.",
+      "caption": "Negative means opposite orientation, not spooky less-than-nothing.",
+      "overlay": ""
+    },
+    "1.3 Integers as repeated unit translations": {
+      "role": "Make integer positions feel like accumulated copies of one repeated move.",
+      "format": "H",
+      "style": "rhythmic translation sequence",
+      "prompt": "Create a rhythmic sequence of identical unit arrows stepping across a line from the origin, each new endpoint inheriting the last. The image should feel like a drumbeat of equal translations: same move, same move, same move. Consider subtle footprints, mechanical ticks, or repeated light pulses to reinforce the idea of composed repetition. Clean, adult, visually musical without becoming playful.",
+      "caption": "An integer can be seen as repeated copies of one unit move.",
+      "overlay": ""
+    },
+    "1.4 Another lens: balance sheets and elevators": {
+      "role": "Offer alternate embodied analogies for signed quantity that are not purely geometric.",
+      "format": "H",
+      "style": "triptych analogy illustration",
+      "prompt": "Make a refined triptych: an elevator shaft with floors above and below a reference floor, a ledger with gains and debts arranged around a zero balance line, and a road marker with east-west displacements from a signpost. All three scenes should quietly rhyme compositionally so the reader sees one underlying structure wearing three costumes. Elegant editorial style, subdued palette, no cartoon office clich\u00e9s.",
+      "caption": "Different stories, one structure: reference plus orientation.",
+      "overlay": ""
+    },
+    "1.5 Historical note: why negatives felt suspicious": {
+      "role": "Show the cultural unevenness of accepting negatives.",
+      "format": "V",
+      "style": "historical collage across cultures",
+      "prompt": "Create a three-part historical collage that moves from Chinese counting rods to an Indian merchant or mathematician handling debts and fortunes, then to a skeptical early modern European scholar staring uneasily at a negative result on paper. Keep the tone respectful and intellectually alive rather than touristy. Use shared compositional geometry so the viewer senses the idea traveling across time and cultures before becoming accepted.",
+      "caption": "Negatives became natural only after people saw them as structured opposites.",
+      "overlay": ""
+    },
+    "1.6 The dimension subtlety": {
+      "role": "Disentangle pure coordinate value from the actual segment of that many units.",
+      "format": "S",
+      "style": "layered dimension-correction plate",
+      "prompt": "Show a single point on a line with two distinct but related visual layers: one layer is the pure coordinate readout, the other is the actual directed segment from origin to that point. A chosen unit segment sits nearby as the hidden mediator. The left side of the image should tempt a collapse of these layers; the right side should cleanly separate them. Transparent planes, precise composition, concept-forward design.",
+      "caption": "The coordinate and the segment it reports are not identical.",
+      "overlay": ""
+    },
+    "1.7 Thought experiments": {
+      "role": "Let the reader mentally run origin flips and unit changes.",
+      "format": "M",
+      "style": "minimal embodied sketch",
+      "prompt": "Create a quiet scene with footsteps on a floor grid moving east then west, alongside a line where the positive arrow flips direction and the coordinate labels would all reverse if added. Include a subtle second panel where the unit changes and the same location receives a different report. Minimal, contemplative, almost like an architect\u2019s margin sketch for a live thought experiment.",
+      "caption": "Change the frame and the report changes; the place stays put.",
+      "overlay": ""
+    },
+    "1.8 A preview of later structure": {
+      "role": "Preview translation, reflection, and scaling as the seed of later mathematics.",
+      "format": "B",
+      "style": "bridge plate / conceptual atlas",
+      "prompt": "Design a wide bridge image starting from a simple number line at the left and branching upward into three luminous pathways labeled only by visual action: sliding translations, mirror reflections, and origin-centered scalings. Those paths should then fade into richer later worlds\u2014vectors, complex rotations, spacetime grids\u2014without becoming busy. The point is to show that the humble number line already contains the seed of a vast transformation language.",
+      "caption": "Small symmetries grow into larger mathematics.",
+      "overlay": ""
+    },
+    "2.1 Addition is composition of translations": {
+      "role": "Make addition feel like path-composition, not symbol pushing.",
+      "format": "D",
+      "style": "motion diagram with editorial depth",
+      "prompt": "Show a point traveling through space by two consecutive arrows, first to an intermediate location and then to a final one, while a larger resultant arrow spans directly from start to finish. The geometry should be crisp, but the scene can feel slightly cinematic, with ghosted traces and luminous path memory. The viewer should immediately understand that addition is doing one move after another.",
+      "caption": "Addition is what happens when moves are chained together.",
+      "overlay": "Vector arrows and labels can be overlaid later."
+    },
+    "2.2 Why commutativity is not a coincidence": {
+      "role": "Reveal commutativity as a symmetry of flat-space translations.",
+      "format": "D",
+      "style": "parallelogram law plate",
+      "prompt": "Create a clean but beautiful illustration of two vectors in the plane forming a parallelogram, with two faint motion sequences showing a-then-b and b-then-a landing at the same corner. The important feeling is inevitability: the diagonal is not a mnemonic trick but the natural summary of flat-space motion. Refined blueprint lines combined with soft depth and elegant color restraint.",
+      "caption": "The same endpoint from two orders is a geometric symmetry.",
+      "overlay": "Use vector overlay for exact arrowheads and optional labels."
+    },
+    "2.3 Subtraction is composition with the inverse move": {
+      "role": "Show subtraction as undoing rather than removal mysticism.",
+      "format": "H",
+      "style": "inverse-motion scene",
+      "prompt": "Illustrate a displacement arrow and its exact inverse as equal rigid moves in opposite directions, perhaps on a smooth rail or floor grid. Then show a path where one move is followed by the undoing move, returning to the start with a calm closed loop. The image should make subtraction feel like composition with an inverse action, not like taking away apples.",
+      "caption": "Subtraction is addition of the move that undoes.",
+      "overlay": ""
+    },
+    "2.4 Associativity: grouping does not change the total path": {
+      "role": "Show grouping differences as invisible to the final motion outcome.",
+      "format": "D",
+      "style": "three-move choreography",
+      "prompt": "Compose an elegant three-step path in space with translucent brackets grouping the first two moves in one version and the last two in another version, yet both sequences collapse onto the same final trajectory. The visual emphasis should be on endpoint invariance under regrouping. Use ghosted arcs or subtle brace shapes rather than text. Sophisticated motion-structure illustration.",
+      "caption": "Different groupings, same accumulated displacement.",
+      "overlay": ""
+    },
+    "2.5 Another lens: addition as bookkeeping of change": {
+      "role": "Offer a non-spatial lens that still preserves structure.",
+      "format": "H",
+      "style": "ledger and cumulative change panel",
+      "prompt": "Create a refined editorial image of a ledger or dashboard of gains and losses stacking over time, with positive and negative changes accumulating into one net result. Avoid generic finance imagery; keep it abstract and structural, like bookkeeping as geometry. The visual rhyme with arrows should be present through vertical and horizontal accumulation traces, showing that motion and accounting share the same algebraic skeleton.",
+      "caption": "Addition also lives in cumulative change, not only in space.",
+      "overlay": ""
+    },
+    "2.6 Historical note: from counting to structure": {
+      "role": "Locate the shift from arithmetic procedure to abstract operation.",
+      "format": "V",
+      "style": "historical evolution montage",
+      "prompt": "Show a visual evolution from pebbles or tallies used for counting, to written algorithms on parchment, to a modern clean abstraction of translations on a line. The image should feel like the concept of addition maturing from a practical tallying act into an operation with identity, inverse, and symmetry. Keep the montage tight and coherent, not a noisy timeline.",
+      "caption": "Operations became deeper when people asked what laws they obey.",
+      "overlay": ""
+    },
+    "2.7 Thought experiments": {
+      "role": "Let the reader test commutativity and inverse structure mentally.",
+      "format": "M",
+      "style": "robot-floor thought experiment sketch",
+      "prompt": "Depict a small robot or marker on a clean floor grid receiving two move instructions in alternate orders, both arriving at the same square; nearby, another tiny sequence goes out and then back to start. Make it feel like a quiet lab sketch rather than a cute robot cartoon. Sparse, crisp, and mentally runnable at a glance.",
+      "caption": "Run the move sequence in your head and trust the structure you see.",
+      "overlay": ""
+    },
+    "3.1 Equal partition is the key act": {
+      "role": "Show equal partition as a genuine geometric achievement, not a casual visual guess.",
+      "format": "D",
+      "style": "construction plate with parallels",
+      "prompt": "Illustrate a segment being divided by a classical geometric construction: an auxiliary ray, equal compass steps on that ray, a connector to the segment endpoint, and parallel lines transporting equal spacing back onto the original segment. The scene should feel like craft knowledge becoming rigor. Use precise drafting-table aesthetics with tactile paper and brass instruments.",
+      "caption": "Equal partition is built, not merely eyeballed.",
+      "overlay": "Hybrid mode: precise parallels and tick marks can be overlaid."
+    },
+    "3.2 One over n is an actual constructed length": {
+      "role": "Give 1/n physical dignity as a built segment, not a pizza-slice slogan.",
+      "format": "H",
+      "style": "constructed-part spotlight",
+      "prompt": "Show the unit segment transformed into several equal parts, with one single part lifted visually into prominence like a crafted object of its own. The image should make that small segment feel legitimate and exact, not a disposable fraction piece. Elegant composition, subtle shadowing, strong sense of the part inheriting reality from the whole.",
+      "caption": "One over n names a real constructed magnitude.",
+      "overlay": ""
+    },
+    "3.3 m/n is repeated taking of a constructed part": {
+      "role": "Make m/n feel like repeated concatenation of a built subunit.",
+      "format": "H",
+      "style": "rhythmic part-concatenation illustration",
+      "prompt": "Create a sequence where one equal fraction-part is repeated end to end until a longer segment emerges, with the repeated piece clearly identical each time. Let the repetition read almost musically or architecturally, like modular construction. Keep the image clean and adult, emphasizing that m over n is made from a real piece taken repeatedly.",
+      "caption": "Fractions can be built from equal parts and repetition.",
+      "overlay": ""
+    },
+    "3.4 Equivalent fractions are the same magnitude wearing different descriptions": {
+      "role": "Show symbolic plurality collapsing onto one congruent magnitude.",
+      "format": "S",
+      "style": "equivalence split/compression plate",
+      "prompt": "Design an image in which several differently partitioned units\u2014halves, quarters, hundredths\u2014each highlight a selected total that lands on exactly the same resulting segment. The partitions can differ dramatically in granularity, but the extracted length should align perfectly in one final shared overlay. The viewer should feel the relief of sameness underneath multiple descriptions.",
+      "caption": "Different fraction stories can point to the same length.",
+      "overlay": ""
+    },
+    "3.5 Commensurable versus incommensurable": {
+      "role": "Visualize the difference between sharing a common measure and refusing one.",
+      "format": "H",
+      "style": "two-panel ratio contrast",
+      "prompt": "Create a two-panel composition. In one panel, two segments are neatly tiled by repeated copies of a smaller common unit. In the other, a square\u2019s side and diagonal resist exact common tiling no matter how small the trial unit becomes, with a subtle sense of stubborn mismatch. Keep the mood precise, not mystical. This is the first glimpse of the irrational problem.",
+      "caption": "Some lengths share a measure; others refuse every common unit.",
+      "overlay": ""
+    },
+    "3.6 Another lens: music and rhythm": {
+      "role": "Translate fraction structure into time and pulse for learners who feel rhythm before geometry.",
+      "format": "H",
+      "style": "musical rhythm plate",
+      "prompt": "Show a refined rhythmic grid with pulses dividing a measure into halves, thirds, quarters, and syncopated patterns, visually matched to divided line segments nearby. The link should be structural: equal time partitions and equal spatial partitions are one idea in two media. No cartoon instruments; think elegant score fragments, handclap marks, resonant minimalism.",
+      "caption": "Fractions live in time as well as space.",
+      "overlay": ""
+    },
+    "3.7 Historical note: why fractions mattered": {
+      "role": "Ground fractions in concrete human pressures like allocation and measurement.",
+      "format": "V",
+      "style": "historical daily-life montage",
+      "prompt": "Create a historically grounded montage of grain being portioned, a field boundary being measured, a recipe or vessel being divided, and a sky chart requiring fractional precision. The scenes should read as one civilization-level argument for why exact wholes were never enough. Textures of clay, linen, grain, and measured rope; serious and practical rather than quaint.",
+      "caption": "Fractions were invented because life refused to arrive in wholes.",
+      "overlay": ""
+    },
+    "3.8 Thought experiments": {
+      "role": "Invite the reader to mentally test what tools can and cannot construct.",
+      "format": "M",
+      "style": "construction thought sketch",
+      "prompt": "Show a blank straightedge failing to mark one third directly, then an auxiliary ray and parallels suddenly making the division possible. Keep the composition minimal, like a marginal note in an architect\u2019s sketchbook. The image should provoke the question: what operations are available, and what new powers do they unlock?",
+      "caption": "Construction power depends on the allowed moves.",
+      "overlay": ""
+    },
+    "3.9 Common confusion": {
+      "role": "Differentiate the fraction as length from the fraction as pure ratio.",
+      "format": "S",
+      "style": "dual-life corrective plate",
+      "prompt": "Design a layered image where the same fraction notation is seen in two valid roles: as a selected subsegment of a unit line, and as a dimensionless comparison between magnitudes. Use transparent overlays and color-coding so the two lives are distinct but visibly connected. The goal is to prevent later dimensional confusion while honoring both uses.",
+      "caption": "A fraction can be a magnitude or a ratio, depending on the role.",
+      "overlay": ""
+    },
+    "4.1 Why this section is load-bearing": {
+      "role": "Signal that proportion theory is the hidden foundation beneath later similarity and multiplication.",
+      "format": "B",
+      "style": "deep foundation plate",
+      "prompt": "Create an image of a stone geometric edifice whose visible upper structure\u2014similar triangles, multiplication, calculus machinery\u2014rests on a deeper hidden foundation slab made of repeated integer comparisons and balance tests. It should feel like the reader is being shown the basement of the subject for the first time. Classical gravity, clean symbolic hints, no melodrama.",
+      "caption": "This chapter is the hidden foundation under the later machine.",
+      "overlay": ""
+    },
+    "4.2 The Eudoxus definition": {
+      "role": "Translate a difficult verbal definition into a memorable discrimination machine.",
+      "format": "D",
+      "style": "ratio discrimination engine",
+      "prompt": "Visualize Eudoxus proportion as two paired comparison tracks being tested by many integer multiples. Imagine stacked copies of segments A and B on one side and C and D on the other, with each trial pair m and n sending both sides into the same greater-than, equal-to, or less-than outcome channel. The image should make the definition feel like a rigorous sorting machine rather than a wall of words. Precise, almost mechanical, with room for later symbolic overlay.",
+      "caption": "Equal ratios survive every integer-scaled comparison.",
+      "overlay": "Hybrid mode strongly recommended for exact multiple stacks and symbols."
+    },
+    "4.3 Why this is brilliant rather than cumbersome": {
+      "role": "Reframe the definition as elegant because it uses only what already exists.",
+      "format": "H",
+      "style": "intellectual relief illustration",
+      "prompt": "Show a complex-looking apparatus built only out of simple pieces already in hand: copied segments, comparison balances, and repeatable stacking. The emotional tone should be one of relief and admiration, as though the reader sees that no illicit multiplication was smuggled in. Think of a disciplined machine assembled from humble components. Serious, clear, quietly beautiful.",
+      "caption": "The genius is that nothing stronger than comparison and repetition is assumed.",
+      "overlay": ""
+    },
+    "4.4 Easy case and hard case": {
+      "role": "Contrast commensurable comfort with incommensurable necessity.",
+      "format": "S",
+      "style": "easy-vs-hard ratio plate",
+      "prompt": "Compose a split-panel image. One side shows two segments cleanly measured by a shared smaller unit, everything snapping into tidy integer counts. The other shows a pair like side and diagonal resisting perfect common measurement, yet still being comparable through a higher-order proportion framework. The contrast should feel like mathematics refusing to give up when whole-number comfort ends.",
+      "caption": "The hard case is where a deeper definition earns its keep.",
+      "overlay": ""
+    },
+    "4.5 The intercept theorem is now earned, not assumed": {
+      "role": "Show parallel lines transporting ratio after the foundation has been built.",
+      "format": "D",
+      "style": "sunlit theorem plate",
+      "prompt": "Illustrate two transversals cut by several parallel lines, with corresponding segments on each transversal visibly linked through a calm, earned geometric order. The scene can be staged on parchment or stone with faint triangle areas hinting at the proof underneath. The important feeling is legitimacy: the theorem now rests on prior theory instead of handwaving. Classical elegance, exact linework overlay recommended.",
+      "caption": "Parallel lines inherit rigor once ratio has been defined properly.",
+      "overlay": "Exact geometry lines and labels should be overlaid after generation."
+    },
+    "4.6 Similarity as same shape, different scale": {
+      "role": "Make similarity feel like shape-preserving transformation rather than visual resemblance.",
+      "format": "H",
+      "style": "shape-preservation plate",
+      "prompt": "Show one triangle dilating into a larger one through a common origin or through matched angle structure, with their corresponding sides connected by delicate luminous threads. The image should emphasize invariance of shape under change of scale, not merely two triangles that happen to look alike. Crisp, serene, Euclidean, slightly luminous.",
+      "caption": "Similarity is shape that survives scale change.",
+      "overlay": ""
+    },
+    "4.7 Historical note: the irrationality shock": {
+      "role": "Capture the conceptual jolt of discovering incommensurable magnitudes.",
+      "format": "V",
+      "style": "intellectual shock tableau",
+      "prompt": "Create a moody but disciplined scene centered on a square and its diagonal, with measuring cords or rods that keep failing to settle into a common repeat. Let the human figures look absorbed rather than melodramatic. The atmosphere should suggest a crack opening inside an older worldview: arithmetic alone is not enough. Marble, twilight, measured tension.",
+      "caption": "The diagonal of the square broke the old comfort of common measure.",
+      "overlay": ""
+    },
+    "4.8 Another lens: ratio as a fingerprint": {
+      "role": "Provide a modern metaphor for sameness of ratio across different objects.",
+      "format": "H",
+      "style": "fingerprint metaphor plate",
+      "prompt": "Show very different objects\u2014a rectangle, a photograph crop, a musical interval waveform, maybe a map enlargement\u2014sharing one hidden ratio pattern rendered as the same luminous fingerprint-like contour or bar-code signature behind them. The metaphor should say: ratio equality is an identity pattern that survives change of medium and size. Modern editorial style, sleek, memorable, not gimmicky.",
+      "caption": "A ratio can be understood as a structural fingerprint.",
+      "overlay": ""
+    },
+    "4.9 Thought experiments": {
+      "role": "Encourage the reader to test ratio equality through repeated comparisons.",
+      "format": "M",
+      "style": "comparison-lab sketch",
+      "prompt": "Create a sparse experimental setup with stacks of copied segments being compared in successive trials, as if a careful thinker is asking over and over whether two candidate ratios ever disagree. The image should feel like a lab bench for pure comparison. Low clutter, repeated forms, meditative rigor.",
+      "caption": "Keep throwing integer comparisons at the ratios and see whether they ever part company.",
+      "overlay": ""
+    },
+    "4.10 What this section teaches beyond geometry": {
+      "role": "Generalize the deeper pattern: define an object by the full set of tests it passes.",
+      "format": "B",
+      "style": "meta-structure bridge plate",
+      "prompt": "Design a conceptual bridge image showing several later ideas\u2014real numbers from nested intervals, derivatives from stabilizing secants, symmetry classes from invariants\u2014all emerging as descendants of one deeper pattern: an object identified by the totality of finite tests it survives. Use repeated visual motifs of filters, narrowing windows, and invariant signatures. This should feel like a revelation about mathematical method itself.",
+      "caption": "Many deep objects are defined by the full set of tests they survive.",
+      "overlay": ""
+    },
+    "5.1 Repeated addition is only one shadow of multiplication": {
+      "role": "Break the school habit of treating multiplication as only repeated addition.",
+      "format": "S",
+      "style": "shadow-vs-core split plate",
+      "prompt": "Create a split image. One side shows repeated equal jumps on a line, useful but visibly limited. The other shows a true dilation scene: a shape or segment being resized from an origin, with scale affecting every point at once. The right side should feel deeper and more general, as though the repeated-addition story is only a shadow cast by the richer transformation picture.",
+      "caption": "Repeated addition is a special case; scaling is the core.",
+      "overlay": ""
+    },
+    "5.2 Dilation: the clean geometric meaning": {
+      "role": "Make scaling about an origin immediate and bodily intelligible.",
+      "format": "H",
+      "style": "luminous dilation plate",
+      "prompt": "Show an origin sending rays outward through points of a shape as that shape enlarges or shrinks along those rays. Every point should remain on its ray, and distances from the origin should visibly scale in proportion. Think of a clean geometric sunburst or optical projector, but elegant and restrained. The image must teach what dilation does in one glance.",
+      "caption": "Scaling means every point keeps its ray and changes its distance by a factor.",
+      "overlay": ""
+    },
+    "5.3 The similar-triangle multiplication machine": {
+      "role": "Turn the multiplication construction into a memorable device rather than a dry diagram.",
+      "format": "D",
+      "style": "drafting-table machine plate",
+      "prompt": "Illustrate the similar-triangle multiplication machine on a refined drafting table: perpendicular rays from an origin, the unit point, a point marking a, a point marking b, a slanted connector, and a parallel through a producing the product location. The image should feel like a real mathematical instrument, almost a precision machine for manufacturing products out of geometry. Clean enough for later labels and coordinates to be overlaid.",
+      "caption": "Multiplication can be built as a geometric machine for scaling one magnitude by another.",
+      "overlay": "Hybrid mode essential: use AI base for atmosphere and vector overlay for exact rays, parallels, and labels."
+    },
+    "5.4 Three meanings that textbooks collapse into one symbol": {
+      "role": "Visually separate scale-factor times length, length times length, and pure number times pure number.",
+      "format": "S",
+      "style": "three-world type-signature plate",
+      "prompt": "Design a three-panel image sharing the same multiplication symbol but showing three genuinely different worlds: a dimensionless scale factor stretching a segment, two lengths forming a rectangle of area, and two pure numbers combining abstractly in a clean symbolic register. The panels should rhyme but not blur into each other. This must inoculate the reader against later dimension errors.",
+      "caption": "The same symbol can host different operations; the type signature tells you which world you are in.",
+      "overlay": ""
+    },
+    "5.5 Why multiplication is commutative": {
+      "role": "Show the symmetry behind ab = ba in the scaling construction.",
+      "format": "D",
+      "style": "symmetric scaling plate",
+      "prompt": "Create a balanced image where the multiplication machine is mirrored or swapped so that scaling b by a and scaling a by b are visibly the same geometric relation seen from two orientations. The composition should feel like a proof by symmetry rather than a slogan. Use clean intersecting rays and paired triangles, but keep it elegant and spacious.",
+      "caption": "The order swap leaves the product invariant because the geometry is symmetric.",
+      "overlay": "Overlay exact correspondences after generation."
+    },
+    "5.6 Distributivity becomes geometric": {
+      "role": "Make the distributive law feel like scaling preserving joins and pieces.",
+      "format": "H",
+      "style": "segmented-scaling plate",
+      "prompt": "Show a single segment made of two joined pieces being dilated, while beside it the two pieces are dilated separately and then rejoined, both yielding the same total result. The composition can echo a folding ruler or extendable instrument. The emotional tone should be inevitability: scaling respects structure and therefore distributes over concatenation.",
+      "caption": "Scaling a whole joined thing equals scaling the pieces and joining them again.",
+      "overlay": ""
+    },
+    "5.7 Historical note: geometry and algebra eventually shake hands": {
+      "role": "Place the geometric and symbolic traditions in dialogue rather than rivalry.",
+      "format": "V",
+      "style": "historical handshake tableau",
+      "prompt": "Create a historically layered image in which a classical geometer with compass and straightedge shares a compositional space with a later algebraist working symbolically, their tools and marks converging onto one common construction. Avoid caricature. The image should suggest that geometry and algebra were once different dialects that gradually learned to speak to each other.",
+      "caption": "Multiplication became richer when geometry and algebra met.",
+      "overlay": ""
+    },
+    "5.8 Thought experiments": {
+      "role": "Invite the reader to test the resizing viewpoint personally.",
+      "format": "M",
+      "style": "everyday scaling thought sketch",
+      "prompt": "Show a quiet set of everyday scale experiences: zooming an image on a screen, enlarging a photocopy, and stretching a simple shape from an origin. Keep the scenes minimal and parallel, so the learner can mentally ask what is preserved and what changes. Sparse, lucid, adult.",
+      "caption": "Ask what changes under resizing, and what stubbornly survives.",
+      "overlay": ""
+    },
+    "6.1 The single equation behind all division": {
+      "role": "Give one unifying spine for the many faces of division.",
+      "format": "B",
+      "style": "one-spine bridge plate",
+      "prompt": "Center the image on a single transformative equation rendered visually rather than typographically: an unknown action q acting on b to produce a. From that center, three branches should open into measurement, sharing, and rate. The composition should feel like a master key unlocking three doors. Strong central symmetry, adult editorial style, no classroom vibe.",
+      "caption": "One relation hides under several different division stories.",
+      "overlay": ""
+    },
+    "6.2 Quotitive division: measurement": {
+      "role": "Show division as asking how many copies of one chunk fit into another.",
+      "format": "H",
+      "style": "measurement plate",
+      "prompt": "Illustrate a long segment or rope being tiled exactly by repeated copies of a shorter segment, with the answer appearing as a count of how many chunks fit. Make the result feel dimensionless: the important thing is the count of fit, not a leftover physical piece. Tactile materials, calm lighting, clear repeated chunk structure.",
+      "caption": "Quotitive division asks for a pure count of fit.",
+      "overlay": ""
+    },
+    "6.3 Partitive division: fair splitting": {
+      "role": "Differentiate sharing division from measurement division.",
+      "format": "H",
+      "style": "fair-sharing plate",
+      "prompt": "Show one whole length or loaf-like object being partitioned into equal shares for several recipients, with the visual emphasis on the size of each share rather than the number of shares. The scene should feel fair, precise, and constructive. Use either a rope cut into equal pieces or a straight segment divided with careful craftsmanship; avoid childish pizza clich\u00e9s.",
+      "caption": "Partitive division asks for the size of each equal part.",
+      "overlay": ""
+    },
+    "6.4 Rate division: the missing third type": {
+      "role": "Make the unlike-dimensions case feel like the birth of a new kind of quantity.",
+      "format": "H",
+      "style": "rate-creation plate",
+      "prompt": "Create a striking editorial illustration of a journey through time and distance becoming a new object: a slope, a speedometer-like steepness, or a line through the origin in a distance-time plane. The two axes should be visibly different kinds of magnitude, and the result should feel like a new species, not a number sitting on either axis. Sophisticated, concept-first, physically alive.",
+      "caption": "When unlike magnitudes are divided, a new kind of quantity is born.",
+      "overlay": ""
+    },
+    "6.5 Slope is the geometric picture of rate": {
+      "role": "Anchor rate in the visual steepness of a line.",
+      "format": "D",
+      "style": "slope plate",
+      "prompt": "Show a clean coordinate scene where several lines through the origin have different steepness, with one highlighted as the line whose rise over run defines a specific rate. The image should make the slope feel like the embodiment of 'how much per one of the other thing.' Elegant graph geometry, no clutter, optional overlay for axes and rise/run markings.",
+      "caption": "Rate becomes visible as slope.",
+      "overlay": "Overlay axes and rise/run brackets after generation."
+    },
+    "6.6 Why the three cases matter": {
+      "role": "Prevent the reader from treating all division answers as the same kind of thing.",
+      "format": "S",
+      "style": "triptych type-awareness plate",
+      "prompt": "Design a disciplined triptych where the same outer algebraic shell opens into three outputs of visibly different ontological types: a pure count, a same-kind share, and a new combined-dimension quantity. Use color, material, and spatial logic to make the distinction unforgettable. The image should inoculate against the silent unit mistakes that haunt later math and physics.",
+      "caption": "Division is one relation with three very different roles.",
+      "overlay": ""
+    },
+    "6.7 Historical note: where rate changed the game": {
+      "role": "Show rate as the door through which physics enters mathematics.",
+      "format": "V",
+      "style": "historical motion-science tableau",
+      "prompt": "Create a scene that links navigation, falling bodies, and moving planets or projectiles through the shared idea of rate. This could be a collage of a ship log, a clock, a ramp experiment, and a trajectory sketch. The point is that dividing unlike magnitudes let mathematics describe motion and the physical world more honestly. Historical, vivid, not cluttered.",
+      "caption": "Rate division is where mathematics starts speaking physics fluently.",
+      "overlay": ""
+    },
+    "6.8 Thought experiments": {
+      "role": "Encourage the reader to diagnose which world of division a question belongs to.",
+      "format": "M",
+      "style": "classification sketch",
+      "prompt": "Show three tiny scenes arranged like cards on a table: measuring how many rods fit into a beam, splitting a rope into equal pieces, and reading speed from a climb or journey. Keep them minimal and parallel so the viewer can mentally sort each one by output type. Clear, sparse, almost like flashcards for deep understanding rather than memorization.",
+      "caption": "Before computing, ask what kind of answer the division should produce.",
+      "overlay": ""
+    },
+    "7.1 The ratio machine": {
+      "role": "Make the geometric construction of a/b feel like a usable instrument.",
+      "format": "D",
+      "style": "ratio instrument plate",
+      "prompt": "Illustrate the ratio machine with two axes, a point representing a, a point representing b, a connector line, and a parallel through the unit point producing the ratio output. Stage it as a beautifully lit instrument on vellum, almost like a scientific device for extracting pure ratios from magnitudes. Clean geometric scaffolding, enough atmosphere to feel memorable, and room for precise overlays.",
+      "caption": "A ratio can be constructed geometrically rather than memorized symbolically.",
+      "overlay": "Exact axes, parallels, and labels should be overlaid after generation."
+    },
+    "7.2 What reciprocal actually means": {
+      "role": "Replace the ritual word reciprocal with the lived idea of undo-scaling.",
+      "format": "H",
+      "style": "undo-transform plate",
+      "prompt": "Show a segment or image first enlarged by a scale factor and then returned exactly to its original size by the inverse scale, with the second action visually coded as the precise undoing of the first. The scene could use a zoom lens, camera crop, or optical projector returning to baseline. The reader should feel the reciprocal as an inverse transformation, not a numerator-denominator flip chant.",
+      "caption": "A reciprocal is the scale that undoes a scale.",
+      "overlay": ""
+    },
+    "7.3 Why dividing by a fraction becomes multiplying by its reciprocal": {
+      "role": "Derive the famous rule from inverse actions rather than slogan repetition.",
+      "format": "D",
+      "style": "fraction-undo derivation plate",
+      "prompt": "Compose a clear sequential image: a fractional scale factor acts on a magnitude, then an inverse scale restores the unit, revealing why division by that fraction must be multiplication by its undoing factor. The geometry can be hybrid\u2014part ratio machine, part transformation sequence. The important feeling is inevitability: the algorithm falls out of inverse structure. Precise but visually warm.",
+      "caption": "The slogan is a consequence of inverse scaling, not the starting point.",
+      "overlay": "Overlay symbols after generation if desired."
+    },
+    "7.4 Another lens: zoom factors on a screen": {
+      "role": "Offer a modern intuitive analogy for ratio and reciprocal.",
+      "format": "H",
+      "style": "screen-zoom analogy plate",
+      "prompt": "Show a sophisticated digital zoom interface or camera monitor moving from 100% to 200% and back down to 50%, with the visual emphasis on how one zoom undoes another. The interface should be abstracted and elegant, not brand-specific. The analogy should let an adult learner feel reciprocal scaling in their bones through a familiar modern action.",
+      "caption": "Zoom factors make inverse scaling intuitive.",
+      "overlay": ""
+    },
+    "7.5 Thought experiments": {
+      "role": "Invite the learner to feel the ratio machine as an action sequence.",
+      "format": "M",
+      "style": "quiet instrument thought sketch",
+      "prompt": "Depict a hand moving along a simple ratio instrument, sliding from a known magnitude to the unit point and watching a pure ratio emerge on the other axis. Keep it sparse, like a designer\u2019s sketch of a conceptual tool. The image should invite mental rehearsal of 'what action do I perform, and what kind of thing comes out?'",
+      "caption": "Think in terms of the operation performed, not only the final quotient.",
+      "overlay": ""
+    },
+    "8.1 Multiplying by -1 is a geometric action": {
+      "role": "Give -1 a concrete transformation meaning: a half-turn or reversal through the origin.",
+      "format": "H",
+      "style": "half-turn symmetry plate",
+      "prompt": "Show a point or arrow on a number line being carried through the origin to the opposite side by a clean 180-degree half-turn arc. The object\u2019s magnitude stays intact while orientation reverses. The image should feel crisp and almost ceremonial, like the simplest nontrivial symmetry in the book. Midnight palette, silver linework, no textual clutter.",
+      "caption": "Multiplying by negative one is the geometry of reversal.",
+      "overlay": ""
+    },
+    "8.2 What (-a)b means": {
+      "role": "Separate magnitude of scaling from orientation reversal.",
+      "format": "D",
+      "style": "factor-and-flip plate",
+      "prompt": "Compose an image where a scale factor of magnitude a acts on b, but a second visual layer adds a flip through the origin. Show that the amount of resizing and the orientation reversal are distinct ingredients that can be composed in either order on the line. Clean transformation sequence, strong visual hierarchy, optional overlay for arrows and signs.",
+      "caption": "A negative factor means scale, then reverse orientation.",
+      "overlay": "Overlay small arrow annotations if needed."
+    },
+    "8.3 Squares forget orientation": {
+      "role": "Make the disappearance of sign under squaring feel like double reversal canceling.",
+      "format": "H",
+      "style": "double-flip cancellation plate",
+      "prompt": "Illustrate a left-pointing directed segment undergoing the same flip-and-scale action twice, with the first flip sending it across the origin and the second returning orientation to positive while magnitude is squared. The emotional tone should be clarity: direction information cancels, magnitude survives and compounds. Clean symmetry choreography, almost dance-like.",
+      "caption": "Squaring erases orientation because two flips cancel.",
+      "overlay": ""
+    },
+    "8.4 Historical note: the uneasy status of negatives": {
+      "role": "Show that negatives were long treated as suspect because their meaning was thin.",
+      "format": "V",
+      "style": "historical unease tableau",
+      "prompt": "Create a restrained historical scene of an early algebraist confronting a negative solution on paper while practical contexts\u2014debts, directions, bookkeeping\u2014hover nearby as the settings that eventually made negatives intelligible. The tone should be thoughtful, not mocking. Candlelight, paper, ink, quiet conceptual tension.",
+      "caption": "Negatives felt suspicious until structure gave them a home.",
+      "overlay": ""
+    },
+    "8.5 Thought experiments": {
+      "role": "Invite quick mental rehearsal of flip, undo, and double-flip.",
+      "format": "M",
+      "style": "mirror-thought sketch",
+      "prompt": "Make a sparse sequence with a single arrow on a line, a mirror-like origin, and two successive flips traced in faint arcs. A second tiny panel can show a debt/gain analogy or east/west motion for reinforcement. The point is instant mental replay, not spectacle.",
+      "caption": "Count the reversals and watch the sign take care of itself.",
+      "overlay": ""
+    },
+    "9.1 Two legitimate meanings of square": {
+      "role": "Hold repeated scaling and area scaling side by side without collapsing them.",
+      "format": "S",
+      "style": "dual-meaning square plate",
+      "prompt": "Create a two-panel image. One panel shows a scale factor acting twice along a one-dimensional line of transformations; the other shows a unit square growing into a larger square whose area changes in two directions at once. The panels should echo each other so the learner feels that both are legitimate meanings of square in different roles. Architectural clarity, tactile surfaces, adult elegance.",
+      "caption": "Squaring can mean repeated scaling or two-direction area growth.",
+      "overlay": ""
+    },
+    "9.2 Why squares appear everywhere": {
+      "role": "Connect squares to independent directions and invariants.",
+      "format": "H",
+      "style": "two-directions plate",
+      "prompt": "Show several contexts where two independent directions matter: a square floor tile, a velocity component diagram, a variance cloud, and a Pythagorean right triangle, all quietly linked by a luminous x-squared pattern of growth in two directions. The image should feel like a conceptual family portrait explaining why squares keep returning throughout mathematics and physics.",
+      "caption": "Squares are the signature of two independent directions combining.",
+      "overlay": ""
+    },
+    "9.3 Square root as an inverse question": {
+      "role": "Make root-finding feel like asking for the side that would produce a given square.",
+      "format": "H",
+      "style": "inverse-square plate",
+      "prompt": "Illustrate a known area as a luminous square field or tiled surface, while an unknown side length is being recovered from it like the unlocking dimension of the figure. The scene should feel like de-compression: a two-direction effect being resolved back into one length-like cause. Calm, architectural, with a sense of inverse restoration rather than trick solving.",
+      "caption": "A square root asks for the side whose square would produce the given whole.",
+      "overlay": ""
+    },
+    "9.4 Why negatives vanish under squaring": {
+      "role": "Reinforce that squaring discards directional information.",
+      "format": "H",
+      "style": "orientation-loss plate",
+      "prompt": "Show two equal-magnitude directed segments pointing opposite ways feeding into the same resulting square or area block. The transformation should visibly forget the left-right distinction and keep only magnitude. Clean symmetry, muted palette, highly legible composition.",
+      "caption": "Opposite directions can generate the same square because orientation is lost.",
+      "overlay": ""
+    },
+    "9.5 Historical note: the diagonal of the square": {
+      "role": "Historicize the diagonal as the doorway to irrationality and geometry\u2019s authority.",
+      "format": "V",
+      "style": "diagonal-shock tableau",
+      "prompt": "Create a quiet but charged image of a square floor tile or drawn square with its diagonal drawn across it, surrounded by measuring cords that never settle into a common exact repeat. Let the diagonal feel almost like a blade opening a crack in the old arithmetic worldview. Stone, chalk, dusk light, seriousness without melodrama.",
+      "caption": "The diagonal forced mathematics to admit lengths beyond fraction.",
+      "overlay": ""
+    },
+    "9.6 Thought experiments": {
+      "role": "Invite felt experiments with area growth and inverse recovery.",
+      "format": "M",
+      "style": "tile-thought sketch",
+      "prompt": "Show a small set of tiles growing from a 1-by-1 square to a 2-by-2 and 3-by-3 arrangement, then a separate unlabeled square area asking what side could have made it. Minimal, lucid, almost like a note in the margin of an architect\u2019s notebook. The image should trigger mental calculation by structure, not formula.",
+      "caption": "Grow the square, then ask what side the area is hiding.",
+      "overlay": ""
+    },
+    "10.1 The tower of operations": {
+      "role": "Show the ladder from combining moves to scaling to iterated scaling.",
+      "format": "B",
+      "style": "operation tower plate",
+      "prompt": "Design a visually elegant tower or ladder in three levels: translations/addition at the base, dilation/multiplication in the middle, and repeated dilation/exponentiation above, each level transforming the previous one. The tower should feel like a structural escalation, not a school poster. Use shared motifs so the viewer senses each operation is iteration or inversion of another.",
+      "caption": "Exponentiation sits above multiplication the way multiplication sits above addition.",
+      "overlay": ""
+    },
+    "10.2 Powers are repeated resizings": {
+      "role": "Make exponential growth feel like repeated dilation, not repeated multiplication symbols.",
+      "format": "H",
+      "style": "growth-ladder plate",
+      "prompt": "Illustrate a point or object starting at unit size and being repeatedly resized by the same factor, with the spacing between stages visibly exploding for growth larger than one or compressing toward zero for factors between zero and one. The composition should feel like a multiplicative staircase on the number line. Elegant, dynamic, restrained.",
+      "caption": "Powers count repeated resizings.",
+      "overlay": ""
+    },
+    "10.3 The exponent laws are structural facts": {
+      "role": "Show laws like x^a x^b = x^(a+b) as consequences of composition.",
+      "format": "D",
+      "style": "law-as-composition plate",
+      "prompt": "Create a clean transformation diagram where repeated scaling blocks are composed in sequence and then collapsed into one equivalent block with combined count. A second nested diagram can show repeated repeated-scaling leading to multiplication of counts. The image should feel like operational bookkeeping for transformations, not symbolic decree. Crisp, exact, overlay-friendly.",
+      "caption": "Exponent laws record how repeated scaling compositions behave.",
+      "overlay": "Overlay small symbolic annotations after generation."
+    },
+    "10.4 Fractional exponents are forced, not invented for mischief": {
+      "role": "Make x^(1/n) feel inevitable as the scale that repeated n times gives x.",
+      "format": "H",
+      "style": "forced-extension plate",
+      "prompt": "Show a scale factor machine being asked to run n times and land on a target size x, with the hidden intermediate factor glowing as the only way to make the system consistent. The image should convey inevitability and continuity: the exponent ladder has to extend if its laws are to survive. Sophisticated mechanical-editorial style, no whimsy.",
+      "caption": "Fractional exponents are required by structural consistency.",
+      "overlay": ""
+    },
+    "10.5 Logarithms count multiplicative steps": {
+      "role": "Translate logarithms into the question 'how many equal multiplicative jumps?'",
+      "format": "H",
+      "style": "counting-growth-steps plate",
+      "prompt": "Illustrate a multiplicative ladder or path where each step multiplies by the same factor, and the unknown is not the destination but the number of steps needed to reach it. The visual should rhyme with division in the additive world while living entirely in resizing space. Make it feel lucid and unexpectedly human, like counting jumps across scales.",
+      "caption": "A logarithm counts multiplicative steps the way division counts additive chunks.",
+      "overlay": ""
+    },
+    "10.6 The logarithmic line": {
+      "role": "Show equal visual spacing standing for equal ratios rather than equal differences.",
+      "format": "D",
+      "style": "log-line plate",
+      "prompt": "Create two aligned number lines or distance tracks: a standard one with equal additive spacing and a logarithmic one where 1, 2, 4, 8, 16 occupy equal visual intervals because each step is the same ratio. The key insight should be embodied, not verbal. Crisp analytic elegance, no unnecessary clutter.",
+      "caption": "On a log scale, equal spacing means equal ratio, not equal difference.",
+      "overlay": "Overlay exact tick labels later."
+    },
+    "10.7 Historical note: Napier, tables, and the war against drudgery": {
+      "role": "Give logarithms their practical historical motive: compressing tedious multiplication work.",
+      "format": "V",
+      "style": "historical computation tableau",
+      "prompt": "Show an early modern scholar or navigator working with astronomical or navigational tables, papers piled high, while logarithmic tables transform a mountain of multiplications into manageable additions. The tone should be energetic but disciplined, like mathematics inventing a power tool against drudgery. Candlelight, instruments, pages, seriousness.",
+      "caption": "Logarithms were a computational technology before they were a textbook chapter.",
+      "overlay": ""
+    },
+    "10.8 Why this chapter matters for calculus": {
+      "role": "Bridge growth, exponential structure, and the coming idea of continuous rate.",
+      "format": "B",
+      "style": "bridge-to-calculus plate",
+      "prompt": "Design an image where discrete repeated resizings blur into smooth continuous growth, and a curve emerges whose slope seems to echo its own height. The composition should feel like multiplication becoming fluid enough for calculus to grab. Use a subtle transition from stepped structure to continuous curve, intellectually elegant and slightly luminous.",
+      "caption": "Calculus begins when repeated scaling is allowed to become continuous.",
+      "overlay": ""
+    },
+    "10.9 Thought experiments": {
+      "role": "Invite the learner to feel multiplicative spacing and counting of resizings.",
+      "format": "M",
+      "style": "growth-thought sketch",
+      "prompt": "Show a simple ladder of resizings, a shrinking sequence toward zero, and a side note-like multiplicative jump path on a line. The image should feel like a private scratchpad for testing how repeated factors behave. Minimal, clean, and mentally runnable.",
+      "caption": "Ask how many equal resizings separate one magnitude from another.",
+      "overlay": ""
+    },
+    "11.1 Density is not the same as no gaps": {
+      "role": "Visually separate infinite crowdedness from completeness.",
+      "format": "S",
+      "style": "density-vs-completeness plate",
+      "prompt": "Create a split image. One side shows a line segment crowded with endlessly many rational markers between any two points, yet with a subtle missing target or hole. The other side shows a complete line where a uniquely determined point is allowed to exist as the limit of refinement. The mood should be conceptual clarity, not mysticism. Deep blue, pale light, disciplined composition.",
+      "caption": "Being dense everywhere is not the same as having no gaps.",
+      "overlay": ""
+    },
+    "11.2 Geometry demands \u221a2": {
+      "role": "Show that the diagonal is a real geometric object before it is a decimal expansion.",
+      "format": "H",
+      "style": "unit-square diagonal plate",
+      "prompt": "Illustrate a simple unit square with its diagonal drawn brightly and undeniably present, while the side sits as the chosen unit. The diagonal should feel physically real and geometrically unavoidable, as though it is demanding a place on the number line whether arithmetic is ready or not. Clean stone or parchment texture, quiet authority.",
+      "caption": "The diagonal exists first; the number system must catch up.",
+      "overlay": ""
+    },
+    "11.3 Nested intervals: defining a point by surviving every refinement": {
+      "role": "Make the shrinking-interval idea visually unforgettable.",
+      "format": "D",
+      "style": "nested-interval tunnel plate",
+      "prompt": "Show a sequence of shrinking intervals on a number line or a corridor of progressively tighter transparent frames all locking onto one single surviving point. The visual should feel like repeated refinement converging without anxiety, each narrower frame increasing certainty. Slightly surreal but precise. Keep room for optional labels like 1.4, 1.41, 1.414 if overlaid later.",
+      "caption": "A real number can be defined by what survives every successful refinement.",
+      "overlay": "Overlay numeric interval labels after generation."
+    },
+    "11.4 Connection back to Eudoxus": {
+      "role": "Reveal the family resemblance between proportion tests and nested-interval completeness.",
+      "format": "B",
+      "style": "same-pattern bridge plate",
+      "prompt": "Design a bridge image linking two seemingly different procedures: on one side, Eudoxus-style comparison tests; on the other, nested intervals squeezing toward a point. In the center, show the shared abstract pattern of an object being identified by all the finite tests it passes. This should feel like a deep structural echo across chapters, almost philosophical but still concrete.",
+      "caption": "Different chapters are reusing the same deeper method.",
+      "overlay": ""
+    },
+    "11.5 Zeno\u2019s shadow and why infinite subdivision does not destroy finiteness": {
+      "role": "Defuse the intuition that infinitely many pieces must make a length infinite.",
+      "format": "H",
+      "style": "Zeno resolution plate",
+      "prompt": "Illustrate a segment repeatedly subdivided into halves, quarters, eighths, and so on, with all pieces still visibly reassembling into the same unchanged whole. The image should reconcile the eye: infinitely many finer descriptions do not make the object longer. Calm, exact, almost meditative, avoiding paradox theater.",
+      "caption": "More pieces do not mean more total length.",
+      "overlay": ""
+    },
+    "11.6 Historical note: rigor took time": {
+      "role": "Historicize the long path from geometric intuition to formal completeness.",
+      "format": "V",
+      "style": "long-rigor montage",
+      "prompt": "Create a visual timeline montage moving from Greek geometric intuition to nineteenth-century rigor, with figures or symbols associated with completeness, limits, and real-number foundations emerging slowly across time. Keep it elegant and spare, not a crowded museum wall. The point is patience: rigor was built, not dropped from the sky.",
+      "caption": "The modern real line took centuries to become fully explicit.",
+      "overlay": ""
+    },
+    "11.7 Thought experiments": {
+      "role": "Invite the reader to inhabit shrinking intervals and the unchanged whole.",
+      "format": "M",
+      "style": "refinement thought sketch",
+      "prompt": "Show a small set of nested boxes, a line segment split finer and finer, and one unwavering point holding still through all the narrowing. The sketch should feel quiet and anti-anxious, as though infinity is being disciplined into something graspable. Minimal, lucid, almost therapeutic for learners who fear the infinite.",
+      "caption": "Let the intervals shrink; watch what remains.",
+      "overlay": ""
+    },
+    "A.1 Why turning deserves its own chapter": {
+      "role": "Elevate turning to equal dignity with moving and resizing.",
+      "format": "B",
+      "style": "turning-opens-world plate",
+      "prompt": "Create a compelling bridge image where translation arrows and scaling rays from earlier chapters are joined by a new protagonist: a clean rotating wheel or arm sweeping through angle. The composition should announce that turning is not a side note but another basic mathematical action with its own invariants. Celestial-mechanical mood, serious, elegant, slightly dramatic.",
+      "caption": "Moving and resizing were never the whole story; turning completes the trio.",
+      "overlay": ""
+    },
+    "A.2 Angle is amount of turn, not just amount of corner": {
+      "role": "Break the frozen-school-diagram idea of angle as merely a corner shape.",
+      "format": "H",
+      "style": "turn-as-motion plate",
+      "prompt": "Show a rigid ray or arm rotating from one direction to another, leaving a luminous swept arc behind it. A corner-like static picture can be faintly present in the background, but the foreground must insist that angle is an amount of turning. Dynamic yet clean, like a precision instrument caught in motion. No text.",
+      "caption": "An angle measures a turn, not merely a shape at a corner.",
+      "overlay": ""
+    },
+    "A.3 Radians: the honest unit of angle": {
+      "role": "Make the arc-length definition of radian intuitive and elegant.",
+      "format": "D",
+      "style": "arc-equals-radius plate",
+      "prompt": "Illustrate a circle where one radius is lifted and then laid along the circumference, showing that the angle subtended by an arc equal in length to the radius is one natural unit of turn. The image should feel honest and inevitable, not arbitrary like degrees. Clean circle geometry, refined composition, optional overlay for arc and radius markings.",
+      "caption": "A radian is built from the circle itself, not imposed from outside.",
+      "overlay": "Overlay arc and radius marks after generation."
+    },
+    "A.4 Sine, cosine, and tangent are shape fingerprints": {
+      "role": "Turn trig functions into living geometric relationships instead of SOHCAHTOA chants.",
+      "format": "D",
+      "style": "unit-circle projection plate",
+      "prompt": "Create a beautiful hybrid image of a point moving around a circle while vertical and horizontal projections drop to form sine and cosine, and a tangent line reveals tangent as a slope-like ratio. The motion around the circle should feel continuous and bodily. Keep the geometry clean enough for later labels, but rich enough to be memorable as art.",
+      "caption": "Trig functions are projections and shape relations made visible.",
+      "overlay": "Exact axes, circle, and projection lines should be overlaid later."
+    },
+    "A.5 Another lens: shadows, slopes, and the unit circle": {
+      "role": "Offer multiple entrances into trig for different cognitive styles.",
+      "format": "H",
+      "style": "three-lens trig triptych",
+      "prompt": "Make a triptych linking a sundial shadow, a hillside or roof slope, and the unit circle projection picture. The same turning quantity should quietly govern all three panels. The goal is cognitive generosity: whichever doorway the learner uses, the underlying structure is the same. Celestial light, clear composition, adult sophistication.",
+      "caption": "Shadows, slopes, and circles are different faces of one turning structure.",
+      "overlay": ""
+    },
+    "A.6 Historical note: trigonometry was forced by the sky": {
+      "role": "Ground trig in astronomy, navigation, and surveying rather than textbook drills.",
+      "format": "V",
+      "style": "sky-forced trigonometry tableau",
+      "prompt": "Create a night-to-dawn observational scene with astronomers, navigators, or surveyors using angular measurements to locate stars, distances, and directions. The circle of the sky and the practical need to project it into numbers should dominate the mood. Historical, luminous, not romanticized into fantasy.",
+      "caption": "Trigonometry was born because the sky and the sea demanded it.",
+      "overlay": ""
+    },
+    "A.7 Why this interlude pays rent later": {
+      "role": "Bridge turning to complex numbers, waves, and calculus.",
+      "format": "B",
+      "style": "turning-bridge plate",
+      "prompt": "Design a visual bridge where a turning radius on a circle smoothly becomes an oscillating sine wave, a complex-plane rotation, and later a wave or differential-equation motif. This should feel like one idea changing clothes, not several disconnected applications. Elegant continuity, strong visual rhythm, future-facing.",
+      "caption": "Turning becomes projection, oscillation, rotation, and eventually waves.",
+      "overlay": ""
+    },
+    "A.8 Thought experiments": {
+      "role": "Invite the learner to physically feel angle, radian, and projection.",
+      "format": "M",
+      "style": "body-turn thought sketch",
+      "prompt": "Show a person or arm turning through space, a wheel rolling a radius along its own arc, and a shadow length changing as a light rotates. Keep each mini-scene spare and physically believable. The goal is to make trig inhabit the body before it returns to symbols.",
+      "caption": "Feel the turn, then watch its projections appear.",
+      "overlay": ""
+    },
+    "12.1 Why the real line is not the whole story": {
+      "role": "Make the need for the plane feel like necessity, not fancy extension.",
+      "format": "B",
+      "style": "line-too-small bridge plate",
+      "prompt": "Create an image where the number line literally feels too cramped to host certain transformations, while the plane opens beside it as a larger stage. A line-bound world should be shown reaching a conceptual limit, then unfolding into a two-dimensional arena with room for rotation. The emotional tone should be relief and expansion rather than complication.",
+      "caption": "Sometimes the old stage is too small for the action we need.",
+      "overlay": ""
+    },
+    "12.2 A complex number as magnitude and angle": {
+      "role": "Introduce complex numbers as vectors with length and direction in the plane.",
+      "format": "H",
+      "style": "polar-form plate",
+      "prompt": "Show a vector from the origin to a point in the plane, with magnitude rendered as distance and angle rendered as turn. The composition should make polar form feel natural and bodily: how far, and in what direction. Use subtle radial grids or luminous circle hints, but keep the image uncluttered and elegant. Modern, slightly cosmic, deeply readable.",
+      "caption": "A complex number can be seen as magnitude plus angle.",
+      "overlay": ""
+    },
+    "12.3 Multiplication becomes \u201cmultiply magnitudes, add angles\u201d": {
+      "role": "Make complex multiplication feel like composition of rotate-and-scale actions.",
+      "format": "D",
+      "style": "rotate-and-scale composition plate",
+      "prompt": "Illustrate two complex transformations composed in sequence: one rotation-and-scaling followed by another, with the final result shown as a single equivalent rotation-and-scaling. Magnitudes should visibly multiply and angles visibly add. Think of a modernist kinetic diagram or precision watchmaking for transformations. Clean enough for labels later, vivid enough to stick in memory.",
+      "caption": "Complex multiplication composes scale with rotation.",
+      "overlay": "Overlay angle arcs and magnitude marks after generation."
+    },
+    "12.4 What i really is": {
+      "role": "Give i a geometric body as the quarter-turn.",
+      "format": "H",
+      "style": "quarter-turn plate",
+      "prompt": "Show the positive real axis rotating cleanly ninety degrees onto the imaginary axis, with the quarter-turn itself as the central event. The scene should feel like the simplest possible nontrivial complex action: no scaling, only perfect rotation. Minimal, luminous, high-contrast, unforgettable.",
+      "caption": "i is the quarter-turn that sends one axis into the other.",
+      "overlay": ""
+    },
+    "12.5 Square roots of negatives": {
+      "role": "Make \u221a-1 feel like the half-turn\u2019s half-turn.",
+      "format": "H",
+      "style": "half-turn-halved plate",
+      "prompt": "Illustrate a half-turn from the positive real axis to the negative real axis, then visually split that rotation into two equal quarter-turns, the first of which becomes the square root of negative one. The image should make the idea feel elegant and unsurprising once rotation is allowed. Minimal but conceptually sharp.",
+      "caption": "A square root of negative one is a quarter-turn whose double is a half-turn.",
+      "overlay": ""
+    },
+    "12.6 Euler\u2019s formula as compressed geometry": {
+      "role": "Show continuous rotation generating the unit circle and linking exponentials to trig.",
+      "format": "B",
+      "style": "Euler bridge plate",
+      "prompt": "Create a stunning but disciplined image where a smooth rotational flow traces the unit circle while simultaneously appearing as exponential accumulation in the complex plane. Cosine and sine should appear as projection shadows or components, not as random floating formulas. The scene should feel like one of mathematics\u2019 great compressions: growth language learning to speak rotation. Modernist, luminous, precise, adult.",
+      "caption": "Euler\u2019s formula is continuous rotation written in exponential language.",
+      "overlay": ""
+    },
+    "12.7 Historical note: from suspicion to indispensability": {
+      "role": "Humanize the long shift from calling complex numbers impossible to using them everywhere.",
+      "format": "V",
+      "style": "historical acceptance montage",
+      "prompt": "Create a sequence moving from skeptical algebra on paper to elegant geometric plane interpretation to modern engineering or physics applications that quietly depend on complex numbers. The tone should be measured and respectful: an idea once mocked becomes indispensable once its geometry is seen. Rich paper textures, modern glow at the end, no triumphal kitsch.",
+      "caption": "Impossible numbers became necessary when their geometry was understood.",
+      "overlay": ""
+    },
+    "12.8 Thought experiments": {
+      "role": "Invite mental rehearsal of rotate-and-scale composition.",
+      "format": "M",
+      "style": "compass-rotation sketch",
+      "prompt": "Show a simple arrow in the plane being rotated, then rotated again, while also being stretched. A small unit-circle component shadow can sit nearby. The sketch should feel like a private rehearsal for understanding complex multiplication without formalism. Sparse, exact, mentally runnable.",
+      "caption": "Compose the turns and the scales in your head and watch the law emerge.",
+      "overlay": ""
+    },
+    "13.1 Vectors are directed segments generalized": {
+      "role": "Expand the arrow idea from the line into the plane and space without breaking the original intuition.",
+      "format": "H",
+      "style": "space-arrow plate",
+      "prompt": "Illustrate arrows living in two and three dimensions, all understood as directed segments that can be translated without changing their identity. A few arrows should share magnitude and direction in different locations to emphasize free-vector thinking. Clean spatial engineering aesthetic, subtle depth, no clutter.",
+      "caption": "A vector is the old directed segment grown into richer space.",
+      "overlay": ""
+    },
+    "13.2 Magnitude becomes a norm": {
+      "role": "Show length in higher dimensions as an invariant under rotations.",
+      "format": "H",
+      "style": "norm plate",
+      "prompt": "Create a spatial scene where a vector rotates through different orientations while a glowing sphere or circular shell of constant norm remains fixed. The image should teach that magnitude in higher dimensions is not guesswork but the invariant preserved by rotation. Elegant, high-clarity, restrained palette of steel and light.",
+      "caption": "Norm is the higher-dimensional descendant of length.",
+      "overlay": ""
+    },
+    "13.3 The dot product measures alignment": {
+      "role": "Make the dot product feel like measured directional agreement, not a mysterious formula.",
+      "format": "D",
+      "style": "alignment-and-projection plate",
+      "prompt": "Show two vectors meeting at an angle, with one casting a projection onto the direction of the other, and a luminous overlap-like quantity indicating alignment. The image should connect angle, projection, and magnitude in one concise composition. Precise linework, calm spatial depth, overlay-friendly for angle marks or projection brackets.",
+      "caption": "The dot product measures how much one vector points along another.",
+      "overlay": "Overlay angle/projection markers later."
+    },
+    "13.4 Matrices are transformation machines": {
+      "role": "Embodied matrices as devices that stretch, shear, rotate, and reflect entire space.",
+      "format": "H",
+      "style": "transformation-room plate",
+      "prompt": "Illustrate a simple grid or room being acted on by an invisible machine so that the whole space stretches, shears, or rotates. Include a familiar object like a book or cube so the deformation is felt bodily. The scene should make a matrix feel like an action on space, not a rectangle of numbers. Clean, engineering-grade, concept-first.",
+      "caption": "Matrices are machines that act on entire spaces at once.",
+      "overlay": ""
+    },
+    "13.5 Historical note: why this language won": {
+      "role": "Show why vectors and matrices became irresistible across science and engineering.",
+      "format": "V",
+      "style": "historical-modern utility montage",
+      "prompt": "Create a measured montage linking artillery or navigation vectors, engineering stress diagrams, computer graphics grids, and modern data or physics imagery, all unified by transformation language. The point is not breadth for its own sake but the recurring usefulness of a compact language for direction and change. Crisp, coherent, no clutter.",
+      "caption": "This language won because it organizes many worlds at once.",
+      "overlay": ""
+    },
+    "13.6 Thought experiments": {
+      "role": "Invite the learner to feel free vectors, alignment, and order-sensitive rotations.",
+      "format": "M",
+      "style": "book-rotation thought sketch",
+      "prompt": "Show a book or block being rotated around one axis and then another in alternate orders, plus two identical arrows moved to different places without changing identity. Add a tiny projection scene for alignment. Sparse and tactile, like a margin note asking the reader to try it with their own hands.",
+      "caption": "Move the arrow, rotate the book, and let the structure announce itself.",
+      "overlay": ""
+    },
+    "B.1 Before coordinates, geometry and algebra spoke different dialects": {
+      "role": "Show the historical gap between shape-thinking and symbolic equation-thinking.",
+      "format": "V",
+      "style": "two-dialects tableau",
+      "prompt": "Create a split historical tableau: on one side a geometer working with shapes, compass, and diagram; on the other an algebraist surrounded by symbolic manipulation. In the middle, leave an almost-empty bridge waiting to be built. The image should communicate that analytic geometry was a translation breakthrough between two already powerful but separate languages.",
+      "caption": "Coordinates built a bridge between shape and symbol.",
+      "overlay": ""
+    },
+    "B.2 A point gets an address": {
+      "role": "Make coordinate assignment feel like choosing an address system, not discovering essence.",
+      "format": "H",
+      "style": "addressing-space plate",
+      "prompt": "Show a point in the plane receiving an address from two perpendicular reference directions, like a city intersection map translated into pure geometry. The point should remain the same object while different frames could, in principle, describe it differently. Clear, map-like, elegant, and adult.",
+      "caption": "A coordinate is an address relative to chosen axes.",
+      "overlay": ""
+    },
+    "B.3 Equation as locus, not just a sentence to solve": {
+      "role": "Shift equation-thinking from verbal command to geometric set of points.",
+      "format": "D",
+      "style": "locus plate",
+      "prompt": "Illustrate an equation coming alive as a curve or line: countless points satisfying one common constraint and glowing into a visible locus. The image should make 'equation' feel like a habitat of points, not a line of text begging to be manipulated. Clean graph geometry with atmospheric restraint, ready for optional overlays.",
+      "caption": "An equation can describe a place, not only a puzzle.",
+      "overlay": "Overlay specific equations later."
+    },
+    "B.4 Solving becomes intersection": {
+      "role": "Show simultaneous solution as where constraints meet.",
+      "format": "D",
+      "style": "intersection-as-solving plate",
+      "prompt": "Compose two curves or a curve and a line in the coordinate plane whose intersection point glows as the place where both constraints are true at once. The rest of each graph should remain visible enough that the meaning of simultaneous truth is felt. Elegant analytic geometry, uncluttered, overlay-friendly for exact graphs if needed.",
+      "caption": "Solving can mean finding where two worlds agree.",
+      "overlay": "Overlay exact axes and curve labels later."
+    },
+    "B.5 Another lens: machine view and constraint view": {
+      "role": "Offer two complementary readings of equations and functions.",
+      "format": "S",
+      "style": "machine-vs-constraint plate",
+      "prompt": "Design a split image. One side treats a formula as a machine transforming an input into an output. The other treats the same formula as a constraint carving out a shape or locus in space. The two views should visibly share structure rather than compete. Clean modern design, transparent layers, conceptual generosity.",
+      "caption": "The same expression can be read as a machine or as a constraint.",
+      "overlay": ""
+    },
+    "B.6 Historical note: analytic geometry changed the landscape": {
+      "role": "Historicize the coordinate bridge as a true reorganization of the subject.",
+      "format": "V",
+      "style": "analytic-geometry revolution tableau",
+      "prompt": "Create a scene inspired by early modern analytic geometry: a room where diagrammatic geometry and symbolic algebra meet on the same surface, with curves gaining equations and equations gaining shape. Avoid portrait clich\u00e9; focus on the conceptual merger. Warm paper, precise lines, the feeling of a landscape being redrawn.",
+      "caption": "Once shape and symbol could translate, mathematics accelerated.",
+      "overlay": ""
+    },
+    "B.7 Why this bridge matters for the rest of the book": {
+      "role": "Make coordinates feel like the hinge from geometry into functions and calculus.",
+      "format": "B",
+      "style": "bridge-forward plate",
+      "prompt": "Design a bridge image in which a coordinate grid becomes a curve, the curve becomes a function, the function grows tangents and areas, and the whole analytic world of later chapters unfolds. The point is continuity: coordinates are not a side chapter but the gateway to modern curve-thinking. Spacious, elegant, future-facing.",
+      "caption": "Coordinates make later function and calculus thinking possible.",
+      "overlay": ""
+    },
+    "B.8 Thought experiments": {
+      "role": "Invite the learner to switch between shape and symbolic report.",
+      "format": "M",
+      "style": "map-to-equation sketch",
+      "prompt": "Show a point being read off a grid, a circle being recognized as the set of points a fixed distance from a center, and two crossing graphs turning into a solved system. Keep it sparse and portable, like a set of private check-your-understanding sketches. Mentally runnable at a glance.",
+      "caption": "Ask yourself whether you are reading an address, a machine, or a constraint.",
+      "overlay": ""
+    },
+    "14.1 The mapping itself is an object": {
+      "role": "Make the shift from action to object explicit and almost physical.",
+      "format": "H",
+      "style": "function-machine plate",
+      "prompt": "Illustrate a clear but elegant machine that takes in one kind of input and reliably produces one output, while the machine itself is highlighted as the real object of attention. Avoid childish gears; think transparent scientific instrument or sculptural mechanism. The reader should feel that a rule can itself be studied, combined, inverted, and transformed.",
+      "caption": "A function is not just what it does; it is also a thing in its own right.",
+      "overlay": ""
+    },
+    "14.2 The graph makes the function visible": {
+      "role": "Turn mapping into a visible curve in the plane.",
+      "format": "D",
+      "style": "graph-as-visibility plate",
+      "prompt": "Show a set of input-output pairs rising into the plane and cohering into a continuous graph, with the curve felt as the visible body of the function. The image should treat the graph not as homework paper but as the function made visible. Elegant coordinate aesthetics, transparent grid, optional overlay for axes and points.",
+      "caption": "A graph is the function showing its body.",
+      "overlay": "Overlay axes and sample points later."
+    },
+    "14.3 Composition is feeding one machine into another": {
+      "role": "Embodied composition as output flowing into the next input.",
+      "format": "H",
+      "style": "machine-feeding plate",
+      "prompt": "Create a transparent two-stage machine or pipe system where the output of the first transformation literally feeds the input of the second, producing a final transformed result. The scene should make function composition feel practical and spatial. Clean, glass-like, adult, with a sense of process rather than clutter.",
+      "caption": "Composition means do one transformation, then feed its result into the next.",
+      "overlay": ""
+    },
+    "14.4 Inverse functions and reflection": {
+      "role": "Show inversion as input-output swapping and reflection across y=x.",
+      "format": "D",
+      "style": "reflection plate",
+      "prompt": "Illustrate a graph and its inverse as reflections across a luminous diagonal mirror line representing y equals x. The swap of input and output should be visible both as mirrored curve geometry and as a conceptual exchange of roles. Elegant and precise, with strong visual symmetry and room for optional annotation overlays.",
+      "caption": "Inverse functions are the same relation viewed with input and output exchanged.",
+      "overlay": "Overlay diagonal line and axes after generation."
+    },
+    "14.5 Historical note: Euler and the rise of function-thinking": {
+      "role": "Place the abstraction of function in its historical emergence.",
+      "format": "V",
+      "style": "historical function montage",
+      "prompt": "Create a historical editorial scene where curves, formulas, and mappings begin to be treated as coherent objects in their own right. You can suggest Euler-era notation and paper culture without turning it into a portrait piece. The conceptual birth of function-thinking should dominate, not biographical trivia.",
+      "caption": "Functions became powerful when the mapping itself became an object of thought.",
+      "overlay": ""
+    },
+    "14.6 Thought experiments": {
+      "role": "Invite learners to think in mappings, graphs, and inverses.",
+      "format": "M",
+      "style": "mapping thought sketch",
+      "prompt": "Show a tiny input-output machine, its graph in the plane, and a reflected inverse partner, all in one sparse triad. The point is to let the learner ask: what stays the same when I switch viewpoints? Minimal, clear, encouraging.",
+      "caption": "Move between machine view and graph view until they feel like the same thing.",
+      "overlay": ""
+    },
+    "15.1 A polynomial is a constructed transformation": {
+      "role": "Make a polynomial feel assembled from shifts, scalings, and powers.",
+      "format": "H",
+      "style": "assembled-machine plate",
+      "prompt": "Illustrate a machine assembled from modules labeled only by their visual action: a power-raising chamber, a scaling lever, a shift block, and an addition junction, all combining to generate one smooth output curve. The image should communicate that a polynomial is built from operations we already understand. Editorial-machine style, adult and precise.",
+      "caption": "A polynomial is a recipe built from familiar transformations.",
+      "overlay": ""
+    },
+    "15.2 Roots are where the machine outputs zero": {
+      "role": "Turn roots into crossings where the transformation hits the horizontal axis.",
+      "format": "D",
+      "style": "zero-crossing plate",
+      "prompt": "Show a polynomial curve crossing the x-axis at several points, with each crossing read as a place where the machine\u2019s output vanishes. The axis should feel like a meaningful threshold, not just graph paper decoration. Elegant analytic illustration, optional overlay for curve specifics and factor hints.",
+      "caption": "A root is where the transformation lands exactly on zero.",
+      "overlay": "Overlay exact curves later if needed."
+    },
+    "15.3 The dimension insight: abstract polynomials are usually ratio-machines": {
+      "role": "Prevent dimensional nonsense by showing why raw lengths cannot usually be plugged into abstract polynomials unchanged.",
+      "format": "S",
+      "style": "dimension-discipline plate",
+      "prompt": "Create a split image where one side tries to add incompatible geometric species\u2014a length term, an area term, a pure number term\u2014and visibly fails to cohere, while the other side shows a clean dimensionless polynomial machine working on pure ratios. The image should feel like a powerful correction, not scolding. Transparent layers and type discipline are key.",
+      "caption": "Polynomials usually live in the world of pure ratios unless coefficients carry the missing dimensions.",
+      "overlay": ""
+    },
+    "15.4 Why polynomials matter so much": {
+      "role": "Show polynomials as the simplest smooth curves that approximate richer behavior.",
+      "format": "B",
+      "style": "gateway-curves plate",
+      "prompt": "Design a bridge image in which simple polynomial curves act like scaffolding for more complicated smooth behaviors, gradually approximating richer functions. The composition should suggest that polynomials are the training ground and local language of calculus. Clean, elegant, future-leaning, with a sense of increasingly expressive smoothness.",
+      "caption": "Polynomials matter because they are the first smooth language rich enough to approximate much more.",
+      "overlay": ""
+    },
+    "15.5 Historical note: from Babylon to the Renaissance and beyond": {
+      "role": "Give polynomial problem-solving a long civilizational arc.",
+      "format": "V",
+      "style": "long-polynomial-history montage",
+      "prompt": "Create a restrained historical montage from ancient equation-solving on clay or parchment through Renaissance algebraic ambition into modern curve-based understanding. Avoid turning it into a jumble of names; focus on the enduring desire to solve structured symbolic problems and see their geometric consequences. Warm history meeting modern clarity.",
+      "caption": "Polynomial thinking has been part of the subject\u2019s backbone for millennia.",
+      "overlay": ""
+    },
+    "15.6 Thought experiments": {
+      "role": "Invite the learner to imagine turning transformation knobs and watching axis crossings move.",
+      "format": "M",
+      "style": "polynomial knob sketch",
+      "prompt": "Show a simple curve with a few conceptual knobs for shifting up, stretching, or changing curvature, and watch its zero crossings slide. The sketch should feel like exploratory play for a serious mind, not gamification. Minimal, lucid, graph-like.",
+      "caption": "Change the machine slightly and watch where its output hits zero.",
+      "overlay": ""
+    },
+    "16.1 Calculus did not appear from nowhere": {
+      "role": "Bridge all prior chapters into calculus as a natural culmination.",
+      "format": "B",
+      "style": "calculus-emergence bridge plate",
+      "prompt": "Create a wide conceptual plate in which earlier motifs\u2014ratio machine, nested intervals, slope as rate, accumulation by pieces, function curves\u2014converge into a single calculus scene. The feeling should be inevitability, not abrupt novelty. This is the moment the reader realizes calculus is the same scaffold under a stronger microscope.",
+      "caption": "Calculus is not a new genre; it is the old scaffold under refinement.",
+      "overlay": ""
+    },
+    "16.2 Derivative: the slope that survives zooming in": {
+      "role": "Make the derivative feel like a stable answer emerging from repeated local refinement.",
+      "format": "D",
+      "style": "secant-to-tangent zoom plate",
+      "prompt": "Illustrate a curve under progressive zoom, with secant lines from nearby points settling toward one tangent line that survives the magnification. The image should make the derivative feel discovered through stabilization, not defined by symbolic ritual. Precision optics vibe, elegant analytic geometry, optional overlay for curve and secants.",
+      "caption": "The derivative is the slope that remains after enough honest zooming.",
+      "overlay": "Overlay exact curve, point, and secant/tangent lines after generation."
+    },
+    "16.3 Another lens: local linearity": {
+      "role": "Offer a gentler intuition: every smooth curve looks straighter up close.",
+      "format": "H",
+      "style": "microscope-of-curves plate",
+      "prompt": "Show a magnifying progression on a smooth curve where each closer view looks more and more like a straight line segment. The image should feel like a microscope discovering hidden linearity inside curvature. Clean, almost scientific-instrument aesthetic, but warm enough to reassure rather than intimidate.",
+      "caption": "Local linearity is the visual secret behind derivatives.",
+      "overlay": ""
+    },
+    "16.4 Rates and units": {
+      "role": "Keep dimensional analysis alive inside derivative thinking.",
+      "format": "S",
+      "style": "rate-type-signature plate",
+      "prompt": "Design a split or layered image where one derivative is displacement over time, another is area over length, and the output type changes accordingly. The visual emphasis should be that derivatives are rates with units, not abstract slopes floating free of context. Graphs, unit tags, and physical meaning should coexist without clutter.",
+      "caption": "A derivative always says 'change in what, per change in what else?'",
+      "overlay": ""
+    },
+    "16.5 Integral: accumulation under refinement": {
+      "role": "Make the integral feel like a stable total emerging from finer and finer pieces.",
+      "format": "D",
+      "style": "refined-rectangles plate",
+      "prompt": "Illustrate area under a curve being approximated by rectangles that become thinner and more numerous until a smooth accumulated shape is trusted. The image should emphasize accumulation and refinement rather than rote symbols. Precision plus warmth; this is one of the book\u2019s core conceptual images. Optional overlay for axes and partition lines.",
+      "caption": "An integral is what survives when accumulated pieces are refined honestly.",
+      "overlay": "Overlay exact grid/rectangle lines later."
+    },
+    "16.6 The Fundamental Theorem of Calculus": {
+      "role": "Show derivative and integral as inverse-ish partners in one coherent visual loop.",
+      "format": "B",
+      "style": "inverse-loop plate",
+      "prompt": "Create a looped conceptual image in which a curve generates an accumulated-area function, and then the local rate of that accumulated function returns the original curve. Use a thin growing area strip and a tangent-rate motif linked in one elegant cycle. This should feel like one of the grand closure moments of the book\u2014two opposite processes locking together.",
+      "caption": "Accumulating rates and extracting rates are inverse partners.",
+      "overlay": ""
+    },
+    "16.7 Taylor series: local information rebuilding the whole": {
+      "role": "Show increasingly rich local approximations reconstructing a function.",
+      "format": "H",
+      "style": "local-to-whole plate",
+      "prompt": "Illustrate a complicated smooth curve with a sequence of local polynomial approximations: constant, tangent line, parabola, then richer curves hugging the original more closely near a chosen point. The image should feel like zoomed local data being used to rebuild the wider behavior. Elegant layering, clear color hierarchy, no overload.",
+      "caption": "Local information can rebuild astonishingly much of the whole.",
+      "overlay": ""
+    },
+    "16.8 Historical note: Newton, Leibniz, then rigor": {
+      "role": "Place calculus inside both invention and later clarification.",
+      "format": "V",
+      "style": "calculus-history montage",
+      "prompt": "Create a disciplined historical montage: geometric tangent and area problems, then symbolic fluency with differentials, then later rigorous epsilon-limit refinement. The image should emphasize continuity more than rivalry. Think intellectual lineage, not duel narrative. Paper, diagrams, motion, measured modernity.",
+      "caption": "Calculus was invented powerfully before it was made fully rigorous.",
+      "overlay": ""
+    },
+    "16.9 Common confusions to avoid": {
+      "role": "Kill the usual confusions: derivative is not just 'the formula you get', integral is not just 'area sometimes'.",
+      "format": "S",
+      "style": "confusion-killing split plate",
+      "prompt": "Design a corrective plate with mistaken textbook shortcuts on one side\u2014derivative as dead algebra, integral as only shaded area\u2014and the fuller structural meanings on the other: stable local rate and accumulated quantity under refinement. The right side should feel like a return of life to the subject. Sharp contrast, sophisticated editorial design.",
+      "caption": "Do not reduce calculus to symbol manipulation divorced from the process it compresses.",
+      "overlay": ""
+    },
+    "16.10 Thought experiments": {
+      "role": "Invite the learner to run a small internal movie of zooming and accumulation.",
+      "format": "M",
+      "style": "calculus-thought sketch",
+      "prompt": "Show a point on a curve under a zoom lens becoming straight, and beside it a strip of rectangles getting finer under the same kind of refining gaze. Sparse, elegant, mentally runnable. The image should feel like a private meditation on what survives refinement.",
+      "caption": "Zoom in, refine the pieces, and trust the stable thing that remains.",
+      "overlay": ""
+    },
+    "17.1 Euclidean geometry already trained us for this": {
+      "role": "Show special relativity as a change of invariant, not a break from all prior geometry.",
+      "format": "B",
+      "style": "Euclid-to-spacetime bridge plate",
+      "prompt": "Create a bridge image that starts with the familiar Euclidean distance invariant in a spatial grid and then morphs into a spacetime grid where a different quadratic form is preserved. The viewer should feel continuity: this is still geometry, but the preserved quantity has changed. Austere, elegant, deeply structured.",
+      "caption": "Relativity is strange, but it is still geometry organized by invariants.",
+      "overlay": ""
+    },
+    "17.2 Relativity changes the symmetry group": {
+      "role": "Make the change from rotations to Lorentz transformations visually graspable.",
+      "format": "H",
+      "style": "symmetry-group shift plate",
+      "prompt": "Illustrate two kinds of preserved structures side by side: Euclidean circles under rotations and hyperbola-like invariant structures under Lorentz-style spacetime transformations. The scene should feel like the rulebook of symmetry has changed while the game of preserving structure remains the same. Minimal, modernist, high clarity.",
+      "caption": "The crucial change is which transformations preserve the world\u2019s law.",
+      "overlay": ""
+    },
+    "17.3 Energy and momentum form a spacetime-like object": {
+      "role": "Make the energy-momentum relation feel like another invariant vector story.",
+      "format": "D",
+      "style": "energy-momentum plate",
+      "prompt": "Create a modernist plate where energy and momentum components assemble into a four-dimensional vector-like object, and an invariant relation glows as the preserved 'length' of that object. You need not literalize all four dimensions; instead, use layered projections and a Minkowski-style geometry cue. Precise, restrained, powerful. Optional overlay for formulas later.",
+      "caption": "Energy and momentum belong together as one invariant structure.",
+      "overlay": "Formula overlay recommended after generation."
+    },
+    "17.4 Why this belongs in the same book": {
+      "role": "Show the continuity from earlier invariants to modern physics.",
+      "format": "B",
+      "style": "same-scaffold plate",
+      "prompt": "Design a visual family portrait of invariants across the book: translation differences, rotational distances, scaling ratios, complex magnitudes, spacetime intervals, and energy-momentum invariants all arranged as descendants of one shared idea. The image should be explanatory, not merely decorative. The viewer should feel that relativity is a late chapter in the same long story.",
+      "caption": "The invariant becomes the law, whether in geometry or physics.",
+      "overlay": ""
+    },
+    "17.5 Historical note: Einstein, Minkowski, and the geometric upgrade": {
+      "role": "Historicize the move from physical principle to geometric language.",
+      "format": "V",
+      "style": "relativity-history tableau",
+      "prompt": "Create a historically sensitive editorial scene where messy measurements and physical principles are re-expressed through a cleaner spacetime geometry. The image may hint at Einstein\u2019s physical insight and Minkowski\u2019s geometric recasting without turning into a biographical poster. Modern paper, chalkboards, light cones, disciplined restraint.",
+      "caption": "The geometric recasting of physics was an upgrade in language, not mere ornament.",
+      "overlay": ""
+    },
+    "17.6 A brief modern echo: Noether": {
+      "role": "Tie invariance to conservation law in a single memorable image.",
+      "format": "H",
+      "style": "Noether echo plate",
+      "prompt": "Illustrate a modern, clean conceptual scene in which a symmetry operation leaves an action-like system unchanged and, in a linked chamber, a conserved quantity remains steady. The relation between symmetry and conservation should feel almost magical but structurally crisp. Noether should appear as an intellectual presence, not a portrait requirement. Elegant, compressed, memorable.",
+      "caption": "Symmetry is not decoration; it generates conservation.",
+      "overlay": ""
+    },
+    "17.7 Thought experiments": {
+      "role": "Invite intuitive rehearsal of invariant change under changed frames.",
+      "format": "M",
+      "style": "spacetime-thought sketch",
+      "prompt": "Show two observers slicing the same spacetime event pattern differently while one interval remains visually unchanged, alongside a tiny echo of a rotated Euclidean vector whose length stays fixed. Sparse and conceptual, like a notebook experiment comparing two kinds of invariance. Calm, modern, lucid.",
+      "caption": "Change the frame and watch what changes; then notice what stubbornly does not.",
+      "overlay": ""
+    },
+    "18.1 Build the real numbers rigorously": {
+      "role": "Make the next step feel like reinforcing a bridge pier, not restarting from scratch.",
+      "format": "H",
+      "style": "foundation-deepening plate",
+      "prompt": "Illustrate the real number line under construction at a deeper level: nested intervals, Dedekind cuts, and Cauchy-like convergence as reinforcing beams under an already-walkable bridge. The image should say that rigor is reinforcement of intuition, not hostility to intuition. Architectural, calm, confidence-building.",
+      "caption": "Rigor is reinforcement, not betrayal.",
+      "overlay": ""
+    },
+    "18.2 Re-derive algebraic laws from the geometry": {
+      "role": "Frame proof of laws as paying down conceptual debt.",
+      "format": "H",
+      "style": "debt-paid plate",
+      "prompt": "Show familiar algebraic laws etched on translucent sheets hovering above the geometric constructions that generate them\u2014distributivity from scaling joined segments, fraction rules from inverse scaling, sign rules from symmetries. The image should feel like debts being settled and slogans earning their keep. Elegant, scholarly, not overloaded.",
+      "caption": "A law becomes trustworthy when you can see what geometry forced it.",
+      "overlay": ""
+    },
+    "18.3 Go deeper on Euler\u2019s formula and complex exponentials": {
+      "role": "Present deeper study as thickening one of the most beautiful bridges in the book.",
+      "format": "H",
+      "style": "deep-Euler plate",
+      "prompt": "Create a richer version of the Euler bridge where complex exponentials, rotations, waves, and differential equations start to braid together. This should look like an invitation to a deeper chamber, not a rehash. Luminous, modernist, mathematically romantic without becoming cheesy.",
+      "caption": "This is one bridge worth walking farther than once.",
+      "overlay": ""
+    },
+    "18.4 Differential equations: laws of change become the object": {
+      "role": "Show the next frontier after derivative-as-rate: whole families of curves obeying local laws.",
+      "format": "H",
+      "style": "field-of-solutions plate",
+      "prompt": "Illustrate a slope field or directional texture in the plane giving rise to many possible solution curves that flow through it. The image should make the subject feel like geometry of laws rather than symbol warfare. Calm, organic, precise, future-facing.",
+      "caption": "Differential equations ask which curves obey a local law everywhere.",
+      "overlay": ""
+    },
+    "18.5 Linear algebra as the grown-up form of transformation geometry": {
+      "role": "Show later study as deepening, not abandoning, the transformation viewpoint.",
+      "format": "H",
+      "style": "grown-up-transformations plate",
+      "prompt": "Create an image where simple arrows and grids from earlier chapters mature into richer linear-algebra structures: eigen-directions, matrix actions, coordinated transformations of space. The tone should be 'same story, larger room.' Clean engineering elegance, strong continuity with section 13.",
+      "caption": "Linear algebra is transformation geometry with more serious muscles.",
+      "overlay": ""
+    },
+    "18.6 Probability and statistics as structured uncertainty": {
+      "role": "Open a door from deterministic geometry into distributions, inference, and information.",
+      "format": "H",
+      "style": "structured-uncertainty plate",
+      "prompt": "Show a cloud of data points, a smooth probability curve, and an information-like compression motif sharing one clean space. The image should avoid casino clich\u00e9s completely. The point is that uncertainty can be structured, quantified, and reasoned about as carefully as geometry. Modern, calm, intellectually inviting.",
+      "caption": "Probability is not the enemy of structure; it is structure under uncertainty.",
+      "overlay": ""
+    },
+    "18.7 Topology and geometry beyond rigid shape": {
+      "role": "Invite curiosity about new sameness relations beyond congruence and similarity.",
+      "format": "H",
+      "style": "beyond-rigid-shape plate",
+      "prompt": "Illustrate a shape smoothly deforming into another while preserving connectivity, alongside earlier rigid or similarity-preserving scenes fading in the background. The image should make topology feel like a new answer to the old question 'what counts as the same?' Elegant, tangible, not rubber-duck cartoon topology.",
+      "caption": "New mathematics often begins by changing the notion of sameness.",
+      "overlay": ""
+    },
+    "19.1 Abstract algebra: symmetry becomes the object itself": {
+      "role": "Show symmetry patterns detached from any single geometric carrier.",
+      "format": "H",
+      "style": "symmetry-as-object plate",
+      "prompt": "Create a conceptual scene where concrete symmetries of shapes, equations, and transformations are distilled into a shared abstract pattern\u2014like a crystalline network or operation table without text. The point is that the structure of composition itself has become the thing being studied. Modern, abstract, crisp, not decorative.",
+      "caption": "Abstract algebra studies the structure of possible symmetries and compositions.",
+      "overlay": ""
+    },
+    "19.2 Topology: sameness under continuous deformation": {
+      "role": "Make topological sameness feel like a new, gentler equivalence relation.",
+      "format": "H",
+      "style": "continuous-deformation plate",
+      "prompt": "Show one shape slowly deforming into another without tearing or gluing, with continuity of the transformation foregrounded. The image should feel serious and elegant rather than novelty-driven. Use tangible surfaces and continuous motion traces so the learner feels what is preserved when rigid shape is no longer sacred.",
+      "caption": "Topology changes the answer to 'what counts as the same?'",
+      "overlay": ""
+    },
+    "19.3 Differential geometry: calculus on curved spaces": {
+      "role": "Show curvature, local flatness, and calculus living together.",
+      "format": "H",
+      "style": "curved-space plate",
+      "prompt": "Illustrate a smooth curved surface with a tiny tangent plane attached locally, and perhaps a path or field flowing across it. The image should make clear that locally the space can still look linear enough for calculus, even while globally it bends. Clean, luminous, concept-driven, quietly beautiful.",
+      "caption": "Differential geometry asks calculus to live on curved worlds.",
+      "overlay": ""
+    },
+    "19.4 Analysis: rigor about limit, approximation, and continuity": {
+      "role": "Show analysis as the disciplined study of the refinement patterns already present throughout the book.",
+      "format": "H",
+      "style": "analysis refinement plate",
+      "prompt": "Create a spare conceptual image composed of nested intervals, convergent sequences, approximation layers, and continuity of curves, all gathered under one austere visual language of precision. The point is not symbol overload but disciplined limit-thinking as a whole domain. Elegant and almost monastic.",
+      "caption": "Analysis is the culture of taking approximation and limit seriously.",
+      "overlay": ""
+    },
+    "19.5 Probability, information, and computation": {
+      "role": "Connect modern mathematical thinking to uncertainty, encoding, and algorithmic process.",
+      "format": "H",
+      "style": "information-computation plate",
+      "prompt": "Design a contemporary image where probability clouds, encoded bit-like structures, and algorithmic flow diagrams share one coherent space. Avoid tech-bro clich\u00e9 and glowing nonsense. The visual should suggest that modern mathematics studies pattern, uncertainty, and computation together in deep ways. Crisp, contemporary, intelligent.",
+      "caption": "Modern mathematics also lives in information, uncertainty, and process.",
+      "overlay": ""
+    },
+    "19.6 Why this modern map matters for a recovering learner": {
+      "role": "Emotionally reframe advanced math as a navigable atlas, not a wall of alien jargon.",
+      "format": "B",
+      "style": "recovering-learner atlas plate",
+      "prompt": "Create a compassionate but serious image of a person or implied viewpoint standing before a richly connected map of mathematical territories\u2014algebra, topology, geometry, analysis, probability\u2014where paths and bridges are visible instead of a forbidding cliff. The tone should be dignifying and invitational, never childish or self-help-ish. This image is about restoring agency.",
+      "caption": "Advanced mathematics is a landscape you can enter, not a wall built to exclude you.",
+      "overlay": ""
+    },
+    "19.7 Final thesis": {
+      "role": "Conclude with the book\u2019s deepest claim: mathematics is organized by objects, transformations, and invariants across every scale.",
+      "format": "B",
+      "style": "final-thesis synthesis plate",
+      "prompt": "Create a culminating synthesis image that gathers the book\u2019s recurring motifs\u2014segment, arrow, dilation rays, circle, graph, tangent, complex plane, spacetime grid\u2014into one coherent constellation. The center of the composition should be the idea of invariance under transformation, with every chapter\u2019s object orbiting it. Grand but disciplined, intellectually beautiful, emotionally earned.",
+      "caption": "Across the whole book, the invariant under the right transformation becomes the real thing to understand.",
+      "overlay": ""
+    }
+  },
+  "extras": {
+    "Cover / title page": {
+      "role": "Set the tone for the whole book: serious, beautiful, first-principles, transformation-centered, adult, and visually irresistible without becoming sci-fi wallpaper.",
+      "format": "F",
+      "style": "synthesis cover art",
+      "prompt": "Create a cover illustration for an adult mathematics book that begins with a single segment and unfolds through arrow, circle, graph, complex plane, and spacetime grid into a coherent transformation-based cosmos. The composition should feel like mathematics growing from concrete geometry into modern abstraction without ever breaking its spine. Rich but disciplined, elegant typography space at top and center, no embedded text, no classroom clich\u00e9, no random equations floating in fog.",
+      "caption": "From segment to spacetime, one scaffold."
+    },
+    "Front matter opener: school made mathematics feel fake": {
+      "role": "Acknowledge the reader\u2019s experience without pity and signal that this book rebuilds trust.",
+      "format": "H",
+      "style": "editorial psychological reset plate",
+      "prompt": "Show a sterile worksheet-like world of disconnected symbols fading away while, in the foreground, real geometric objects and transformations\u2014sticks, arrows, circles, curves\u2014re-enter as tangible, intelligible things. The mood should be relief and re-entry into meaning, not therapy clich\u00e9. Adult, dignified, low-drama, intellectually welcoming.",
+      "caption": "This book returns mathematics to things you can see and act on."
+    },
+    "Decoding tool opener: picture, action, relation, compression": {
+      "role": "Give the reader the four-lens method in one memorable image.",
+      "format": "D",
+      "style": "four-lens conceptual plate",
+      "prompt": "Design a four-quadrant image around one mathematical idea\u2014such as addition or derivative\u2014shown as picture, action, relation, and compression. Each quadrant should feel different in medium but clearly belong to the same concept: a drawn scene, a transformation process, an invariant relationship, and a symbolic packaging. Elegant, didactic without being textbooky, overlay-friendly for labels later.",
+      "caption": "Every new idea can be decoded four ways."
+    },
+    "Permanent scaffold plate": {
+      "role": "Give the whole document a recurring visual anchor that readers can return to.",
+      "format": "B",
+      "style": "master-scaffold atlas",
+      "prompt": "Create a master visual atlas linking objects, sameness relations, operations, and invariants across the whole book. Segments, directed arrows, triangles, curves, functions, vectors, and spacetime intervals should appear as stations in one transformation-based system. The image should be rich enough to revisit throughout the book but not crowded. Elegant editorial map, adult palette, room for later labels.",
+      "caption": "Objects, operations, symmetries, invariants: the whole spine at once."
+    },
+    "Roadmap of the journey": {
+      "role": "Make the five-part structure feel like a navigable expedition rather than a syllabus.",
+      "format": "B",
+      "style": "journey map",
+      "prompt": "Design a five-part journey map that begins with raw magnitudes and ends in modern mathematical landscapes. Each part should have its own terrain character\u2014workshop, instrument room, celestial chamber, analytic city, spacetime atlas\u2014while remaining connected by a single path of transformations and invariants. The tone should be exploratory and rigorous, not fantasy-cartoon.",
+      "caption": "This is a journey through one evolving language, not a pile of disconnected units."
+    },
+    "Part I opener": {
+      "role": "Set the tactile, pre-symbolic tone of the first part.",
+      "format": "F",
+      "style": "earthy workshop opener",
+      "prompt": "Create a tactile opening image for Part I: wood, rope, brass compass, straight segments, and unlabeled geometric comparisons laid out like the first honest tools of mathematics before symbolism takes over. The mood should be grounded, physical, and quietly profound.",
+      "caption": "Before symbols, there were magnitudes, comparisons, and choices."
+    },
+    "Part II opener": {
+      "role": "Announce operations as transformations rather than arithmetic recipes.",
+      "format": "F",
+      "style": "instrument-and-motion opener",
+      "prompt": "Create a Part II opener in which arrows, scaling rays, mirrors, and ratio machines appear as a family of operations acting on a common geometric world. The image should feel like entering a room full of instruments that do mathematics by moving, resizing, reversing, and composing. Elegant, kinetic, no clutter.",
+      "caption": "Arithmetic becomes transformation."
+    },
+    "Part III opener": {
+      "role": "Signal expansion beyond the rational line into turning, completeness, and the plane.",
+      "format": "F",
+      "style": "celestial expansion opener",
+      "prompt": "Create a Part III opener where a number line opens into nested intervals, a turning circle, and finally the complex plane under a night-sky or observatory mood. The feeling should be expansion of stage and depth, not abandonment of prior structure. Luminous, precise, adult.",
+      "caption": "The line widens into circle, plane, and completeness."
+    },
+    "Part IV opener": {
+      "role": "Set the mood for coordinates, functions, and calculus as curve-thinking.",
+      "format": "F",
+      "style": "analytic city opener",
+      "prompt": "Create a Part IV opener where coordinate grids, curves, machines, tangents, and accumulations flow together like a transparent city of analytic structures. It should feel modern, lucid, and full of motion under refinement. Crisp glassy layers, elegant geometry, no software-dashboard vibe.",
+      "caption": "Curves become objects; change becomes visible."
+    },
+    "Part V opener": {
+      "role": "Elevate the final part into an invariants-and-modernity chamber.",
+      "format": "F",
+      "style": "austere modern physics opener",
+      "prompt": "Create a Part V opener where Euclidean geometry, complex rotations, and spacetime invariants line up as one family of preserved structures under different symmetry groups. The image should feel austere, modern, and culminating. Black, silver, deep blue, strong structure, no sci-fi noise.",
+      "caption": "At the end of the road, the invariant becomes the law."
+    },
+    "Appendix A timeline": {
+      "role": "Give the historical timeline a clean visual spine so it feels like living development rather than trivia.",
+      "format": "D",
+      "style": "timeline mural",
+      "prompt": "Design a horizontally flowing timeline mural that moves from ancient geometry and ratio crises through analytic geometry, calculus, complex numbers, linear algebra, relativity, and modern branches. Use a restrained icon system and evolving visual motifs rather than portraits alone. Clean, elegant, highly navigable.",
+      "caption": "The subject grew by answering pressure, not by accreting random facts."
+    },
+    "Appendix D proof-reading guide": {
+      "role": "Turn proof-reading from dread into a navigable practice.",
+      "format": "H",
+      "style": "proof path plate",
+      "prompt": "Create an image of a proof as a path through a structured landscape: assumptions at one end, allowed moves as stepping stones, conclusions at the far side, and common wrong turns faintly visible but not dominant. The image should be calming and procedural without becoming childish. It should tell the reader that a proof is a route to be walked, not a wall to be feared.",
+      "caption": "A proof is a path of allowed moves, not a performance of brilliance."
+    }
+  }
+}

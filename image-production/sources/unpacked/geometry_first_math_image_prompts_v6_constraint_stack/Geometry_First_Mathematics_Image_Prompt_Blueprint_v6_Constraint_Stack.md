@@ -1,0 +1,5884 @@
+# Geometry-First Mathematics Image Prompt Blueprint v6
+
+## Constraint-stack production system for GPT Image 1.5
+
+This v6 pass converts the prompt library from creative-writing briefs into compact behavior constraints. Each prompt follows the same order: Scene, Subject, Conceptual action, Composition, Materials / medium, Surface / text policy, Use. Exact mathematical text, labels, axes, tick marks, and theorem lines are post-generation vector overlays.
+
+## What changed from v5
+
+- Prompt lines are constraints, not mood prose. Each line controls scene, subject, action, composition, materials, surface policy, or intended use.
+- The prompt order is fixed: Scene -> Subject -> Conceptual action -> Composition -> Materials / medium -> Surface / text policy -> Use.
+- Use concrete nouns and exact counts; avoid vague quantities like many, several, countless, or a few.
+- One conceptual move per instructional image. Opening spreads may use station-based friezes with equal cells and blank gutters.
+- Generated art carries atmosphere, apparatus, and conceptual gesture. Exact labels, axes, equations, theorem lines, and tick marks are vector overlays.
+- Historical plates use instruments first. Closed books or blank pages may appear; open manuscripts with fake script are avoided by construction.
+- Recurring motifs are generated as reference assets first and reused through image edits to prevent style drift.
+
+## API and production defaults
+
+- Recommended model: `gpt-image-1.5`
+- Prompt count: 265
+- Pilot count: 20
+- Total recommended variants if running full library as specified: 384
+
+## Reference-image workflow
+
+- **Step 1 Generate System Assets**: SYS.1 brass_unit_stick, SYS.2 amber_invariant_glow, SYS.3 refinement_lens
+- **Step 2 Lock Asset Selection**: Choose one approved asset for each motif. Do not regenerate recurring props independently in later chapters.
+- **Step 3 Use Image Edit For Callbacks**: When a prompt has reference_tags, use the approved system asset as an input image and write edit prompts that preserve material, proportions, patina, and silhouette.
+- **Edit Invariant Sentence**: Change only the surrounding scene and conceptual apparatus. Preserve the referenced motif shape, material, scale character, patina, and lighting logic.
+
+## Batch QA protocol
+
+- Run the 20-prompt pilot first with three variants each using gpt-image-1.5, quality high for pilot regardless of record default.
+- Reject any variant with generated letters, numerals, formulas, pseudo-script, signage, visible watermarks, or fake diagram labels.
+- Reject any variant where the focal hierarchy is ambiguous after a two-second look.
+- Reject any instructional plate with more than one conceptual action unless it is explicitly a two-panel, three-panel, or frieze prompt.
+- Run automated OCR/text detection where possible; treat OCR hits as review flags, not final judgment.
+- Review side-by-side by section. Pick one winning variant or rewrite the prompt before moving to the next section cluster.
+- Only after the pilot passes, batch-generate the rest in section order.
+
+## Visual families
+
+### Tactile workshop realism
+Purpose: Magnitudes, units, measurement, number line, early fractions. Rods, string, pins, vellum, calipers, hands, shadows.
+
+Default scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+
+Default materials: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+
+Default API: quality `medium`, size `1536x1024`
+
+### Vellum-and-instrument geometry
+Purpose: Eudoxus, intercept theorem, similarity, ratio machines. Drafting arms, balances, taut threads, transparent triangles.
+
+Default scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+
+Default materials: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+
+Default API: quality `high`, size `1536x1024`
+
+### Transformation theatre
+Purpose: Negatives, complex numbers, functions, matrices, polynomials. Machines, stages, gears, turntables, input/output paths.
+
+Default scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+
+Default materials: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+
+Default API: quality `medium`, size `1536x1024`
+
+### Scale-gate and odometer
+Purpose: Exponents and logarithms. Repeated resize portals, ratio shells, counters that count multiplicative steps.
+
+Default scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+
+Default materials: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+
+Default API: quality `high`, size `1536x1024`
+
+### Refinement optics
+Purpose: Irrationals, limits, calculus, Taylor series. Lenses, nested shutters, microscopes, slices, converging masks.
+
+Default scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+
+Default materials: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+
+Default API: quality `high`, size `1536x1024`
+
+### Turning and projection observatory
+Purpose: Trigonometry and Euler's formula. Rotating arms, shadows, circular rails, sky instruments, periodic motion.
+
+Default scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+
+Default materials: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+
+Default API: quality `high`, size `1536x1024`
+
+### Field and flow
+Purpose: Differential equations, waves, phase portraits. Local arrows, currents, vibrating media, paths obeying local rules.
+
+Default scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+
+Default materials: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+
+Default API: quality `high`, size `1536x1024`
+
+### Invariant architecture
+Purpose: Relativity, Noether, modern structure. Quiet crystals, observer slices, preserved amber cores, symmetry chambers.
+
+Default scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+
+Default materials: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+
+Default API: quality `high`, size `1536x1024`
+
+### Modern map and recovery
+Purpose: Front matter, where-to-go-next, appendices. Maps, cabinets, cathedral scaffolds, disciplined visual systems.
+
+Default scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+
+Default materials: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+
+Default API: quality `high`, size `1536x1024`
+
+
+# Prompt cards
+
+## GFV6-FM_1-A — FM.1: What this revision thinks the original manuscript is really trying to do
+
+Family: Modern map and recovery  
+Placement: full-width opening plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: horizontal frieze on a modular studio wall; exactly seven equal stations from left to right
+Subject: one amber thread passes through: rod comparison, arrow translation, scale gate, nested shutter, curve under lens, local field arrows, architectural prism
+Conceptual action: show the book spine as one repeated move: object -> action -> relation -> refinement -> invariant
+Composition: seven stations, equal size, separated by blank gutters; each station reads as a simple icon before it reads as a scene
+Materials / medium: graphite wall, brass instruments, vellum, glass lens, matte stone prism, warm amber thread
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The book's thesis is one spine, not a tour of disconnected topics.
+
+Overlay notes: Overlay optional: small chapter waypoint labels on the ascending path. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_1-B — FM.1-B: Thesis spine - seven-panel reference frieze
+
+Family: Modern map and recovery  
+Placement: companion reference frieze  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: wide modular frieze with exactly seven square cells
+Subject: one brass bead travels cell by cell through comparison, translation, scaling, refinement, calculus zoom, field rule, invariant prism
+Conceptual action: same object survives the whole curriculum by changing the operation around it
+Composition: seven cells, equal size, blank gutters, bead aligned on one horizontal path
+Materials / medium: wood, brass, vellum, glass lens, water field, graphite stone prism, amber thread
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The book is a connected spine: compare, move, resize, refine, approximate, flow, preserve.
+
+Overlay notes: Use as a foldout or section divider. Add captions after generation only. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_2-A — FM.2: How to use this book if school made mathematics feel fake
+
+Family: Modern map and recovery  
+Placement: margin or opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a quiet desk scene where a stack of rote worksheets has been pushed aside and replaced by a compass, string, brass unit rod, transparent tracing paper, and a small lamp illuminating one simple segment.
+Conceptual action: The reader is being respected as a rebuilding learner; the subject is being rebuilt honestly; the mood feels like leaving a fluorescent classroom and entering a real workshop
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The reader is not being remediated; the subject is being rebuilt honestly.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_3-A — FM.3: A decoding tool for every new idea
+
+Family: Modern map and recovery  
+Placement: one-page reference image  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+
+```text
+Scene: single brass bead on a clean tabletop passing through exactly four square lenses
+Subject: the same bead appears as picture, action, relation, and compression while identity is preserved
+Conceptual action: each lens changes the learner’s view, while object identity is preserved
+Composition: four lenses in a cross around the bead; center object remains aligned; empty corners for later labels
+Materials / medium: clear glass lenses, brass bead, vellum shadows, warm tabletop side light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Picture, action, relation, compression are four views of the same idea.
+
+Overlay notes: Overlay recommended: the four words can be added in layout. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_4-A — FM.4: A visual grammar for the rest of the book
+
+Family: Modern map and recovery  
+Placement: spread opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: an elegant wall of six framed visual motifs: layered stack, path, resize, turn, constraint, and refinement.
+Conceptual action: The reader learns to recognize the book's recurring visual families; each frame is simple and iconic but rendered as fine art objects: translucent layers, a ghost path, a dilation shadow, a rotating beam, a glowing selected locus, and nested shutters closing
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The reader learns to recognize the book's recurring visual families.
+
+Overlay notes: Overlay: add motif names as typography after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_5-A — FM.5: The permanent scaffold
+
+Family: Modern map and recovery  
+Placement: full-width anchor plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+
+```text
+Scene: long workbench divided into exactly six equal stations
+Subject: one plain object is moved, resized, turned, partitioned, refined, and tested for what stays fixed
+Conceptual action: make the permanent scaffold visible as repeated actions on the same object
+Composition: six stations in a straight row; one action per station; station boundaries are blank gutters, gutter boundaries
+Materials / medium: wood bench, brass unit stick, small turntable, scale gate, nested glass shutter, amber invariant thread
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Every later concept is a reuse of the same acts.
+
+Overlay notes: Overlay recommended for platform names and chapter references. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_5-B — FM.5-B: Permanent scaffold - simplified learner card
+
+Family: Modern map and recovery  
+Placement: companion learner card  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: single square learning card on a clean desk
+Subject: four empty compartments arranged as a 2 by 2 grid: object, operation, equivalence, invariant
+Conceptual action: show the scaffold as four reusable roles in a compact learning card
+Composition: exactly four compartments; one plain object appears in all four; large blank heading space
+Materials / medium: matte card, brass bead, vellum overlay, amber thread, soft desk light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: A simpler scaffold card for readers who need the map before the machinery.
+
+Overlay notes: Add four word labels as vector type only. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-FM_6-A — FM.6: A roadmap of the journey
+
+Family: Modern map and recovery  
+Placement: front matter spread  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a long road that begins with two unmeasured sticks and passes through milestones: unit choice, number line, partition, ratio loom, dilation tower, turning observatory, function city, calculus microscope, wave landscape, spacetime arch, and modern mathematics horizon.
+Conceptual action: The book is a spiral ascent, a spiral ascent; each milestone is recognizable but clear and readable
+Composition: wide left-to-right route with exactly seven milestones; each milestone is visually simple; open sky/space above for captions
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The book is a spiral ascent, not a checklist.
+
+Overlay notes: Overlay recommended for part names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0-A — 0: Geometry before numbers: magnitudes and sameness
+
+Family: Tactile workshop realism  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: two handmade wooden rods on a table under soft side light.
+Conceptual action: Magnitude and sameness come before measurement; one rod aligns exactly with a transparent ghost of the other after a slide-and-rotate motion; In the background, a measuring scale remains blurred and secondary
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Magnitude and sameness come before measurement.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_1-A — 0.1: Magnitudes are older than numerals
+
+Family: Tactile workshop realism  
+Placement: subsection side image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a rope pulled taut between two pins, a carved stick, and the edge of a stone slab.
+Conceptual action: Length exists before its numeric report; endpoints are subtly highlighted; a faint translucent line connects the examples as instances of extension
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Length exists before its numeric report.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_2-A — 0.2: Congruence: sameness without counting
+
+Family: Tactile workshop realism  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: two segments on separate sheets of translucent vellum.
+Conceptual action: Sameness is what survives rigid motion; one sheet has been slid, rotated, and flipped in three ghosted positions until the segments land in perfect overlap
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Sameness is what survives rigid motion.
+
+Overlay notes: Overlay optional: endpoint names and motion arrows. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_3-A — 0.3: The first honest act of measurement: choose a unit
+
+Family: Tactile workshop realism  
+Placement: conceptual pipeline  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: four calm stages from left to right: raw segment, chosen brass unit stick, repeated comparison of the unit against the segment, and a small blank tag waiting for the measured report.
+Conceptual action: Measurement is a relationship between a magnitude and a chosen reference; the tag is visually last and least physical
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Measurement is a relationship between a magnitude and a chosen reference.
+
+Overlay notes: Overlay recommended for stage labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_4-A — 0.4: Comparison before multiplication
+
+Family: Tactile workshop realism  
+Placement: small horizontal plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: three rods: A and B are placed end-to-end to form a combined length; C sits below as the target comparison.
+Conceptual action: Comparison and concatenation are enough for the first layer of mathematics; use shadows and alignment to make longer, shorter, and equal feel decidable using alignment rather than generated numbers
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Comparison and concatenation are enough for the first layer of mathematics.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_5-A — 0.5: What school usually hides here
+
+Family: Tactile workshop realism  
+Placement: split-panel corrective image  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a calm corrective split image.
+Conceptual action: Most early confusion comes from collapsing four layers into one; on the left, show one confusing heap where point, segment, unit stick, arrow, and report token have been collapsed together
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Most early confusion comes from collapsing several layers into one.
+
+Overlay notes: Overlay can add layer names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_6-A — 0.6: Historical note: why the Greeks cared so much
+
+Family: Tactile workshop realism  
+Placement: vertical historical tableau  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: survey ropes, limestone blocks, a wax tablet, and a square whose diagonal refuses to match a neat row of counting pebbles.
+Conceptual action: Incommensurable lengths forced mathematics toward proof; two hands hover over the diagonal, with the seriousness of people realizing computation alone fails
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Incommensurable lengths forced mathematics toward proof.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_7-A — 0.7: Thought experiments
+
+Family: Tactile workshop realism  
+Placement: margin prompt image  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: the same unchanged object measured twice with two different unit sticks: one short brass unit repeated eight times, one longer wood unit repeated four times.
+Conceptual action: Run the idea with your hands before accepting the notation; the object remains physically identical in the center while the reports are represented only by two blank tags waiting for overlay
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Run the idea with your hands before accepting the notation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-0_8-A — 0.8: Common confusion to kill early
+
+Family: Tactile workshop realism  
+Placement: corrective plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a table edge seen through three translucent layers.
+Conceptual action: A thing, a standard, and a number are related but distinct; bottom layer: the actual edge
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: A thing, a standard, and a number are related but not identical.
+
+Overlay notes: Overlay optional: layer names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1-A — 1: The number line as geometry: oriented length
+
+Family: Tactile workshop realism  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a bare road becoming a coordinate line only after three deliberate choices: a stake hammered as origin, an arrow of travel painted on the ground, and a unit stride marked by a brass rod.
+Conceptual action: A number line is a chosen frame placed on a line; the world looks unchanged before and after; only the reference frame has been installed
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: A number line is a chosen frame placed on a line.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_1-A — 1.1: A line becomes a number line only after choices
+
+Family: Tactile workshop realism  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a plain line on a drafting table as a stage before performance.
+Conceptual action: Origin, direction, and unit turn a line into a number line; a hand places a small pin for origin, a compass arrow sets positive direction, and a unit tile is laid down
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Origin, direction, and unit turn a line into a number line.
+
+Overlay notes: Overlay recommended for O, direction arrow, and unit. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_2-A — 1.2: Directed segments: where negatives actually come from
+
+Family: Tactile workshop realism  
+Placement: horizontal plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a fixed origin bead on a horizontal rail.
+Conceptual action: Negative means opposite direction, opposite orientation; one arrow of a certain length points right; a matching ghost arrow of exactly the same length points left
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Negative means opposite direction, not less-than-real.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_3-A — 1.3: Integers as repeated unit translations
+
+Family: Tactile workshop realism  
+Placement: small sequence image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a brass unit block being copied along a rail like identical train cars.
+Conceptual action: Integers record repeated unit moves; each copy is a completed translation from the last endpoint
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Integers record repeated unit moves.
+
+Overlay notes: Overlay optional: integer coordinates after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_4-A — 1.4: Another lens: balance sheets and elevators
+
+Family: Tactile workshop realism  
+Placement: triptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a restrained triptych of orientation analogies with Each panel uses the same visual grammar: a reference, a direction, and equal distance in opposite orientations.
+Conceptual action: Signed quantities are reference-relative orientations across domains.
+Composition: exactly three equal panels with blank gutters; one conceptual role per panel; each panel contains at most two main objects
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Signed quantities are reference-relative orientations across domains.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_5-A — 1.5: Historical note: why negatives felt suspicious
+
+Family: Tactile workshop realism  
+Placement: historical note plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a historical merchant desk with physical tokens: ordinary assets sit above a reference line, debts hang below it like counterweights.
+Conceptual action: Negatives were suspect until number could mean directed relation; one older ledger treats the below-line tokens as suspicious shadows; a newer geometric overlay shows them simply as opposite-directed quantities
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Negatives were suspect until number could mean directed relation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_6-A — 1.6: The dimension subtlety
+
+Family: Tactile workshop realism  
+Placement: layered explanatory plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: one fixed point on a blank line, its directed segment from a chosen origin, and a separate blank coordinate tag hovering above like a report.
+Conceptual action: A coordinate is a report; a directed segment is a geometric object; the physical arrow and the abstract tag different materials
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: A coordinate is a report; a directed segment is a geometric object.
+
+Overlay notes: Overlay recommended for dimension notes. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_7-A — 1.7: Thought experiments
+
+Family: Tactile workshop realism  
+Placement: margin visual  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a path with footsteps measured by two different reference sticks placed beside it.
+Conceptual action: Change the frame and the report changes; the physical place stays fixed; one reference stick is short and repeats eight times; the other is longer and repeats four times
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Change the frame and the report changes; the place does not.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-1_8-A — 1.8: A preview of later structure
+
+Family: Tactile workshop realism  
+Placement: motif bridge  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a single luminous line visited by three hovering transformation glyphs: slide, reflect, scale.
+Conceptual action: The number line is already a symmetry space; each glyph leaves a different trace while a small invariant glows beneath it: difference, distance, ratio
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: The number line is already a symmetry space.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2-A — 2: Addition and subtraction as geometry of motion
+
+Family: Tactile workshop realism  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a figureless sequence of arrows moving across a clean floor: first arrow, second arrow, final displacement.
+Conceptual action: Addition is the geometry of chaining moves; the final arrow floats above the two-step path like the compressed summary of the journey
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Addition is the geometry of chaining moves.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_1-A — 2.1: Addition is composition of translations
+
+Family: Tactile workshop realism  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a point traveling from P to Q to R as two physical arrow moves, with a single larger translucent arrow spanning start to finish.
+Conceptual action: The sum is the one move equivalent to two moves in sequence; the intermediate point is visible but visually subordinate to the total displacement
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: The sum is the one move equivalent to two moves in sequence.
+
+Overlay notes: Overlay for point names and arrow labels recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_2-A — 2.2: Why commutativity is not a coincidence
+
+Family: Tactile workshop realism  
+Placement: hybrid diagram  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: two arrows as colored glass strips forming adjacent sides of a parallelogram.
+Conceptual action: Commutativity is a symmetry of translation in flat space; a diagonal beam reaches the same far corner by either route; ghosted footsteps trace both orders
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Commutativity is a symmetry of translation in flat space.
+
+Overlay notes: Overlay optional: a+b and b+a labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_3-A — 2.3: Subtraction is composition with the inverse move
+
+Family: Tactile workshop realism  
+Placement: small motion plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a bright arrow move followed by a translucent reversed arrow that perfectly unwinds it, like a path being rewound.
+Conceptual action: Subtracting means adding the undoing move; the endpoint returns to the origin marker
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Subtracting means adding the undoing move.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_4-A — 2.4: Associativity: grouping does not change the total path
+
+Family: Tactile workshop realism  
+Placement: minimal route map  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a three-segment route across a map with two faint transparent grouping bubbles placed differently over the same route.
+Conceptual action: Grouping changes description, description while accumulated displacement stays fixed; the physical path and final endpoint remain identical
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Grouping changes description, not accumulated displacement.
+
+Overlay notes: Overlay optional: parentheses as layout type only. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_5-A — 2.5: Another lens: addition as bookkeeping of change
+
+Family: Tactile workshop realism  
+Placement: alternate lens plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a ledger of changes as stacked translucent arrows rather than columns of digits.
+Conceptual action: Addition tracks net change across any compatible quantity; gains, losses, deposits, and withdrawals become displacements on a common line
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Addition tracks net change across any compatible quantity.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_6-A — 2.6: Historical note: from counting to structure
+
+Family: Tactile workshop realism  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: an abacus, tally marks, and a modern vector diagram connected by a single thread.
+Conceptual action: Old arithmetic becomes structural when viewed as transformation; the abacus counts results; the vector diagram reveals structure
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Old arithmetic becomes structural when viewed as transformation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-2_7-A — 2.7: Thought experiments
+
+Family: Tactile workshop realism  
+Placement: interactive mental scene  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a sparse grid floor with a token moved north then east, and a ghost route east then north to the same square.
+Conceptual action: Try the move in both orders and watch the endpoint; include a second tiny scene where a move and its undoing cancel
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Try the move in both orders and watch the endpoint.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3-A — 3: Fractions and rationals: partitioning and repeatability
+
+Family: Tactile workshop realism  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a long ribbon being divided by parallel light beams into equal parts, with three parts recombined elsewhere into a new segment.
+Conceptual action: Fractions are constructed by equal partition and finite repetition; the materials feels tactile: paper, thread, pins, and shadows
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Fractions are constructed by equal partition and finite repetition.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_1-A — 3.1: Equal partition is the key act
+
+Family: Tactile workshop realism  
+Placement: subsection image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a single strip of paper being prepared for equal division, with a fan of auxiliary lines from one endpoint and parallel cuts projected back onto the strip.
+Conceptual action: A fraction begins as a construction of equal parts; the focus is the act of forcing equality through geometry, the construction action before symbols
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: A fraction begins as a construction of equal parts.
+
+Overlay notes: Overlay recommended for construction lines. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_2-A — 3.2: One over n is an actual constructed length
+
+Family: Tactile workshop realism  
+Placement: close-up plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: one highlighted piece cut from a unit ribbon after division into equal parts.
+Conceptual action: One over n is one constructed equal part of the unit; the other pieces remain pale; the chosen piece glows as a real little length, a tangible little length
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: One over n is one constructed equal part of the unit.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_3-A — 3.3: m/n is repeated taking of a constructed part
+
+Family: Tactile workshop realism  
+Placement: horizontal sequence  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: identical small unit-fraction tiles being placed end-to-end to build a longer segment.
+Conceptual action: m/n is m copies of one equal part; the repeated pieces is visibly congruent, with a hand or ghost trail indicating finite repetition
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: m/n is m copies of one equal part.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_4-A — 3.4: Equivalent fractions are the same magnitude wearing different descriptions
+
+Family: Tactile workshop realism  
+Placement: split-and-overlay image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: two different tile patterns - one with six small tiles, one with three larger tiles - sliding into perfect overlap over the same length.
+Conceptual action: Equivalent fractions are different reports for one congruent length; the viewer sees different partitions, same final magnitude
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Equivalent fractions are different reports for one congruent length.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_5-A — 3.5: Commensurable versus incommensurable
+
+Family: Tactile workshop realism  
+Placement: conceptual contrast  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: two rods happily measured by the same small golden bead, then a square diagonal beside them where the bead never quite fits
+Conceptual action: One pair of magnitudes shares a common measure; one diagonal refuses.
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Some magnitudes share a common measure; some refuse.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_6-A — 3.6: Another lens: music and rhythm
+
+Family: Tactile workshop realism  
+Placement: alternate lens plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: a circular rhythm wheel split into equal pulses, with different rhythmic patterns lighting up different subsets while the cycle stays fixed.
+Conceptual action: Fractions are also equal divisions of time and rhythm; let the fraction idea become temporal: equal beats, repeated beats, same cycle
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: Fractions are also equal divisions of time and rhythm.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_7-A — 3.7: Historical note: why fractions mattered
+
+Family: Tactile workshop realism  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a granary, a field boundary rope, and an astronomical measuring arc sharing the same quiet problem: finite quantities must be divided and compared.
+Conceptual action: Fractions were born from dividing real magnitudes fairly and reliably; the scene connects land, food, trade, and sky through one practical arrangement rather than a busy history mural
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Fractions were born from dividing real magnitudes fairly and reliably.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_8-A — 3.8: Thought experiments
+
+Family: Tactile workshop realism  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: one ribbon folded in halves, thirds, and fifths as ghosted alternate constructions, with the same original ribbon visible underneath.
+Conceptual action: Fold first; calculate later; the reader feels invited to imagine folding, cutting, and recombining rather than computing
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Fold first; calculate later.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-3_9-A — 3.9: Common confusion
+
+Family: Tactile workshop realism  
+Placement: corrective plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light
+Subject: an elegant image of a unit segment, a part of that segment, and a ratio tag as three separate layers.
+Conceptual action: A fraction can name a length, a ratio, or an operator; keep the roles visually separate; in the corner, a childish pie-chart image is faded out like an insufficient metaphor
+Composition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels
+Materials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical editorial plate for an adult math book
+```
+
+Caption: A fraction can name a length, a ratio, or an operator; do not blur them.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4-A — 4: Proportion theory: equality of ratios before multiplication
+
+Family: Vellum-and-instrument geometry  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: two pairs of magnitudes fed into a large elegant comparison loom.
+Conceptual action: Proportion is equality of comparison behavior before multiplication exists; whole-number copies of each magnitude rise and fall on paired balances, and the loom emits matching woven fingerprints when every comparison agrees
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Proportion is equality of comparison behavior before multiplication exists.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_1-A — 4.1: Why this section is load-bearing
+
+Family: Vellum-and-instrument geometry  
+Placement: chapter anchor  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a load-bearing stone bridge where addition/comparison stones form the approach, a central proportion arch carries the span, and similar-triangle construction rests beyond it.
+Conceptual action: Ratio theory carries the weight of later multiplication; leave a transparent gap where the proportion arch would be; the bridge proportion arch is missing and the bridge fails at that span
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Ratio theory carries the weight of later multiplication.
+
+Overlay notes: Overlay optional for visual layer names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_2-A — 4.2: The Eudoxus definition
+
+Family: Vellum-and-instrument geometry  
+Placement: hero diagram-art hybrid  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with exactly two small balance scales side by side
+Subject: each balance receives paired stacks of segment copies; both balances tip the same way across the same trial
+Conceptual action: teach Eudoxus as identical response to every finite comparison test
+Composition: two balances centered; two faint ghost trials behind them; blank top margin for vector overlay
+Materials / medium: brass balances, wood segment copies, vellum trial cards with abstract texture only
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Equal ratios answer every whole-number comparison the same way.
+
+Overlay notes: Precise symbols should be overlaid later, not generated. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_2-C — 4.2-C: Eudoxus definition - clean balance companion
+
+Family: Vellum-and-instrument geometry  
+Placement: diagram-art hybrid  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: minimal vellum plate for later diagram overlay
+Subject: two blank balance scales, two rows of segment-copy stacks, and one amber “same test response” line
+Conceptual action: create atmosphere only; exact m, n, A, B, C, D labels are vector overlays
+Composition: centered apparatus; large empty margins; apparatus only
+Materials / medium: pale vellum, brass balance arms, wooden segment blocks, soft grey shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Same ratio means same response to every finite comparison test.
+
+Overlay notes: Overlay may add one worked m-versus-n test after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_2-B-A — 4.2-B: The Eudoxus definition - alternate
+
+Family: Vellum-and-instrument geometry  
+Placement: optional secondary plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a field of tiny comparison switches as an abstract fingerprint.
+Conceptual action: A ratio can be known by its full comparison fingerprint; two different-looking ratio objects cast the same pattern of lit and unlit switches across the field; exact construction lines are reserved for vector overlay.
+Composition: minimal apparatus centered on blank vellum; 70 percent clean overlay area; one construction scaffold only
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: A ratio can be known by its full comparison fingerprint.
+
+Overlay notes: Optional overlay: mA vs nB and mC vs nD. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_3-A — 4.3: A concrete pass through the Eudoxus test
+
+Family: Vellum-and-instrument geometry  
+Placement: instructional plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: ratio-testing bench with exactly one trial in progress and two faint completed trials behind it
+Subject: the same pair of copy counts is applied to two different ratio pairs
+Conceptual action: make the learner see “same ratio” as same comparison behavior, same comparison behavior before division syntax
+Composition: foreground trial sharp; background trials translucent; single amber result marker
+Materials / medium: wood segment stacks, brass calipers, vellum cards with blank surfaces
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: A single Eudoxus test is just repeated addition plus comparison.
+
+Overlay notes: Overlay for sample m and n recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_4-A — 4.4: Why this is brilliant rather than cumbersome
+
+Family: Vellum-and-instrument geometry  
+Placement: conceptual portrait  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a ratio as a key whose teeth are outcomes of every possible comparison.
+Conceptual action: The cumbersome test becomes a precise identity fingerprint; two different-looking magnitude pairs produce identical keys that open the same lock
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: The cumbersome test becomes a precise identity fingerprint.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_5-A — 4.5: Easy case and hard case
+
+Family: Vellum-and-instrument geometry  
+Placement: split contrast  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: left side: two lengths measured neatly by a common bead-string.
+Conceptual action: Eudoxus works for commensurable and incommensurable cases; right side: a square diagonal approached by finer bead-strings that never settle into exact fit
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Eudoxus works whether or not a common measure exists.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_6-A — 4.6: The intercept theorem is now earned, not assumed
+
+Family: Vellum-and-instrument geometry  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: sunlight-like parallel rays cutting across two angled reeds or strings.
+Conceptual action: Parallel structure transfers ratios across lines; equal marks on one support project into proportional marks on the other through clean parallel lines
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Parallel structure transfers ratios across lines.
+
+Overlay notes: Overlay required for exact theorem lines and segment labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_7-A — 4.7: Similarity as same shape, different scale
+
+Family: Vellum-and-instrument geometry  
+Placement: visual proof plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: three versions of the same triangular frame at different sizes, nested like architectural models.
+Conceptual action: Similarity is preserved shape under scale change; their angles align by transparent overlays while side lengths grow
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Similarity is preserved shape under scale change.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_8-A — 4.8: Historical note: the irrationality shock
+
+Family: Vellum-and-instrument geometry  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a Pythagorean-style counting pebble arrangement failing to match the diagonal of a square carved into dark stone.
+Conceptual action: The diagonal broke the belief that all magnitudes are ratios of whole numbers; a hairline crack runs through the neat pebble grid, symbolizing a broken assumption
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: The diagonal broke the belief that all magnitudes are ratios of whole numbers.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_9-A — 4.9: Another lens: ratio as a fingerprint
+
+Family: Vellum-and-instrument geometry  
+Placement: macro conceptual image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: two different objects pressed into soft wax, producing the same ratio fingerprint pattern: ridges made of comparison outcomes rather than literal finger lines.
+Conceptual action: A ratio is the invariant comparison pattern shared by three pairs; the physical objects differ, but the pattern matches perfectly
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: A ratio is the invariant comparison pattern shared by many pairs.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_10-A — 4.10: Thought experiments
+
+Family: Vellum-and-instrument geometry  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a tray of small comparison cards: each card shows stacks of copies being compared, with green/red tipping results The cards for two ratios line up like a memory game.
+Conceptual action: Equal ratio means every comparison test gives matching behavior; reader sees the invitation to testing more and more cards
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Equal ratio means no test can distinguish them.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-4_11-A — 4.11: What this section teaches beyond geometry
+
+Family: Vellum-and-instrument geometry  
+Placement: motif bridge  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a triptych linking Eudoxus comparisons, nested intervals, and calculus limits.
+Conceptual action: Mathematics often defines an object by all tests it survives; in each panel, finite approximations surround a central object that is never touched directly but becomes forced into clarity
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Mathematics often defines an object by all tests it survives.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5-A — 5: Multiplication as scaling, not repeated chanting
+
+Family: Vellum-and-instrument geometry  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a small geometric figure projected by a lantern onto a larger wall, preserving shape while changing size.
+Conceptual action: Multiplication is fundamentally resizing; a second dim shadow made of repeated blocks sits off to the side as only one limited interpretation
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Multiplication is fundamentally resizing.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_1-A — 5.1: Repeated addition is only one shadow of multiplication
+
+Family: Vellum-and-instrument geometry  
+Placement: conceptual split image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: the full object called multiplication as a 3D dilation sculpture casting a flat shadow made of repeated equal blocks.
+Conceptual action: Repeated addition is a special case, one narrow shadow of the meaning; the shadow is useful but incomplete
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Repeated addition is a special case, not the whole meaning.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_2-A — 5.2: Dilation: the clean geometric meaning
+
+Family: Vellum-and-instrument geometry  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: points radiating from a fixed center through a pantograph-like mechanism.
+Conceptual action: Dilation scales distances from a fixed center; each point moves along its ray farther from the center by the same scale factor
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Dilation scales distances from a fixed center.
+
+Overlay notes: Overlay optional for center, rays, and scale factor. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_3-A — 5.3: The similar-triangle multiplication machine
+
+Family: Vellum-and-instrument geometry  
+Placement: primary technical plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: brass drafting apparatus on translucent vellum
+Subject: two rays from one origin, one movable point on the first ray, one height point on the second ray, one parallel guide arm
+Conceptual action: show multiplication as a scale transferred by similar triangles
+Composition: apparatus only; exact rays, points, and parallel lines will be drawn as vector overlay; leave wide clean margins
+Materials / medium: brass pins, taut thread, clear guide arm, vellum layers, soft overhead light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Multiplication is earned by similarity and parallel transfer.
+
+Overlay notes: Vector overlay required for labels, product, and parallel marks. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_3-C — 5.3-C: Similar-triangle multiplication machine - clean overlay plate
+
+Family: Vellum-and-instrument geometry  
+Placement: technical-art plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: blank technical construction plate prepared for vector overlay
+Subject: empty vellum, origin pin, two ray guides, one movable guide arm, one taut diagonal thread
+Conceptual action: provide the physical scaffold for the similar-triangle multiplication machine
+Composition: top-down, 70 percent clean vellum, apparatus endpoints clearly visible
+Materials / medium: pale vellum, brass pins, graphite smudges, taut linen thread
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The art plate provides atmosphere; the overlay supplies exact labels.
+
+Overlay notes: Add origin, unit, factor, input height, output height, and parallel marks in layout. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_3-B-A — 5.3-B: The similar-triangle multiplication machine - learner close-up
+
+Family: Vellum-and-instrument geometry  
+Placement: optional secondary plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: the same multiplication idea as a satisfying physical scale copier: a small triangular frame and a larger similar triangular frame connected by synchronized parallel arms.
+Conceptual action: The product is the height forced by a similarity machine; a vertical output gauge rises because shape is preserved under scale; exact construction lines are reserved for vector overlay.
+Composition: minimal apparatus centered on blank vellum; 70 percent clean overlay area; one construction scaffold only
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The product is the height forced by a similarity machine.
+
+Overlay notes: Overlay optional for one concrete example. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_4-A — 5.4: Three meanings that textbooks collapse into one symbol
+
+Family: Vellum-and-instrument geometry  
+Placement: triptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: three glass cases: a scale factor stretching a rope, two lengths forming a rectangle of area, and two pure scale factors composing like gears.
+Conceptual action: The same symbol can package different typed actions; each case uses the same multiplication glyph as a small removable tag outside the glass, implying one symbol covers different type signatures
+Composition: exactly three equal panels with blank gutters; one conceptual role per panel; each panel contains at most two main objects
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: The same symbol can package different typed actions.
+
+Overlay notes: Overlay for type signatures recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_5-A — 5.5: Why multiplication is commutative
+
+Family: Vellum-and-instrument geometry  
+Placement: mirror composition  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: two rays crossing at an origin with two similar-triangle constructions mirrored across a diagonal.
+Conceptual action: Scaling by a then b gives the same pure scale as b then a in this setting; the outputs meet at the same product height from opposite interpretive routes
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Scaling by a then b gives the same pure scale as b then a in this setting.
+
+Overlay notes: Overlay for swapped roles recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_6-A — 5.6: Distributivity becomes geometric
+
+Family: Vellum-and-instrument geometry  
+Placement: animated still plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a two-colored ribbon made of segments b and c being enlarged by a dilation.
+Conceptual action: Dilation carries joined pieces to joined scaled pieces; after scaling, the join between colors remains exactly between the scaled pieces
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Dilation carries joined pieces to joined scaled pieces.
+
+Overlay notes: Overlay optional for segment labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_7-A — 5.7: Historical note: geometry and algebra eventually shake hands
+
+Family: Vellum-and-instrument geometry  
+Placement: split historical tableau  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: on one side, show Euclidean diagrams on parchment; on the other, algebraic symbols emerging on a merchant's slate.
+Conceptual action: Algebra and geometry became mutually translating languages; in the center, similar triangles and equations clasp through a mechanical bridge
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Algebra and geometry became mutually translating languages.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-5_8-A — 5.8: Thought experiments
+
+Family: Vellum-and-instrument geometry  
+Placement: margin image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a simple shape under three zoom settings: same shape, different sizes, with one marked join inside the shape remaining proportionally located.
+Conceptual action: Imagine resizing the whole world and ask what survives; reader sees the invitation to dragging the zoom slider and watching every distance scale together
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Imagine resizing the whole world and ask what survives.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6-A — 6: Division as inverse scaling
+
+Family: Vellum-and-instrument geometry  
+Placement: chapter opener  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a quiet three-door threshold for division, but distinguish the doors only by action: copies fitting into a whole, a whole being split into equal shares, and a slope line connecting unlike axes.
+Conceptual action: Division is one inverse relation with three different roles; the same small unknown-scale token sits before all three doors
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Division is one inverse relation with three different roles.
+
+Overlay notes: Overlay optional for type signatures. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_1-A — 6.1: The single equation behind all division
+
+Family: Vellum-and-instrument geometry  
+Placement: mechanical metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a machine with input b and output a, but the central scale gear is missing.
+Conceptual action: Division asks for the missing transformation; a hand is selecting the gear that would make the transformation work
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Division asks for the missing transformation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_1-B — 6.1-B: Division roles - restrained triptych
+
+Family: Vellum-and-instrument geometry  
+Placement: triptych  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: single tabletop divided into exactly three equal panels
+Subject: left: copy-fitting; center: fair splitting; right: slope/rate between unlike axes
+Conceptual action: show the three roles of division separated into one panel each
+Composition: three panels; one role per panel; each panel has one focal object
+Materials / medium: wood table, brass rods, ribbon strip, slope ramp, blank vellum axes
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Division is one inverse relation with three different roles.
+
+Overlay notes: Overlay panel labels later: measurement, sharing, rate. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_2-A — 6.2: Quotitive division: measurement
+
+Family: Vellum-and-instrument geometry  
+Placement: horizontal tactile image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a long plank being measured by repeated placement of a smaller standard block.
+Conceptual action: Length divided by length produces a pure ratio; the output is a pure count/ratio object; it is the count/ratio implied by how many times the block fits
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Length divided by length produces a pure ratio.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_3-A — 6.3: Partitive division: fair splitting
+
+Family: Vellum-and-instrument geometry  
+Placement: top-down plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a single cloth strip being divided into equal shares by parallel guide lines, with one share lifted slightly as the answer.
+Conceptual action: Length divided by count produces a smaller length; the divisor is implied as a count of shares, a count of shares rather than a second length
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Length divided by count produces a smaller length.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_4-A — 6.4: Rate division: the missing third type
+
+Family: Vellum-and-instrument geometry  
+Placement: cinematic axis metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a train moving across a landscape where the horizontal axis is time and the vertical climb is distance.
+Conceptual action: Unlike quantities divide into a new kind of quantity: rate; a glowing diagonal path connects the origin to the journey point
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Unlike quantities divide into a new kind of quantity: rate.
+
+Overlay notes: Overlay recommended for axes and units. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_5-A — 6.5: Slope is the geometric picture of rate
+
+Family: Vellum-and-instrument geometry  
+Placement: technical plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: two-axis rate table with unlike physical rails
+Subject: one horizontal time rail and one vertical distance rail meet at an origin pin; one ramp connects origin to a journey point
+Conceptual action: show rate as steepness produced by unlike magnitudes
+Composition: one slope ramp only; axes are blank rails, blank physical rails; leave endpoint label area empty
+Materials / medium: dark table, brass rails, glass ramp, amber endpoint bead
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Rate is steepness in a plane whose axes carry different units.
+
+Overlay notes: Overlay for sample units recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_5-B-A — 6.5-B: Slope is the geometric picture of rate - alternate
+
+Family: Vellum-and-instrument geometry  
+Placement: optional conceptual image  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a mountain trail where every horizontal stride corresponds to time and every vertical rise corresponds to distance.
+Conceptual action: The quotient lives as the relation between axes; the same path has a constant incline; the incline itself is highlighted as a new object; exact construction lines are reserved for vector overlay.
+Composition: minimal apparatus centered on blank vellum; 70 percent clean overlay area; one construction scaffold only
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The quotient is not on either axis; it is the relation between axes.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_6-A — 6.6: Why the three cases matter
+
+Family: Vellum-and-instrument geometry  
+Placement: triptych corrective  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: the same central division symbol as a neutral mask worn by three different bodies: same-kind measurement, count-based sharing, unlike-kind rate.
+Conceptual action: Type signatures decide what kind of answer division produces; each body has different output material: pure light token, smaller segment, angled slope ribbon
+Composition: exactly three equal panels with blank gutters; one conceptual role per panel; each panel contains at most two main objects
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Type signatures decide what kind of answer division produces.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_7-A — 6.7: Historical note: where rate changed the game
+
+Family: Vellum-and-instrument geometry  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: an inclined plane, water clock, rolling ball, and a notebook of measured distances arranged under moonlit workshop light.
+Conceptual action: Physics begins when unlike magnitudes are compared by rate; the visual story is that motion forced mathematics to divide distance by time, birthing rate as a serious object
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Physics begins when unlike magnitudes are compared by rate.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-6_8-A — 6.8: Thought experiments
+
+Family: Vellum-and-instrument geometry  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: cards showing length/length, length/count, distance/time, mass/volume, and force/area into three trays.
+Conceptual action: Ask what kinds of things are being divided before calculating; each tray produces a different output token
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Ask what kinds of things are being divided before calculating.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7-A — 7: Constructing ratios geometrically
+
+Family: Vellum-and-instrument geometry  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a handcrafted ratio machine of pins, threads, and parallel arms producing an output height from two input lengths.
+Conceptual action: Division can be constructed by similarity before it becomes a slogan; it feels like a secret calculator built from pure geometry
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Division can be constructed by similarity before it becomes a slogan.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_1-A — 7.1: The ratio machine
+
+Family: Vellum-and-instrument geometry  
+Placement: technical plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: ratio construction apparatus on blank vellum
+Subject: two rays, one connector thread, one parallel guide passing through a unit marker position
+Conceptual action: show division as finding the scale factor that transfers one magnitude to another
+Composition: top-down technical plate; exact geometry added later; apparatus endpoints obvious and uncluttered
+Materials / medium: vellum, brass pins, linen thread, clear acrylic parallel guide
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: A quotient is the scale forced by a parallel construction.
+
+Overlay notes: Vector overlay required for a, b, 1, and q labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_2-A — 7.2: What reciprocal actually means
+
+Family: Vellum-and-instrument geometry  
+Placement: conceptual metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a camera lens zoomed in by a factor, then a second lens setting that exactly undoes the zoom and returns the image to original size.
+Conceptual action: A reciprocal is an inverse scaling transformation; the reciprocal is visualized as the undo-setting on the same mechanism, as the undo-setting on the same mechanism
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: A reciprocal is an inverse scaling transformation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_3-A — 7.3: Why dividing by a fraction becomes multiplying by its reciprocal
+
+Family: Vellum-and-instrument geometry  
+Placement: process plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: two constructed fractional lengths being fed into the ratio machine, then a separate undo-scaling gear transforming the divisor back to the unit before scaling the numerator.
+Conceptual action: Invert-and-multiply is a theorem about undoing scale, a theorem about undoing scale; it a clean two-stage causal story: build the lengths, find the inverse scaling
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Invert-and-multiply is a theorem about undoing scale, not a chant.
+
+Overlay notes: Overlay optional for one concrete numerical example. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_3-B-A — 7.3-B: Dividing fractions - alternate anti-slogan
+
+Family: Vellum-and-instrument geometry  
+Placement: optional split panel  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: an anti-slogan image: on the left, a hand holds a blank fraction-shaped card about to be flipped, but the card is shadowy and secondary; on the right, a real inverse-scaling machine rescales one constructed segment into another using parallel guides.
+Conceptual action: The rule is a shadow of inverse scaling; the point is that 'invert and multiply' is only a shadow of undoing a scaling; exact construction lines are reserved for vector overlay.
+Composition: minimal apparatus centered on blank vellum; 70 percent clean overlay area; one construction scaffold only
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The rule is a shadow of inverse scaling.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_4-A — 7.4: Cross-multiplication is a late shadow, not the meaning
+
+Family: Vellum-and-instrument geometry  
+Placement: corrective image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: the rich ratio machine casting a flat cross-shaped shadow on a wall.
+Conceptual action: Cross-multiplication is compressed evidence of a deeper proportion relation; the shadow is useful and recognizable but visibly downstream from the 3D construction
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: Cross-multiplication is compressed evidence of a deeper proportion relation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_5-A — 7.5: Another lens: zoom factors on a screen
+
+Family: Vellum-and-instrument geometry  
+Placement: modern analogy  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: an image on a monitor being resized by a zoom factor.
+Conceptual action: A ratio is the zoom factor that makes one magnitude match another; a second image must be scaled to match the first, and the unknown zoom slider glows
+Composition: spacious construction stage; exact theorem lines reserved for vector overlay; one apparatus in focus
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: diagram-art hybrid for geometry-first instruction
+```
+
+Caption: A ratio is the zoom factor that makes one magnitude match another.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-7_6-A — 7.6: Thought experiments
+
+Family: Vellum-and-instrument geometry  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light
+Subject: a map scale bar, a microscope magnification ring, and a blueprint scale model as three quiet objects sharing the same hidden question: what factor converts one size to another?
+Conceptual action: Look for the conversion factor, before the quotient symbol; the shared factor is indicated by a common amber glow
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Look for the conversion factor, not just the quotient symbol.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8-A — 8: Negatives and multiplication
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a line through an origin mounted like a kinetic sculpture.
+Conceptual action: Negative multiplication is symmetry composition; a half-turn rotation sends a right-pointing segment to its left-pointing twin; a second half-turn returns it
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Negative multiplication is symmetry composition.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8_1-A — 8.1: Multiplying by -1 is a geometric action
+
+Family: Transformation theatre  
+Placement: subsection plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: multiplying by minus one as a half-turn machine on a line: an arrow enters, passes through a simple rotating hinge centered at the origin, and exits with the same length in the opposite direction.
+Conceptual action: Multiplying by -1 is a half-turn; one ghosted half-turn arc is enough
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Multiplying by -1 is a half-turn.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8_2-A — 8.2: What (-a)b means
+
+Family: Transformation theatre  
+Placement: process image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a segment passing through two stations: a scaling frame that changes its length, then a flipping frame that reverses orientation.
+Conceptual action: Negative scaling combines size change with orientation reversal; a parallel ghost version flips first then scales, landing at the same final segment
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Negative scaling combines size change with orientation reversal.
+
+Overlay notes: Overlay optional for order notes. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8_3-A — 8.3: Squares forget orientation
+
+Family: Transformation theatre  
+Placement: conceptual metaphor  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two opposite arrows entering a square-making device and producing identical unoriented square tiles.
+Conceptual action: Squaring preserves magnitude but loses sign; the arrows remember left versus right; the tiles preserve only magnitude
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Squaring preserves magnitude but loses sign.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8_4-A — 8.4: Historical note: the uneasy status of negatives
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: debt tokens, merchant ledgers, and a number line projected faintly over them.
+Conceptual action: Debts made negatives useful; orientation made them coherent; the old objects suggest suspicion around 'less than nothing'; the geometric projection resolves it as orientation
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Debts made negatives useful; orientation made them coherent.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-8_5-A — 8.5: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin visual  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a card with an arrow printed on it being flipped around a central pin once, then twice.
+Conceptual action: Count half-turns, half-turn composition rather than sign mnemonics; after two flips it returns to its original orientation
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Count half-turns, not sign mnemonics.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9-A — 9: Squares and square roots
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a unit square garden expanding equally in two perpendicular directions while a separate number-line segment scales twice in sequence.
+Conceptual action: Squaring means repeated scaling or two-direction area growth depending on type; the two meanings is visually parallel but kept clearly separated: repeated scaling on a line, area scaling in a plane
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Squaring means repeated scaling or two-direction area growth depending on type.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_1-A — 9.1: Two legitimate meanings of square
+
+Family: Transformation theatre  
+Placement: diptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two panels.
+Conceptual action: A square can be a repeated scale factor or an area; left: a segment passes through two identical scale gates on a line
+Composition: exactly two equal panels; left and right are visually parallel; blank gutter between panels; one action per panel
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A square can be a repeated scale factor or an area.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_2-A — 9.2: Why squares appear everywhere
+
+Family: Transformation theatre  
+Placement: conceptual field image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a city block grid growing outward in two independent directions from a unit square.
+Conceptual action: Squares are the fingerprint of two independent directions; every new block belongs to area created by horizontal and vertical scaling together
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Squares are the fingerprint of two independent directions.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_3-A — 9.3: Square root as an inverse question
+
+Family: Transformation theatre  
+Placement: tactile reconstruction  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: an artisan given a glowing square area rug and using dividers to recover the side length that would generate it.
+Conceptual action: A square root asks for the length that produces an area; the side length is lifted from the area like an answer extracted from a surface
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A square root asks for the length that produces an area.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_4-A — 9.4: Why negatives vanish under squaring
+
+Family: Transformation theatre  
+Placement: mirror concept  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two arrows in opposite directions dipped into the same square pool of light; after two flips or two scalings their orientation stains disappear and only equal magnitude remains.
+Conceptual action: Squaring collapses opposite orientations into the same magnitude; be poetic but clear: direction has been washed out
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Squaring collapses opposite orientations into the same magnitude.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_5-A — 9.5: Historical note: the diagonal of the square
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a unit square carved into black stone with its diagonal as a bright metal inlay extending beyond a grid of rational measuring ticks that fail to catch it.
+Conceptual action: The square's diagonal demanded numbers beyond fractions; the diagonal looks undeniable, almost more real than the ticks
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: The square's diagonal demanded numbers beyond fractions.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-9_6-A — 9.6: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: three square tiles of different areas with movable side rods beside them.
+Conceptual action: Ask the inverse area question with your hands; one rod must be selected to generate each square
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Ask the inverse area question with your hands.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10-A — 10: Exponents as iterated scaling, logarithms as counted resizings
+
+Family: Scale-gate and odometer  
+Placement: chapter opener  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: a chain of identical scale gates receding into space.
+Conceptual action: Exponents perform repeated resizing; logarithms count the resizings; an object changes size by the same ratio at each gate
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Exponents perform repeated resizing; logarithms count the resizings.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_1-A — 10.1: The tower of operations
+
+Family: Scale-gate and odometer  
+Placement: vertical structural diagram  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: one horizontal workbench divided into exactly three stations
+Subject: station one shows equal translation steps; station two shows equal resize gates; station three shows an odometer attached to a resize gate
+Conceptual action: show iteration moving from repeated motion to repeated scaling to counting repeated scaling
+Composition: three stations, left-to-right causation, blank gutters, horizontal layout
+Materials / medium: brass rail, matte blocks, scale gates, blank odometer wheels, soft studio light
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: Each operation level iterates the one below.
+
+Overlay notes: Overlay optional for operation names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_2-A — 10.2: Powers are repeated resizings
+
+Family: Scale-gate and odometer  
+Placement: horizontal-to-spiral sequence  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: one object passing through the same resize portal repeatedly.
+Conceptual action: A power is one scaling applied again and again; each passage leaves a ghost copy that is larger by the same ratio than the previous copy
+Composition: left-to-right causation; exactly one resizing action or one counting action per image; large negative space above
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: A power is one scaling applied again and again.
+
+Overlay notes: Overlay can add powers as labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_3-A — 10.3: The exponent laws are structural facts
+
+Family: Scale-gate and odometer  
+Placement: mechanical choreography  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean resizing corridor with exactly two choreographies
+Subject: left choreography joins two scale-gate chains end-to-end; right choreography repeats one boxed chain as a unit
+Conceptual action: show exponent laws as arrangements of repeated resizing machines
+Composition: exactly two panels; each panel carries one law-choreography; open space above each choreography for overlay
+Materials / medium: brushed brass gates, matte ceramic object, black tabletop, soft shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: Exponent laws record how repeated scale actions combine.
+
+Overlay notes: Overlay optional for law names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_3-B — 10.3-B: Exponent law companion - joined chains
+
+Family: Scale-gate and odometer  
+Placement: technical-art plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: two chains of identical resize gates joined end-to-end into one longer chain.
+Conceptual action: Composing repeated resizings adds the counts; nothing else
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Composing repeated resizings adds the counts.
+
+Overlay notes: Overlay the symbolic law after generation if needed. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_3-C — 10.3-C: Exponent law companion - nested chains
+
+Family: Scale-gate and odometer  
+Placement: technical-art plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens; SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: one package containing a short chain of resize gates, then three identical packages repeated in sequence.
+Conceptual action: Repeating an already-repeated resizing multiplies the counts; learner sees see a group of actions being repeated as a group
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Repeating an already-repeated resizing multiplies the counts.
+
+Overlay notes: Overlay the symbolic law after generation if needed. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_3-D — 10.3-D: Exponent law companion - paired scaling channels
+
+Family: Scale-gate and odometer  
+Placement: technical-art plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: an object passing through paired scale channels: each stage applies one horizontal resize and one vertical resize together, repeated three times.
+Conceptual action: Repeated paired resizings can be regrouped when the actions commute; then show the same total effect as all horizontal resizes gathered and all vertical resizes gathered
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Repeated paired resizings can be regrouped when the actions commute.
+
+Overlay notes: Overlay the symbolic law after generation if needed. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_4-A — 10.4: Fractional exponents are forced, not invented for mischief
+
+Family: Scale-gate and odometer  
+Placement: morph sequence  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: resize corridor between a starting object and a final target object
+Subject: exactly three identical small scale gates fill the gap between start and target
+Conceptual action: the highlighted gate is the repeated intermediate resizing that makes the final target possible
+Composition: straight left-to-right path; start, three gates, target; only these five elements
+Materials / medium: brass gate frames, matte objects, pale floor track, soft product lighting
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: A fractional power is the scale step that must repeat to make the target.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_4-B — 10.4-B: Fractional exponent companion - the required middle gate
+
+Family: Scale-gate and odometer  
+Placement: conceptual plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: a starting object and a final target object with three identical empty gates between them.
+Conceptual action: A root is the scale step that must repeat to make the whole scaling; one gate is highlighted as the required middle resizing: pass through it three times and the target is reached
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: A root is the scale step that must repeat to make the whole scaling.
+
+Overlay notes: Overlay can identify the number of gates later. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_5-A — 10.5: Logarithms count multiplicative steps
+
+Family: Scale-gate and odometer  
+Placement: conceptual detective image  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: close mechanical resize corridor with a small odometer mounted beside the gate path
+Subject: one object crosses identical ratio gates while a blank-notch counter advances once per gate
+Conceptual action: make logarithm feel like counting how many equal scale steps happened
+Composition: counter is the focal object; three scale gates recede behind it; clear blank space for overlay
+Materials / medium: brass counter wheels with blank notches, ceramic object, glass gate edges, warm studio reflections
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: A logarithm asks how many scale steps reach the target.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_5-C — 10.5-C: Logarithm companion - resizing odometer close-up
+
+Family: Scale-gate and odometer  
+Placement: margin image  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: a close-up of a beautiful mechanical odometer attached to a resize gate.
+Conceptual action: A logarithm counts how many equal ratio steps occurred; each time the gate is crossed, one small wheel clicks forward
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: A logarithm counts how many equal ratio steps occurred.
+
+Overlay notes: Do not generate digits; overlay any count later. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_5-B-A — 10.5-B: Logarithms count multiplicative steps - alternate
+
+Family: Scale-gate and odometer  
+Placement: optional plate  
+Priority: optional / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: a minimal cosmic version of the same idea: a small probe crosses concentric ratio shells, each shell representing one equal multiplicative jump.
+Conceptual action: Logarithms measure distance in the resizing world; the four shells are spacious; the probe's counter glows softly
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Logarithms measure distance in the resizing world.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_6-A — 10.6: The logarithmic line
+
+Family: Scale-gate and odometer  
+Placement: technical-art plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: a special blank ruler whose spacing represents equal ratios rather than equal differences.
+Conceptual action: A logarithmic scale turns multiplicative structure into additive spacing; above it, a curved growth path is projected down and becomes a straight path on the ratio-spaced ruler
+Composition: left-to-right causation; exactly one resizing action or one counting action per image; large negative space above
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: A logarithmic scale turns multiplicative structure into additive spacing.
+
+Overlay notes: Overlay recommended for a few clean tick labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_7-A — 10.7: Historical note: Napier, tables, and the war against drudgery
+
+Family: Scale-gate and odometer  
+Placement: historical note plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer; SYS.5 rotating_bead  
+
+```text
+Scene: Napier-era instrument still life; closed books and tools only
+Subject: Napier rods, astrolabe, dividers, navigation calipers, compact lookup instrument, and one closed codex
+Conceptual action: show logarithms as practical compression of repeated arithmetic labor
+Composition: single tabletop still life; compact lookup instrument in focus; tools arranged in a calm arc
+Materials / medium: aged brass, dark wood, leather-bound closed book, candlelight, blank instrument faces with abstract ticks
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Logarithms were invented to turn brutal multiplication into manageable addition.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_7-B — 10.7-B: Napier compression - instruments-only version
+
+Family: Scale-gate and odometer  
+Placement: historical companion plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: instrument-only still life on dark wood
+Subject: Napier rods, dividers, astrolabe, blank odometer-like lookup cylinder, and one closed leather codex
+Conceptual action: show calculation labor compressed into a compact tool
+Composition: lookup cylinder centered; rods and instruments form a quiet semicircle
+Materials / medium: aged brass, wood, leather, blank ceramic surfaces, candle glow
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Logs began as a machine for removing arithmetic drudgery.
+
+Overlay notes: Use if manuscript/paper surfaces keep producing fake script. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_8-A — 10.8: Why this chapter matters for calculus
+
+Family: Scale-gate and odometer  
+Placement: bridge image  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: repeated scale jumps becoming smaller and more frequent until they blur into a smooth growth curve.
+Conceptual action: Continuous iterated scaling leads naturally toward calculus; on the smooth side, a tiny tangent line begins to appear under a refinement lens
+Composition: left-to-right causation; exactly one resizing action or one counting action per image; large negative space above
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: Continuous iterated scaling leads naturally toward calculus.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-10_9-A — 10.9: Thought experiments
+
+Family: Scale-gate and odometer  
+Placement: margin prompt  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick; SYS.4 scale_gate_odometer  
+
+```text
+Scene: clean mechanical resizing corridor with identical scale gates and a physical odometer that counts gate crossings
+Subject: two living growth worlds side by side: one plant gains equal height increments marked by equal spacer blocks, while another plant passes through equal ratio rings and compounds.
+Conceptual action: Equal additions and equal ratios create different worlds; the contrast is visible at a glance: equal additions versus equal multiplications
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: premium product-style 3D render; brushed brass gates, matte ceramic objects, blank odometer wheels, soft studio shadows
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Equal additions and equal ratios create different worlds.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11-A — 11: Irrationals, completeness, and the point that survives infinite refinement
+
+Family: Refinement optics  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a star being isolated by nested rectangular shutters, each smaller than the last, until one exact point remains.
+Conceptual action: A real number is what survives every refinement; in the foreground, a square diagonal points to a missing place on a rational ruler
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: A real number is what survives every refinement.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_1-A — 11.1: Density is not the same as no gaps
+
+Family: Refinement optics  
+Placement: conceptual city map  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a dense city grid full of tiny lit houses between any two houses, but with one glowing empty lot where an address exists.
+Conceptual action: Density differs from completeness; the city is crowded yet incomplete
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Dense does not mean complete.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_2-A — 11.2: Geometry demands sqrt2
+
+Family: Refinement optics  
+Placement: geometric object plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a unit square as a real physical tile with a diagonal brass rod removed and placed against a number line where The rod looks unquestionably real; the ruler's failure is the problem.
+Conceptual action: The diagonal exists before arithmetic can name it neatly.
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: The diagonal exists before arithmetic can name it neatly.
+
+Overlay notes: Overlay optional for square and number-line labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_3-A — 11.3: Nested intervals: defining a point by surviving every refinement
+
+Family: Refinement optics  
+Placement: hero plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a sequence of transparent interval windows closing around one luminous point on a line.
+Conceptual action: The point is the unique survivor of all nested constraints; each window is nested inside the last, with widths shrinking toward invisibility
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: The point is the unique survivor of all nested constraints.
+
+Overlay notes: Overlay optional for interval endpoints. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_3-B-A — 11.3-B: Nested intervals - alternate
+
+Family: Refinement optics  
+Placement: optional plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a glowing bead inside five nested glass boxes, each box thinner than the previous.
+Conceptual action: Exactness can be approached by tightening finite cages; the boxes are finite approximations; the bead is the forced exact object
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Exactness can be approached by tightening finite cages.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_4-A — 11.4: A decimal expansion is a report, not the number
+
+Family: Refinement optics  
+Placement: corrective image  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a stable luminous point on a blank line while an overhead mechanical ticker emits a stream of small abstract marks that never becomes the main object.
+Conceptual action: Digits are reports about the point, separate from the point; the marks are reports; the point is primary
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Digits are reports about the point, not the point itself.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_5-A — 11.5: Connection back to Eudoxus
+
+Family: Refinement optics  
+Placement: motif callback  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: two-panel bridge on a black optical workbench
+Subject: left: two finite balance tests for an unseen ratio; right: nested interval shutters around one unseen point
+Conceptual action: show the same logic: finite tests force an exact object
+Composition: exactly two parallel panels; amber survivor line connects the panels; each panel has one apparatus
+Materials / medium: brass balances, glass shutters, black velvet, amber focal line
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Proportion and real numbers both define objects by all finite tests they survive.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_5-B — 11.5-B: Eudoxus-to-completeness callback - same test logic
+
+Family: Refinement optics  
+Placement: motif bridge  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a same-logic callback image: a left hand tests ratios with finite balance comparisons; a right hand narrows a point with finite interval shutters.
+Conceptual action: Ratios, real numbers, and limits all define exactness through finite tests that survive refinement; between them, one amber survivor line connects the hidden ratio to the hidden point
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Ratios, real numbers, and limits all define exactness through finite tests that survive refinement.
+
+Overlay notes: Overlay arrows or captions in layout only. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_6-A — 11.6: Zeno's shadow and why infinite subdivision does not destroy finiteness
+
+Family: Refinement optics  
+Placement: poetic path image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a ribbon path divided into half, quarter, eighth, and smaller segments, each colored lighter, all folding back to exactly fill one unit frame.
+Conceptual action: Shrinking half-quarter-eighth pieces assemble into one finite whole; the infinity of pieces looks like refinement, refinement inside the same finite frame
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Infinitely many pieces can still assemble into one finite whole.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_7-A — 11.7: Historical note: rigor took time
+
+Family: Refinement optics  
+Placement: library timeline  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: ancient geometry manuscripts, calculus notes, and 19th-century analysis texts connected by nested magnifying lenses.
+Conceptual action: Completeness became explicit only after a long historical struggle; suggest that intuition arrived early but logical housing took centuries to build
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Completeness became explicit only after a long historical struggle.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-11_8-A — 11.8: Thought experiments
+
+Family: Refinement optics  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a sequence of narrowing calipers around a hidden bead on a line.
+Conceptual action: Exactness is the limit of disciplined narrowing; each caliper choice rules out more space
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Exactness is the limit of disciplined narrowing.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A-A — A: Angle, circle, and trigonometric thinking
+
+Family: Turning and projection observatory  
+Placement: interlude opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a rotating telescope arm sweeping a circle under the stars.
+Conceptual action: Trigonometry is the mathematics of turning and projected shadow; its tip casts shadows onto horizontal and vertical measuring walls
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Trigonometry is the mathematics of turning and projected shadow.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_1-A — A.1: Why turning deserves its own chapter
+
+Family: Turning and projection observatory  
+Placement: subsection plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a large compass arm rotating around a fixed point, leaving a luminous arc.
+Conceptual action: Turning is a core operation; it is a core operation; nearby, translation and dilation tools rest on the table, making room for a third basic act: turn
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: Turning is not decoration; it is a core operation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_2-A — A.2: Angle is amount of turn, not just amount of corner
+
+Family: Turning and projection observatory  
+Placement: conceptual image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a lighthouse beam sweeping from one direction to another, leaving an arc of motion.
+Conceptual action: An angle measures rotation, the amount of rotation; the wedge between beams is secondary; the action of turning is primary
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: An angle measures rotation, not merely a static corner.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_3-A — A.3: Radians: the honest unit of angle
+
+Family: Turning and projection observatory  
+Placement: technical-art plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a piece of string equal to the circle's radius being wrapped along the circumference to mark one radian.
+Conceptual action: A radian is an angle measured by arc length relative to radius; the radius string and arc string is visibly congruent, with the central angle formed by the endpoints
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: A radian is an angle measured by arc length relative to radius.
+
+Overlay notes: Overlay recommended for radius, arc, and one-radian mark. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_4-A — A.4: Sine, cosine, and tangent are shape fingerprints
+
+Family: Turning and projection observatory  
+Placement: unit circle diagram-art  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a point on a unit circle with a lamp casting its horizontal and vertical shadows onto two axes, while a tangent line catches a third shadow.
+Conceptual action: Trig functions are projections and ratios attached to a turn; the point, shadows, and tangent forms one clean visual system
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: Trig functions are projections and ratios attached to a turn.
+
+Overlay notes: Overlay for sin/cos/tan labels recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_4-B-A — A.4-B: Sine, cosine, tangent - alternate
+
+Family: Turning and projection observatory  
+Placement: optional tactile plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a bead moving around a circular track.
+Conceptual action: Turning creates changing projections; as it moves, two sliders on perpendicular rails follow its shadows
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Turning creates changing projections.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_5-A — A.5: Another lens: shadows, slopes, and the unit circle
+
+Family: Turning and projection observatory  
+Placement: horizontal analogy plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: the same rotating rod under a low sun, casting a shadow whose length changes, while a slope ramp beside it rises and falls with the tangent idea.
+Conceptual action: Sine and cosine are shadows; tangent is a slope relation; keep the unit circle faint in the background; foreground the physical shadow
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: Sine and cosine are shadows; tangent is a slope relation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_6-A — A.6: Historical note: trigonometry was forced by the sky
+
+Family: Turning and projection observatory  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: an astrolabe, star chart, desert horizon, and ship's navigation instruments arranged around a circular measuring disk.
+Conceptual action: Astronomy and navigation made angle measurement indispensable; the sky is the problem-generator: distant objects forced humans to measure angles before distances
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Astronomy and navigation made angle measurement indispensable.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_7-A — A.7: Why this interlude pays rent later
+
+Family: Turning and projection observatory  
+Placement: motif bridge  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a three-stage visual bridge: rotating point on circle, its shadow tracing a wave, and the same rotation becoming multiplication in the complex plane.
+Conceptual action: Turning returns as waves, complex multiplication, and periodic motion; use the same bead in all three stages so the learner sees one object moving through later chapters
+Composition: one turning action; one rotating point and its projections; keep axes and labels for vector overlay
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: Turning returns as waves, complex multiplication, and periodic motion.
+
+Overlay notes: Overlay optional for chapter callbacks. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-A_8-A — A.8: Thought experiments
+
+Family: Turning and projection observatory  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a pendulum swinging while its bob's shadow moves back and forth along a straight track.
+Conceptual action: Watch a turn through its shadow; the circular motion and linear projection is visible at once, inviting the reader to imagine what quantity repeats
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Watch a turn through its shadow.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12-A — 12: Complex numbers
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a narrow number-line railway reaching a cliff where a plane opens beneath it like a luminous map.
+Conceptual action: The real line is too small for rotation; the plane is the right stage; a point leaves the rail and gains both distance from origin and direction angle
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The real line is too small for rotation; the plane is the right stage.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_1-A — 12.1: Why the real line is not the whole story
+
+Family: Transformation theatre  
+Placement: conceptual threshold  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a one-dimensional track that can only move left and right, then reveal a circular turn that cannot live on the track while preserving connected material the idea.
+Conceptual action: Rotation requires a larger space; the plane opens as the missing space where rotation becomes possible
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Some operations require a larger space.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_2-A — 12.2: A complex number as magnitude and angle
+
+Family: Transformation theatre  
+Placement: subsection plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a point in the plane reached by a rope from the origin and a compass arc from the positive axis.
+Conceptual action: A complex number stores distance and direction; the rope gives magnitude; the arc gives angle
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A complex number stores distance and direction.
+
+Overlay notes: Overlay optional for magnitude and angle. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_3-A — 12.3: Addition and multiplication are different geometries on the same plane
+
+Family: Transformation theatre  
+Placement: diptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two panels on the same complex plane.
+Conceptual action: Complex addition moves; complex multiplication rotates and scales; left: arrows slide head-to-tail for addition
+Composition: exactly two equal panels; left and right are visually parallel; blank gutter between panels; one action per panel
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Complex addition moves; complex multiplication rotates and scales.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_4-A — 12.4: Multiplication becomes multiply magnitudes, add angles
+
+Family: Transformation theatre  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two rotate-scale transformations performed in sequence by a dancer-like arrow: first it lengthens and turns, then lengthens and turns again.
+Conceptual action: Composing rotate-scale actions multiplies lengths and adds turns; a final arrow records multiplied length and accumulated angle
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Composing rotate-scale actions multiplies lengths and adds turns.
+
+Overlay notes: Overlay for angle arcs recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_5-A — 12.5: What i really is
+
+Family: Transformation theatre  
+Placement: iconic plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: i as a small mechanical key that turns every arrow exactly 90 degrees while preserving length.
+Conceptual action: i is the unit quarter-turn; one arrow before and after the quarter-turn
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: i is the unit quarter-turn.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_6-A — 12.6: Square roots of negatives
+
+Family: Transformation theatre  
+Placement: conceptual plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a half-turn transformation split into two equal quarter-turn arcs.
+Conceptual action: The square root of -1 is the operation that turns twice into a half-turn; a rigid arrow reaches the negative direction after two identical turns
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: The square root of -1 is the operation that turns twice into a half-turn.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_7-A — 12.7: Euler's formula as compressed geometry
+
+Family: Transformation theatre  
+Placement: hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: turntable observatory with one lamp fixed on a circular rail
+Subject: lamp rotates at constant radius while exactly two shadow sliders move on perpendicular rails
+Conceptual action: show continuous rotation as bookkeeping: one circular motion, two projected components
+Composition: circle centered; two projection rails at right angle; clean empty corner for overlay
+Materials / medium: brass turntable, glass lamp, charcoal paper, moonlit shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Euler's formula compresses continuous rotation into exponential language.
+
+Overlay notes: Overlay equation later if desired; do not generate text in image. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_7-C — 12.7-C: Euler formula companion - turntable bookkeeping
+
+Family: Turning and projection observatory  
+Placement: conceptual plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: observatory table under a dark sky; rotating arm, circular rail, projection walls, shadows, pendulum, and sky instruments
+Subject: a polished turntable with a lamp mounted on its edge.
+Conceptual action: Euler's formula is continuous rotation bookkeeping; as the table rotates, the lamp remains at fixed radius while two shadow sliders move on perpendicular rails
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: night-sky editorial realism; brass pivots, glass bead, charcoal paper, soft moonlight, clean projected shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Euler's formula is continuous rotation bookkeeping.
+
+Overlay notes: Overlay any formula or angle marks later. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_7-B-A — 12.7-B: Euler's formula - alternate
+
+Family: Transformation theatre  
+Placement: optional emotional plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a conductor's baton drawing a circle in the air while two soft wave shadows emerge on perpendicular curtains.
+Conceptual action: Rotation projects into sine and cosine; the same motion produces rotation and waves
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Rotation projects into sine and cosine.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_8-A — 12.8: Historical note: from suspicion to indispensability
+
+Family: Transformation theatre  
+Placement: historical transformation  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: 'imaginary' roots as ghostly scribbles in an old algebra notebook gradually becoming solid gears inside electrical circuits, waves, and rotations.
+Conceptual action: Complex numbers became real by proving their geometric work; tell the arc from mistrust to indispensability through instruments and objects
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Complex numbers became real by proving their geometric work.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-12_9-A — 12.9: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a turntable with an arrow painted on it, rotated once by 90 degrees, twice by 180, four times back home.
+Conceptual action: Multiply by turning; then count the turns; the setup invites the reader to count turns and compositions physically
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Multiply by turning; then count the turns.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13-A — 13: Vectors, norms, and matrices
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: arrows rising off the number line into a three-dimensional mobile.
+Conceptual action: Directed magnitude grows into transformation geometry; two arrows pass through transformation frames that stretch, rotate, shear, or flip the surrounding space
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Directed magnitude grows into transformation geometry.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_1-A — 13.1: Vectors are directed segments generalized
+
+Family: Transformation theatre  
+Placement: subsection plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a mobile of arrows in 2D and 3D space, all understood as movable directed segments.
+Conceptual action: A vector is directed displacement, a movable directed displacement; two arrows are translated to share a tail with identity preserved
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A vector is directed displacement, not a fixed decorative arrow.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_2-A — 13.2: Magnitude becomes a norm
+
+Family: Transformation theatre  
+Placement: technical-poetic plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: three vectors in space with transparent spheres centered at the origin marking equal norm.
+Conceptual action: A norm measures length in a space by what rotations preserve; rotating the vectors moves their components but keeps their tips on the same sphere
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A norm measures length in a space by what rotations preserve.
+
+Overlay notes: Overlay optional for norm notation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_3-A — 13.3: The dot product measures alignment
+
+Family: Transformation theatre  
+Placement: diagram-art hybrid  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: one vector as a beam of light projecting another vector's shadow onto its direction.
+Conceptual action: The dot product measures how much two directions point together; when vectors align, the shadow is long; when perpendicular, it nearly disappears
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: The dot product measures how much two directions point together.
+
+Overlay notes: Overlay recommended for projection line. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_4-A — 13.4: Matrices are transformation machines
+
+Family: Transformation theatre  
+Placement: hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a square mesh entering a transparent transformation machine and exiting as a sheared or rotated mesh.
+Conceptual action: A matrix is a machine acting on space; three embedded arrows move with the mesh so the learner sees that the machine acts on space itself, on space itself before isolated numbers
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A matrix is a machine acting on space.
+
+Overlay notes: Overlay optional for input/output basis vectors. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_4-B-A — 13.4-B: Matrices - alternate
+
+Family: Transformation theatre  
+Placement: optional learner plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: the basis vectors as two handles on a flexible grid.
+Conceptual action: A linear transformation is determined by where it sends the basis; moving the handles drags the entire plane with them
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: A linear transformation is determined by where it sends the basis.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_5-A — 13.5: Determinant: area, volume, and orientation change
+
+Family: Transformation theatre  
+Placement: technical-art plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a small oriented square of fabric entering a transformation frame and exiting as a parallelogram.
+Conceptual action: The determinant measures volume scaling and orientation flip; its area grows or shrinks; if flipped, its underside color appears
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: The determinant measures volume scaling and orientation flip.
+
+Overlay notes: Overlay optional for area factor sign. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_6-A — 13.6: Eigenvectors and eigenvalues: directions the machine treats simply
+
+Family: Transformation theatre  
+Placement: conceptual image  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: seven arrows entering a transformation machine and emerging changed, while one special direction passes through only stretched or shrunk, still pointing along itself.
+Conceptual action: Eigenvectors are directions a transformation keeps its direction; that surviving direction glows subtly
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Eigenvectors are directions a transformation does not turn.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_6-C — 13.6-C: Eigenvectors companion - direction that survives
+
+Family: Transformation theatre  
+Placement: margin image  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.5 rotating_bead  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a crowd of arrows entering a shear machine and emerging tilted in five directions, except one arrow that emerges only longer, still on its original rail.
+Conceptual action: An eigenvector is a direction the transformation keeps its direction; the surviving rail glows amber
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: An eigenvector is a direction the transformation does not turn.
+
+Overlay notes: Overlay name and scaling factor later if desired. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_6-B-A — 13.6-B: Eigenvectors - alternate
+
+Family: Transformation theatre  
+Placement: optional plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: arrows in a wind tunnel where most are deflected, but one stream-aligned arrow only lengthens.
+Conceptual action: One direction survives a machine as simple scaling; use the wind as the transformation field and the straight survivor as the eigenvector
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Some directions survive a machine as simple scaling.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_7-A — 13.7: Historical note: why this language won
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: engineering diagrams, electrical networks, quantum wave sketches, and computer graphics meshes all feeding into one clean transformation-grid language.
+Conceptual action: Linear algebra won because transformation language travels; the point is compression: four practical worlds found the same machinery
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Linear algebra won because transformation language travels.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-13_8-A — 13.8: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a book rotating around one axis and then another, with a ghost version doing the rotations in the opposite order and ending differently.
+Conceptual action: In higher geometry, order can matter; keep the book simple and the axes clear
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: In higher geometry, order can matter.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B-A — B: Coordinates, equations, and translation between shape and symbol
+
+Family: Transformation theatre  
+Placement: interlude opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a sculpted curve on one side of a bridge and symbolic machinery on the other.
+Conceptual action: Coordinates let geometry and algebra speak to each other; on the bridge, points receive addresses as coordinate beads
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Coordinates let geometry and algebra speak to each other.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_1-A — B.1: Before coordinates, geometry and algebra spoke different dialects
+
+Family: Transformation theatre  
+Placement: historical-conceptual plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a geometer's compass-and-straightedge workspace facing an algebraist's symbolic slate across a narrow gap.
+Conceptual action: Coordinates joined two mathematical languages; a coordinate grid rises between them as a bridge
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Coordinates joined two mathematical languages.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_2-A — B.2: A point gets an address
+
+Family: Transformation theatre  
+Placement: city map analogy  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a lone point in a city grid receiving an address by counting horizontal and vertical moves from a chosen origin plaza.
+Conceptual action: A coordinate is an address relative to a frame; the origin, axes, and unit blocks is visible as civic infrastructure
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A coordinate is an address relative to a frame.
+
+Overlay notes: Overlay optional for ordered-pair labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_3-A — B.3: Equation as locus, not just a sentence to solve
+
+Family: Transformation theatre  
+Placement: hero conceptual plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a cloud of possible points on a dark plane.
+Conceptual action: An equation carves a locus out of possible points; an invisible constraint field pulls only the satisfying points into a glowing curve, like iron filings revealing a magnetic line
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: An equation carves a locus out of possible points.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_4-A — B.4: Solving becomes intersection
+
+Family: Transformation theatre  
+Placement: clean visual metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: two glowing paths or rivers crossing in a landscape-grid.
+Conceptual action: Solving means finding where constraints agree; the solution is the shared point where both constraints are true
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Solving means finding where constraints agree.
+
+Overlay notes: Overlay optional for two equations after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_5-A — B.5: One curve, many descriptions
+
+Family: Transformation theatre  
+Placement: triptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: the same dancer's ribbon path represented in three adjacent panels: as height over time, as a glowing set of points satisfying a constraint, and as a timed trail of positions.
+Conceptual action: Explicit, implicit, and parametric forms are different access routes to one object; the ribbon color is identical in all panels to make one curve, three descriptions unmistakable
+Composition: exactly three equal panels with blank gutters; one conceptual role per panel; each panel contains at most two main objects
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Explicit, implicit, and parametric forms are different access routes to one object.
+
+Overlay notes: Overlay optional for description names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_5-B-A — B.5-B: One curve, many descriptions - alternate
+
+Family: Transformation theatre  
+Placement: optional plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a single transparent curve-sculpture under three different lights.
+Conceptual action: Representations are shadows of one curve; each light projects a different shadow: graph, contour, and moving trace
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Representations are shadows of one curve.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_6-A — B.6: Another lens: machine view and constraint view
+
+Family: Transformation theatre  
+Placement: split conceptual image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: left: a machine accepts inputs and outputs points along a path.
+Conceptual action: A curve can be produced by a machine or selected by a constraint; right: a field of possible points is filtered by a constraint into the same path
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A curve can be produced by a machine or selected by a constraint.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_7-A — B.7: Historical note: analytic geometry changed the landscape
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a 17th-century desk with maps, axes, geometric curves, and algebraic symbols beginning to overlay one another.
+Conceptual action: Analytic geometry made shape calculable and algebra visible; suggest that placing a grid on space changed what problems could be seen
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Analytic geometry made shape calculable and algebra visible.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_8-A — B.8: Why this bridge matters for the rest of the book
+
+Family: Transformation theatre  
+Placement: road interchange  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: coordinate roads leading forward to function curves, derivative tangents, integrals, and phase portraits.
+Conceptual action: Coordinates are the infrastructure for functions, calculus, and modern geometry; keep the future topics as distant silhouettes so the current bridge remains focal
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Coordinates are the infrastructure for functions, calculus, and modern geometry.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-B_9-A — B.9: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: one circular ring under three projection lights casting different shadows: vertical graph-like trace, horizontal footprint, and timed moving dot.
+Conceptual action: Change the representation and the same object may become easier to think with; the reader asks which description is easiest for which question
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Change the representation and the same object may become easier to think with.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14-A — 14: Functions as geometric objects
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a landscape where inputs enter four machines and emerge as curves, surfaces, and transformed objects.
+Conceptual action: A function is an object you can operate on; one machine itself is lifted onto a pedestal as the object of study
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: A function is an object you can operate on.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_1-A — 14.1: The mapping itself is an object
+
+Family: Transformation theatre  
+Placement: subsection image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a black-box mapping machine that takes beads from one rail and sends them to another rail according to a rule.
+Conceptual action: The rule itself can become a mathematical object; the entire machine is enclosed in a glass case as the object being studied
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: The rule itself can become a mathematical object.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_2-A — 14.2: A function does not need a formula
+
+Family: Transformation theatre  
+Placement: modern observational plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a weather instrument, a sensor trace, and a set of input-output samples surrounding a sealed machine.
+Conceptual action: A function can be known by behavior, by behavior as well as by a closed-form expression; the mood fights formula worship
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A function can be known by behavior, not just by a closed-form expression.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_3-A — 14.3: The graph makes the function visible
+
+Family: Transformation theatre  
+Placement: weaving metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a loom where horizontal input threads and vertical output threads weave into a continuous curve.
+Conceptual action: A graph is the visible set of all input-output pairings; each woven knot corresponds to one input-output pair
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A graph is the visible set of all input-output pairings.
+
+Overlay notes: Overlay optional for axes. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_4-A — 14.4: Composition is feeding one machine into another
+
+Family: Transformation theatre  
+Placement: process image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: the output stream of one machine feeding directly into a second machine, with a final output emerging.
+Conceptual action: Composition is one mapping fed into another; the connection tube is the visual focus: output becomes input
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Composition is one mapping fed into another.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_5-A — 14.5: Inverse functions and reflection
+
+Family: Transformation theatre  
+Placement: mirror plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a curve approaching a diagonal mirror-door.
+Conceptual action: An inverse swaps the direction of the mapping; on the other side, input and output roles have swapped, producing the inverse curve
+Composition: exactly two equal panels; left and right are visually parallel; blank gutter between panels; one action per panel
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: An inverse swaps the direction of the mapping.
+
+Overlay notes: Overlay optional for y=x mirror line. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_6-A — 14.6: Historical note: Euler and the rise of function-thinking
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: an Euler-era desk where curves rise off paper like living objects and rules, series, and diagrams orbit them.
+Conceptual action: Function-thinking made curves and rules into manipulable objects; the transition is from solving individual equations to studying families of mappings
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Function-thinking made curves and rules into manipulable objects.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-14_7-A — 14.7: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: four simple machines: one shifts every bead, one stretches spacing, one reverses order, one composes two actions.
+Conceptual action: Ask what the whole machine does, the whole machine before individual outputs; reader sees the invitation to naming the machine rather than just calculating sample outputs
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Ask what the whole machine does, not just what one input becomes.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15-A — 15: Polynomials
+
+Family: Transformation theatre  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a curve assembled from modular transformation blocks: shift blocks, scale blocks, power blocks, and addition rails.
+Conceptual action: Polynomials are curves built from operations already earned; the blocks feed into a smooth polynomial curve, like a sculpture built from known operations
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Polynomials are curves built from operations already earned.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_1-A — 15.1: A polynomial is a constructed transformation
+
+Family: Transformation theatre  
+Placement: subsection image  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a polynomial as an assembly line of operations with Each station is distinguished by action, physical actions.
+Conceptual action: A polynomial is an operation recipe made from shifts, scales, and powers.
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A polynomial is an operation recipe made from shifts, scales, and powers.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_2-A — 15.2: Degree tells the far-away story
+
+Family: Transformation theatre  
+Placement: landscape curve  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: three polynomial curves as roads leading toward distant horizons.
+Conceptual action: The highest-degree term controls the distant shape; higher degree roads dominate the far distance like mountain ridges, while lower-degree features matter only near town
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: The highest-degree term controls the distant shape.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_3-A — 15.3: Roots are where the machine outputs zero
+
+Family: Transformation theatre  
+Placement: mechanical drop gate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a function machine dropping output beads onto a vertical scale; roots are the input positions where beads land exactly on the zero floor.
+Conceptual action: A root is an input that sends the output to zero; the zero floor is a clean horizontal threshold
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: A root is an input that sends the output to zero.
+
+Overlay notes: Overlay optional for axis and root markers. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_4-A — 15.4: The dimension insight
+
+Family: Transformation theatre  
+Placement: border inspection  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `2`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: polynomial terms at a dimensional border checkpoint.
+Conceptual action: Terms can only be added when their dimensions match; length, area, volume, and pure ratio objects carry visibly different passports made of shape and material, shape and material passports
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Terms can only be added when their dimensions match.
+
+Overlay notes: Overlay optional for type signatures. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_5-A — 15.5: Why polynomials matter so much
+
+Family: Transformation theatre  
+Placement: tool chest  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a tool chest containing straightedge, parabola former, cubic spline, and higher-order flexible rulers.
+Conceptual action: Polynomials are the simplest flexible tools for approximating smooth behavior; a complicated curve is being approximated by choosing tools of increasing subtlety
+Composition: one machine action; before/after states separated by clear space; exact symbols added later
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual book illustration for transformations and functions
+```
+
+Caption: Polynomials are the simplest flexible tools for approximating smooth behavior.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_6-A — 15.6: Historical note: from Babylon to the Renaissance and beyond
+
+Family: Transformation theatre  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1536x1024`, variants `1`  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: babylonian clay tablets, Islamic algebra manuscripts, Renaissance equation notebooks, and modern graphing traces layered in chronological transparency.
+Conceptual action: Polynomial thinking grew across civilizations and notations; a single polynomial curve threads through all layers
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Polynomial thinking grew across civilizations and notations.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-15_7-A — 15.7: Thought experiments
+
+Family: Transformation theatre  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: small theatrical transformation stage; rails, turntables, levers, mirrors, input/output paths, and controlled spotlights
+Subject: a curve attached to sliders for shifting, stretching, and changing power behavior, but with blank label zones.
+Conceptual action: Tweak the construction and watch the curve respond; moving sliders ghost-changes the curve shape
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial 3D illustration; matte black stage, brass mechanisms, colored glass arrows, soft smoke-free lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Tweak the construction and watch the curve respond.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C-A — C: Limits, continuity, and convergence
+
+Family: Refinement optics  
+Placement: interlude opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: four blurry paths, sequences, and approximations focusing through a lens onto one sharp object.
+Conceptual action: Limits are the discipline of controlled approach; approximation becoming exactness feel like resolution, a visible guarantee
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Limits are the discipline of controlled approach.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_1-A — C.1: Why approaches needs its own language
+
+Family: Refinement optics  
+Placement: conceptual threshold  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a train slowing toward a station marker through smaller and smaller position gaps.
+Conceptual action: Approach needs rules precise enough to trust; the station is the limiting value; the train's approach is controlled
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Approach needs rules precise enough to trust.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_2-A — C.2: Sequences are itineraries of approximation
+
+Family: Refinement optics  
+Placement: route image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: footprints on a path that get closer to a lantern with each step.
+Conceptual action: A sequence is a planned list of approximations; each footprint is one approximation; the lantern determines the itinerary's direction
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A sequence is a planned list of approximations.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_3-A — C.3: What a limit really promises
+
+Family: Refinement optics  
+Placement: contract image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a target surrounded by rings of tolerance, with all later approximation beads trapped inside any ring chosen.
+Conceptual action: A limit promises eventual containment inside every tolerance; imply a promise: beyond a chosen threshold, the sequence stays as close as demanded
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A limit promises eventual containment inside every tolerance.
+
+Overlay notes: Overlay optional for epsilon-style rings. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_4-A — C.4: Continuity: controlled change
+
+Family: Refinement optics  
+Placement: fluid but disciplined  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: fluid moving through a transparent tube whose small input changes cause small output changes.
+Conceptual action: Continuity means nearby inputs force nearby outputs; nearby, a cracked jump-tube spills fluid abruptly
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Continuity means nearby inputs force nearby outputs.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_5-A — C.5: Function limits are about all nearby paths agreeing
+
+Family: Refinement optics  
+Placement: multi-path convergence  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: exactly three paths approaching the same gate from different directions; all must arrive at the same glowing courtyard.
+Conceptual action: A function limit exists only when nearby approaches agree; a single rogue path fading away can suggest failure while the rest stays sparse
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A function limit exists only when nearby approaches agree.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_6-A — C.6: Another lens: focus, blur, and guaranteed resolution
+
+Family: Refinement optics  
+Placement: photographic plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a camera viewfinder where a blurry curve sharpens as focus rings turn.
+Conceptual action: A limit is guaranteed resolution under refinement; the key is guarantee over aesthetics: every turn reduces blur according to a controlled mechanism
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A limit is guaranteed resolution under refinement.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_7-A — C.7: Historical note: from intuition to explicit rigor
+
+Family: Refinement optics  
+Placement: historical note plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: a chalk-dust lecture room where intuitive infinitesimal sketches are being reorganized into precise nested tolerance bands.
+Conceptual action: Calculus intuition eventually required explicit limit language; respect intuition while showing why rigor was needed
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Calculus intuition eventually required explicit limit language.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_8-A — C.8: Why this interlude pays rent later
+
+Family: Refinement optics  
+Placement: microscope bridge  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: three refinement scenes connected by one magnifying rail: nested intervals finding a point, secants becoming a tangent, rectangles becoming area.
+Conceptual action: Limits are the common grammar behind real numbers and calculus; use the same amber survivor glow in all three
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Limits are the common grammar behind real numbers and calculus.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-C_9-A — C.9: Thought experiments
+
+Family: Refinement optics  
+Placement: margin image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: beads representing successive approximations eventually staying inside any cage placed around the target.
+Conceptual action: Test whether the approximations eventually stay trapped; three cages of different sizes are stacked nearby
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Test whether the approximations eventually stay trapped.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16-A — 16: Calculus: the ratio machine at infinite zoom
+
+Family: Refinement optics  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: the earlier ratio machine miniaturized under a microscope on a curve, while below it sixteen thin strips pour into a reservoir of accumulated area.
+Conceptual action: Calculus is ratio and accumulation under refinement; a single refinement lens connects derivative and integral
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Calculus is ratio and accumulation under refinement.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_1-A — 16.1: Calculus did not appear from nowhere
+
+Family: Refinement optics  
+Placement: tool genealogy  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: the tools from earlier chapters - unit rod, parallel lines, ratio machine, log spiral, coordinate grid - all arranged on a wall behind a calculus microscope.
+Conceptual action: Calculus is built from earlier acts, assembled from earlier acts; the microscope is assembled from earlier tools and belongs with them
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Calculus is built from earlier acts, not imported from nowhere.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_2-A — 16.2: Derivative: the slope that survives zooming in
+
+Family: Refinement optics  
+Placement: hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: microscope over a single curve segment on a glass slide
+Subject: one point on the curve and one nearby point approach until the curve looks locally straight
+Conceptual action: show derivative as the slope that survives zooming in
+Composition: one microscope lens; one local straight segment in focus; surrounding curve fades softly
+Materials / medium: glass lens, black slide, amber tangent strip, faint blank vellum grid
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: The derivative is the stable slope revealed by infinite zoom.
+
+Overlay notes: Overlay recommended for secants, tangent, and delta markers. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_2-B-A — 16.2-B: Derivative - alternate
+
+Family: Refinement optics  
+Placement: optional technical plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a tiny similar-triangle ratio machine directly on a curve between two close points.
+Conceptual action: The derivative is the ratio machine applied to shrinking changes; as the points move closer, the apparatus fades into a tangent gauge
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The derivative is the ratio machine applied to shrinking changes.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_3-A — 16.3: Another lens: local linearity
+
+Family: Refinement optics  
+Placement: conceptual landscape  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a rugged coastline seen from far away and through a magnifying glass, where a tiny neighborhood looks almost straight.
+Conceptual action: A smooth curve becomes locally linear when viewed closely enough.
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A smooth curve becomes locally linear when viewed closely enough.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_4-A — 16.4: The chain rule: rates flowing through nested machines
+
+Family: Refinement optics  
+Placement: process plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: water flowing through one wheel, then another, where each wheel changes the flow rate before passing it along.
+Conceptual action: The chain rule tracks rate through composed machines; the final rate depends on both internal rates
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: The chain rule tracks rate through composed machines.
+
+Overlay notes: Overlay optional for input/output rate arrows. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_5-A — 16.5: The product rule: two changing sides make one changing area
+
+Family: Refinement optics  
+Placement: technical-art plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a rectangle whose width and height both expand slightly.
+Conceptual action: When both sides change, area gains two main strips and a tiny second-order corner; the new area is decomposed into two side strips plus a tiny corner overlap
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: When both sides change, area gains two main strips and a tiny second-order corner.
+
+Overlay notes: Overlay optional for dx, dy, and area pieces. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_6-A — 16.6: Rates and units
+
+Family: Refinement optics  
+Placement: passport / unit discipline  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: quantities crossing a dimensional border checkpoint: distance/time becomes velocity, area/length becomes length, velocity*time becomes distance.
+Conceptual action: Derivatives divide dimensions; integrals multiply them back in; use passports or tags as visual devices but
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Derivatives divide dimensions; integrals multiply them back in.
+
+Overlay notes: Overlay for type signatures recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_7-A — 16.7: Integral: accumulation under refinement
+
+Family: Refinement optics  
+Placement: hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: accumulation as a landscape under a curve being tiled by vertical slats.
+Conceptual action: An integral is accumulated contribution under finer partition; in the foreground the slats are chunky; farther along they become thinner and thinner until the total shape stabilizes into a single glowing area
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: An integral is accumulated contribution under finer partition.
+
+Overlay notes: Overlay optional for rectangle strips and interval. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_7-B-A — 16.7-B: Integral - alternate
+
+Family: Refinement optics  
+Placement: optional plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: area under a curve as a woven textile made from increasingly thin vertical threads.
+Conceptual action: Integration weaves twelve local contributions into one whole; the final cloth is smooth; the threads remain visible near the edge to show refinement
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Integration weaves many local contributions into one whole.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_8-A — 16.8: The Fundamental Theorem of Calculus
+
+Family: Refinement optics  
+Placement: bridge image  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: two linked workbenches for the same curve
+Subject: left bench accumulates thin area slices; right bench extracts the local height from the accumulated area
+Conceptual action: show derivative and integral as inverse-ish operations on accumulation and rate
+Composition: exactly two benches connected by one loop arrow shape drawn as a physical rail; only these two benches
+Materials / medium: glass slices, matte curve plate, brass rail, warm amber height marker
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: Rate of accumulation returns the thing being accumulated.
+
+Overlay notes: Overlay optional for curve and accumulated area function. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_9-A — 16.9: Taylor series: local information rebuilding the whole
+
+Family: Refinement optics  
+Placement: hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical mask table focused on one point of a curve
+Subject: exactly four transparent masks match value, slope, curvature, and the next bend of the curve
+Conceptual action: show Taylor series as local information rebuilding more of the shape
+Composition: four masks nested over one focal point; curve visible beneath; open space for overlay
+Materials / medium: clear acetate masks, glass pins, amber focal bead, black drafting surface
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: A Taylor series rebuilds a function from local behavior, when convergence allows.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_9-C — 16.9-C: Taylor series companion - local masks
+
+Family: Refinement optics  
+Placement: technical-art plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: a curve near one marked point and four transparent masks stacked nearby: flat value mask, tangent mask, bending mask, and finer-shape mask.
+Conceptual action: Taylor approximation matches more local features, one refinement at a time; each mask hugs the target curve more closely near the point and loses authority farther away
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Taylor approximation matches more local features, one refinement at a time.
+
+Overlay notes: Overlay degree labels later only if needed. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_9-B-A — 16.9-B: Taylor series - alternate
+
+Family: Refinement optics  
+Placement: optional technical plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: layer transparent curves of degree 0, 1, 2, 3, and higher over a target curve near one point.
+Conceptual action: Higher-degree polynomials match more local structure; each layer matches more local features and extends trust outward
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Higher-degree polynomials match more local structure.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_10-A — 16.10: Historical note: Newton, Leibniz, then rigor
+
+Family: Refinement optics  
+Placement: split historical study  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: newton's motion diagrams and Leibniz's area notation developing on two separate desks, with later rigorous limit lenses aligning both.
+Conceptual action: Calculus emerged from motion, area, and later rigor.
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Calculus emerged from motion, area, and later rigor.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_11-A — 16.11: Common confusions to avoid
+
+Family: Refinement optics  
+Placement: corrective plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: three elegant warning panels: derivative as stabilized ratio, dx as refinement width, integral as accumulation beyond area contexts.
+Conceptual action: The old symbols are safe only when their roles are understood; use visual metaphors - shrinking secant, unit passport, accumulation reservoir - rather than text-heavy cautions
+Composition: one refinement process; exact endpoint or stable survivor centered; surrounding approximations fade outward
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: pedagogical concept plate for limits, completeness, and calculus
+```
+
+Caption: The old symbols are safe only when their roles are understood.
+
+Overlay notes: Overlay warning labels in layout if needed. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-16_12-A — 16.12: Thought experiments
+
+Family: Refinement optics  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: optical workbench with nested shutters, lenses, microscopes, translucent windows, and increasingly fine slices
+Subject: two small workstations: one with a magnifying lens tightening two curve points into a tangent, the other with scissors cutting a region into thinner strips.
+Conceptual action: Zoom for rate; refine for accumulation; the reader mentally operates both machines
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: macro editorial photography mixed with precise illustration; glass, black velvet, warm amber focal point, clean shadows
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Zoom for rate; refine for accumulation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D-A — D: Differential equations and waves
+
+Family: Field and flow  
+Placement: interlude opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a landscape covered by small arrows indicating local rules of change.
+Conceptual action: A differential equation makes the rule of change the object; curves grow by following the arrows, waves travel across the field, and a phase portrait appears as a hidden map beneath
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: A differential equation makes the rule of change the object.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_1-A — D.1: A differential equation is a rule about a function and its rates
+
+Family: Field and flow  
+Placement: subsection image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a curve traveling through a space where each point carries instructions for its slope or acceleration.
+Conceptual action: The equation tells the curve how to change; the curve grows from local rules; it grows by obeying local rules
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: The equation tells the curve how to change.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_2-A — D.2: Slope fields let you see the law before you solve it
+
+Family: Field and flow  
+Placement: technical-art plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a field of short line segments like blades of grass tilted by an invisible law.
+Conceptual action: A slope field lets the law be seen before formulas solve it; three solution curves weave through by following the local blade direction
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: A slope field lets the law be seen before formulas solve it.
+
+Overlay notes: Overlay optional for sample solution curves. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_3-A — D.3: Exponential growth and decay: rate proportional to current amount
+
+Family: Field and flow  
+Placement: living system metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: lanterns whose brightness controls how fast they brighten or fade: bright lanterns change faster, dim lanterns change slower.
+Conceptual action: When rate follows current amount, exponential behavior appears; one path grows explosively, another decays gently toward darkness
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: When rate follows current amount, exponential behavior appears.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_4-A — D.4: Harmonic motion: acceleration pointing back toward equilibrium
+
+Family: Field and flow  
+Placement: motion plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a pendulum or spring displaced from center with acceleration arrows pointing back toward equilibrium, and a ghosted sinusoidal trace below.
+Conceptual action: Harmonic motion is change governed by a restoring pull; the motion feels like return, overshoot, return, ordered return, overshoot, return
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: Harmonic motion is change governed by a restoring pull.
+
+Overlay notes: Overlay optional for equilibrium line. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_5-A — D.5: Waves: local coupling creates traveling patterns
+
+Family: Field and flow  
+Placement: hero plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a line of connected beads or people where one bead pulls the next, creating a wave that travels through the chain.
+Conceptual action: A wave is a traveling pattern born from local coupling; the local neighbor interactions clearly, with the global wave emerging across the whole line
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: A wave is a traveling pattern born from local coupling.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_5-B-A — D.5-B: Waves - alternate
+
+Family: Field and flow  
+Placement: optional emotional plate  
+Priority: optional / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a stadium wave seen from above dissolving into an ocean ripple diagram.
+Conceptual action: The pattern moves; the pieces may only move locally; the same visual rhythm passes through different media, emphasizing that the pattern travels while individual parts mostly oscillate locally
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The pattern moves; the pieces may only move locally.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_6-A — D.6: State space and phase portraits
+
+Family: Field and flow  
+Placement: conceptual plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: instead of graphing height over time, show a dancer's position and velocity as a moving point in a state-space room.
+Conceptual action: Sometimes the right picture is the space of states, the state-space path before the time graph; the point traces loops and spirals on the floor
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: Sometimes the right picture is the space of states, not the graph over time.
+
+Overlay notes: Overlay optional for state axes. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_7-A — D.7: Historical note: Newton, Euler, Fourier, and after
+
+Family: Field and flow  
+Placement: orchestra of laws  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: newton, Euler, Fourier eras as instruments in one orchestra: planets, fluids, strings, heat, and waves all playing from local rate laws.
+Conceptual action: Differential equations became the language of changing physical systems.
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Differential equations became the language of changing physical systems.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_8-A — D.8: Why this interlude matters for the whole mission
+
+Family: Field and flow  
+Placement: conceptual convergence  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: earlier ideas - rate, function, trig wave, matrix, limit - flowing into a single living landscape governed by arrows and waves.
+Conceptual action: The scaffold becomes powerful when laws of change become objects; the message is that the book's spine now animates the world
+Composition: rule everywhere, path obeying it; exact axes and equations added later; one local law visible at a time
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: conceptual science-math plate for differential equations and waves
+```
+
+Caption: The scaffold becomes powerful when laws of change become objects.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-D_9-A — D.9: Thought experiments
+
+Family: Field and flow  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+
+```text
+Scene: field laboratory; water table, vibrating string, wind tunnel, local arrow markers, currents, and phase-space traces
+Subject: a blank curve starting at one point in an arrow field, with three possible starts elsewhere.
+Conceptual action: Follow the local instruction and watch a global curve appear; reader sees the invitation to drawing a curve by obeying the local arrows, by obeying local arrows before solving equations
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: editorial scientific visualization; translucent fluid, matte arrows, taut string, pale blank grids
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Follow the local instruction and watch a global curve appear.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17-A — 17: E = mc^2 and the geometry of invariants
+
+Family: Invariant architecture  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: two observers slicing the same luminous spacetime crystal at different angles.
+Conceptual action: Relativity is invariant geometry in a new symmetry group; their coordinate shadows differ, but one inner interval glows unchanged
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Relativity is invariant geometry in a new symmetry group.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_1-A — 17.1: Euclidean geometry already trained us for this
+
+Family: Invariant architecture  
+Placement: subsection plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: a vector in the plane viewed through two rotated coordinate grids.
+Conceptual action: Rotated observers disagree on components but agree on length; its component shadows change, but a circular radius ring around the origin preserves the same length
+Composition: exactly two observers when observers appear; one invariant object stays fixed; restrained architectural stillness
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial plate for invariants, relativity, and modern structure
+```
+
+Caption: Rotated observers disagree on components but agree on length.
+
+Overlay notes: Overlay optional for x/y components. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_2-A — 17.2: Relativity changes the symmetry group
+
+Family: Invariant architecture  
+Placement: hero conceptual plate  
+Priority: core / regeneration: high  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `3`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: translucent architectural prism standing on a stone table
+Subject: exactly two observers place different slicing frames through the same prism while one amber core line remains unchanged
+Conceptual action: show relativity as different decompositions of one invariant structure
+Composition: two observers only; prism centered; amber invariant line uninterrupted through both slices
+Materials / medium: glass prism, graphite stone, brass slicing frames, restrained architectural light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial plate for invariants, relativity, and modern structure
+```
+
+Caption: Relativity changes which transformations preserve structure.
+
+Overlay notes: Overlay for ct and x axes recommended. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_2-C — 17.2-C: Relativity companion - observer slices of one crystal
+
+Family: Invariant architecture  
+Placement: hero plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: one translucent spacetime crystal with two calm observer slices cutting it at different angles.
+Conceptual action: Observers disagree about components but preserve the interval; the slices have different shadows on the outside frame, but one internal amber interval is identical in both views
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: Observers disagree about components but preserve the interval.
+
+Overlay notes: Overlay observer labels and interval line after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_2-B-A — 17.2-B: Relativity symmetry - alternate
+
+Family: Invariant architecture  
+Placement: optional plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: two measuring frames sliding past the same spacetime event-pair.
+Conceptual action: Coordinates flex while the invariant holds fixed; their time and space shadows differ, but both frames lock onto the same amber interval core
+Composition: minimal companion plate; one apparatus centered; at least half the image is clean overlay space
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The coordinates flex; the invariant does not.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_3-A — 17.3: Energy and momentum form a spacetime-like object
+
+Family: Invariant architecture  
+Placement: technical-poetic plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: energy and momentum as components of a luminous vector inside a dark prism.
+Conceptual action: Mass is tied to the invariant length of energy-momentum; as observer frames tilt, the components slide along different faces, but the vector's invariant core remains the same
+Composition: exactly two observers when observers appear; one invariant object stays fixed; restrained architectural stillness
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial plate for invariants, relativity, and modern structure
+```
+
+Caption: Mass is tied to the invariant length of energy-momentum.
+
+Overlay notes: Overlay optional for rest-frame and momentum component labels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_4-A — 17.4: Why this belongs in the same book
+
+Family: Invariant architecture  
+Placement: summary plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: invariant archive room with exactly six drawers arranged in one row
+Subject: each drawer contains a simple object transformed by a symmetry; one amber thread runs through all drawers
+Conceptual action: show the same scaffold returning across number line, plane, scaling, complex plane, spacetime, and energy-momentum
+Composition: six drawers, equal size, blank fronts; one drawer slightly open; remaining drawers closed and calm
+Materials / medium: matte stone archive, brass handles, amber thread, translucent glass covers
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial plate for invariants, relativity, and modern structure
+```
+
+Caption: The same invariant habit runs from segments to spacetime.
+
+Overlay notes: Overlay optional for domain names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_4-B — 17.4-B: Invariant scaffold - one object through six symmetries
+
+Family: Invariant architecture  
+Placement: companion recap plate  
+Priority: optional / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: long stone measurement hall with exactly six identical glass chambers
+Subject: one amber measuring thread passes through six transformed versions of a simple object
+Conceptual action: show sameness surviving different symmetry chambers
+Composition: six chambers in one row; one object per chamber; thread is the only continuous element
+Materials / medium: stone, glass, brass frames, amber thread, quiet architectural lighting
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: companion plate designed to receive exact vector diagram overlays
+```
+
+Caption: The invariant is what survives a change of viewpoint or transformation.
+
+Overlay notes: Add the six domain labels later as vector type; keep drawer fronts blank in generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_5-A — 17.5: Historical note: Einstein, Minkowski, and the geometric upgrade
+
+Family: Invariant architecture  
+Placement: historical transition  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only
+Subject: einstein and Minkowski historically through objects rather than portraits: train platform, light clock, geometric spacetime notebook, and a crystalline interval diagram becoming solid.
+Conceptual action: Once the right geometry appeared, the formulas became structural; the historical upgrade is from event timing to geometry
+Composition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: historical editorial plate; context comes from instruments and one practical problem; restrained scene
+```
+
+Caption: Once the right geometry appeared, the formulas became structural.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_6-A — 17.6: A brief modern echo: Noether
+
+Family: Invariant architecture  
+Placement: beautiful theorem metaphor  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: a symmetry mechanism connected to conserved reservoirs: when a rotation gear turns smoothly, an amber reservoir remains level; when a translation rail slides smoothly, another reservoir remains level.
+Conceptual action: Symmetry and conservation are two sides of one structure; the conserved quantities is shown as stable physical levels, physical actions
+Composition: exactly two observers when observers appear; one invariant object stays fixed; restrained architectural stillness
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial plate for invariants, relativity, and modern structure
+```
+
+Caption: Symmetry and conservation are two sides of one structure.
+
+Overlay notes: Overlay optional for conservation names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-17_7-A — 17.7: Thought experiments
+
+Family: Invariant architecture  
+Placement: margin prompt  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `medium`, size `1024x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: quiet architectural prism room; observer slices, symmetry frames, amber preserved core, and stone/glass measuring structures
+Subject: two observers with tilted spacetime grids measuring the same pair of events.
+Conceptual action: Ask what all observers agree on; their coordinate projections differ, but a central luminous interval connects the events unchanged
+Composition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement
+Materials / medium: restrained architectural editorial render; translucent glass, graphite stone, amber thread, sober studio light
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: small margin plate for reflective adult learning
+```
+
+Caption: Ask what all observers agree on.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18-A — 18: Where to go next: strengthening the joints
+
+Family: Modern map and recovery  
+Placement: chapter opener  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: the completed mathematical scaffold with seven joints glowing for future reinforcement: real numbers, algebraic laws, Euler rotation, differential fields, linear transformations, probability, and topology.
+Conceptual action: Further study reinforces the same spine; each future path is a doorway with a distinct visual action, a set of distinct visual actions
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Further study reinforces the same spine.
+
+Overlay notes: Overlay optional for destination names. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_1-A — 18.1: Build the real numbers rigorously
+
+Family: Modern map and recovery  
+Placement: subsection image  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.3 refinement_lens  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: two construction crews completing the same bridge over a gorge in the number line: one crew builds with nested cuts, the other with converging sequences of stepping stones.
+Conceptual action: Rigor gives every convergent process a home; they meet at one completed real-line span
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Rigor gives every convergent process a home.
+
+Overlay notes: Overlay optional for two construction methods. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_2-A — 18.2: Re-derive algebraic laws from the geometry
+
+Family: Modern map and recovery  
+Placement: evidence wall  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: algebraic laws as sealed case files connected by strings to geometric constructions: parallelogram, dilation, reciprocal, half-turn.
+Conceptual action: A rule becomes trustworthy when you can locate its geometry; the point is that every rule has evidence, evidence rather than authority
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: A rule becomes trustworthy when you can locate its geometry.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_3-A — 18.3: Go deeper on Euler's formula and complex exponentials
+
+Family: Modern map and recovery  
+Placement: destination plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a rotating circular lamp whose shadows become waves while a scale-gate mechanism feeds the turn continuously.
+Conceptual action: Euler's formula is where turning, waves, and exponentials meet; this is a promise of a deeper Euler chapter: addition of angle becomes multiplication of rotations
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Euler's formula is where turning, waves, and exponentials meet.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_4-A — 18.4: Partial differential equations, fields, and nonlinear dynamics
+
+Family: Modern map and recovery  
+Placement: landscape plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a field landscape where heat flows, fluid swirls, and waves propagate through local arrows.
+Conceptual action: Local laws over two spatial variables plus time create rich global behavior; in one corner, a simple rule produces a complex chaotic braid
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Local laws over many variables create rich global behavior.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_5-A — 18.5: Linear algebra as the grown-up form of transformation geometry
+
+Family: Modern map and recovery  
+Placement: cockpit metaphor  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a control room for space transformations: basis levers, eigen-direction monitors, determinant gauges, diagonalization panels.
+Conceptual action: Linear algebra is transformation geometry made systematic; the grid outside responds to every control
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Linear algebra is transformation geometry made systematic.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_6-A — 18.6: Probability and statistics as structured uncertainty
+
+Family: Modern map and recovery  
+Placement: conceptual terrain  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick; SYS.2 amber_invariant_glow  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: uncertainty as fog over a landscape, with measurement tools extracting expectation, spread, correlation, and information channels.
+Conceptual action: Probability studies structured uncertainty with the same habits of measure and invariant; the fog means structured uncertainty rather than blank ignorance
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Probability studies structured uncertainty with the same habits of measure and invariant.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-18_7-A — 18.7: Topology and geometry beyond rigid shape
+
+Family: Modern map and recovery  
+Placement: rubber-sheet art  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a coffee cup, donut, and looped clay object smoothly deforming on a rubber sheet while holes and connectedness glow as preserved features.
+Conceptual action: Change the allowed transformations and 'same' changes too; distances stretch freely; topological invariants remain lit
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Change the allowed transformations and 'same' changes too.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19-A — 19: A modern continuation
+
+Family: Modern map and recovery  
+Placement: chapter opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: the mathematical cathedral extending beyond the calculus nave into modern wings: algebra, topology, differential geometry, analysis, probability, computation.
+Conceptual action: The scaffold survives into modern mathematics; the same foundation beams from the early chapters run under all wings
+Composition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The scaffold survives into modern mathematics.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_1-A — 19.1: Abstract algebra: symmetry becomes the object itself
+
+Family: Modern map and recovery  
+Placement: subsection image  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: four transformations first acting on a shape, then stepping away from the shape to form their own choreography circle.
+Conceptual action: Abstract algebra studies the structure of operations themselves; the composition law becomes the dance itself
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Abstract algebra studies the structure of operations themselves.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_2-A — 19.2: Topology: sameness under continuous deformation
+
+Family: Modern map and recovery  
+Placement: conceptual clay plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a shape being stretched, bent, and smoothed while preserving connected material, while a glowing hole remains protected through every deformation.
+Conceptual action: Topology changes the sameness rule to continuous deformation; correct the notion that topology is weirdness for its own sake
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Topology changes the sameness rule to continuous deformation.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_3-A — 19.3: Differential geometry: calculus on curved spaces
+
+Family: Modern map and recovery  
+Placement: hero modern plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: tiny explorers on a curved surface carrying tangent planes, measuring geodesic paths, and detecting curvature with local straight rulers.
+Conceptual action: Differential geometry makes local linear thinking work on curved spaces; the surface feels like a living extension of calculus onto bent space
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Differential geometry makes local linear thinking work on curved spaces.
+
+Overlay notes: Overlay optional for tangent plane and geodesic. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_4-A — 19.4: Analysis: rigor about limit, approximation, and continuity
+
+Family: Modern map and recovery  
+Placement: laboratory plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: functions passing through a series of testing chambers: convergence, continuity, completeness, compactness.
+Conceptual action: Analysis formalizes the approximation habits used throughout the book; each chamber uses the same refinement motif from Interlude C, now sharpened into a lab apparatus
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Analysis formalizes the approximation habits used throughout the book.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_5-A — 19.5: Probability, information, and computation
+
+Family: Modern map and recovery  
+Placement: modern conceptual triptych  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: three linked panels: probability as structured fog, information as compression into a bright channel, computation as a path through a maze of allowed procedures.
+Conceptual action: Modern mathematics also studies uncertainty, compression, and process; a common thread of measurement and transformation connects all three
+Composition: exactly three equal panels with blank gutters; one conceptual role per panel; each panel contains at most two main objects
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: Modern mathematics also studies uncertainty, compression, and process.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_6-A — 19.6: Why this modern map matters for a recovering learner
+
+Family: Modern map and recovery  
+Placement: emotional architecture plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a narrow corridor of rote drills opening into a spacious mathematical structure where comparison, transformation, refinement, and invariant appear as visible beams.
+Conceptual action: The learner was shown the hallway before the cathedral; the beams are distinguished by objects and actions, physical actions
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: The learner was shown the hallway, not the cathedral.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-19_7-A — 19.7: Final thesis
+
+Family: Modern map and recovery  
+Placement: closing hero plate  
+Priority: core / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: the final thesis as a spiral ascent made of recurring actions: unmeasured segment, chosen unit, directed path, partition, ratio test, scale gate, turntable, mapping machine, refinement lens, field flow, invariant crystal.
+Conceptual action: The methods change; the spine stays fixed; keep it elegant and legible, with one continuous amber thread
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: The methods change; the spine does not.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-APP_A-A — APP.A: Historical timeline at a glance
+
+Family: Modern map and recovery  
+Placement: appendix opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a horizontal river of mathematical history flowing from ancient measurement through Greek proof, algebra, analytic geometry, calculus, rigor, relativity, and modern abstraction.
+Conceptual action: History is a sequence of pressures that forced better concepts; each era is a small landscape island with one visual motif from the book
+Composition: wide left-to-right route with exactly seven milestones; each milestone is visually simple; open sky/space above for captions
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: History is a sequence of pressures that forced better concepts.
+
+Overlay notes: Overlay dates and names in layout. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-APP_B-A — APP.B: A compact glossary of recurring ideas
+
+Family: Modern map and recovery  
+Placement: appendix opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a well-organized cabinet with drawers for magnitude, unit, ratio, transformation, invariant, function, limit, rate, and symmetry.
+Conceptual action: The glossary is a cabinet of reusable tools; each drawer contains a small object-motif from the chapters
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: The glossary is a cabinet of reusable tools.
+
+Overlay notes: Overlay drawer labels after generation. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-APP_C-A — APP.C: A small reading discipline for this book
+
+Family: Modern map and recovery  
+Placement: appendix opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a calm adult study desk with four passes arranged as physical objects: sketch pad, action arrows, relation thread, compressed notation card.
+Conceptual action: Read by moving between picture, action, relation, and compression; a bookmark moves through the book in layers, as layered reading rather than a single straight pass
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: Read by moving between picture, action, relation, and compression.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-APP_D-A — APP.D: How to read a proof without feeling ambushed
+
+Family: Modern map and recovery  
+Placement: appendix opener  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `2`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: a proof as a route through a landscape: assumptions as starting camp, lemmas as bridges, conclusion as summit.
+Conceptual action: A proof is a controlled route from assumptions to conclusion; beside it, evidence tokens are checked into place
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: opening editorial spread for a geometry-first adult learning book
+```
+
+Caption: A proof is a controlled route from assumptions to conclusion.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-CLOSE-A — CLOSE: Closing note
+
+Family: Modern map and recovery  
+Placement: final small plate  
+Priority: core / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1536x1024`, variants `1`  
+
+```text
+Scene: calm recovery-map studio; modular wall, cabinets, paths, cards, instruments, and a single amber thread tying ideas together
+Subject: the reader's tools - unit rod, compass, lens, thread, and notebook - placed at the threshold of an open landscape where curves, waves, and geometric structures continue into the distance.
+Conceptual action: The book ends by opening the next field of view; any paper, slate, card, ticker, or manuscript surfaces uses abstract non-readable marks only
+Composition: organized stations or one central object; scan left-to-right using the exact station count required by the subject; clear gutters between zones
+Materials / medium: museum-quality editorial illustration; paper, wood, brass, glass, graphite, warm neutral palette
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: The book ends by opening the next field of view.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-SYS_1-A — SYS.1: Recurring callback: the brass unit stick
+
+Family: Modern map and recovery  
+Placement: production reference  
+Priority: system / regeneration: normal  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `3`  
+Reference tags: SYS.1 brass_unit_stick  
+
+```text
+Scene: single-object product reference shot on warm neutral tabletop
+Subject: one brass unit stick centered horizontally; beveled ends; two small edge nicks; matte patina; no markings
+Conceptual action: create the reusable reference asset for measurement, unit choice, and early ratio scenes
+Composition: stick fills the center third of the image; clean empty border on all sides; straight top-down view
+Materials / medium: aged brass, subtle scratches, warm wood tabletop, soft side shadow
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: A stable visual prop for unit choice and measurement.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-SYS_2-A — SYS.2: Recurring callback: amber invariant glow
+
+Family: Modern map and recovery  
+Placement: production reference  
+Priority: system / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow  
+
+```text
+Scene: single motif reference on dark matte stone
+Subject: one thin amber thread passing through a small glass bead, glowing softly where it crosses the bead
+Conceptual action: create the reusable visual marker for “what remains unchanged” across the book
+Composition: thread runs left-to-right through center; bead centered; large clean border for cropping
+Materials / medium: amber glass light, graphite stone, restrained glow, sharp contact shadow
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: One lighting motif marks what remains unchanged.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-SYS_3-A — SYS.3: Recurring callback: refinement lens
+
+Family: Modern map and recovery  
+Placement: production reference  
+Priority: system / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `2`  
+Reference tags: SYS.2 amber_invariant_glow; SYS.3 refinement_lens  
+
+```text
+Scene: single refinement-lens reference asset on black velvet
+Subject: one brass-rimmed glass lens hovering above nested rectangular shutters that close toward one point
+Conceptual action: create the reusable visual marker for limits, refinement, convergence, and local zoom
+Composition: lens centered; exactly five nested shutters; focal point under lens; clean border on all sides
+Materials / medium: clear glass, brass rim, black velvet, amber focal point, soft reflected highlights
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: front-matter or recap plate for an adult learning book
+```
+
+Caption: One lens motif ties every limit process together.
+
+Overlay notes: Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-SYS_4-A — SYS.4: Recurring callback: scale gate and odometer
+
+Family: Scale-gate and odometer  
+Placement: production reference  
+Priority: system / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `2`  
+Reference tags: SYS.4 scale_gate_odometer  
+
+```text
+Scene: single-object product reference shot in a clean studio
+Subject: one brass resize gate with one blank-notch odometer wheel attached to its right side
+Conceptual action: create the reusable reference asset for repeated scaling and logarithm counting
+Composition: gate centered, odometer attached, clean border on all sides, straight-on three-quarter view
+Materials / medium: brushed brass, matte ceramic base, blank wheel notches, soft studio reflection
+Surface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: editorial instructional plate for exponents and logarithms
+```
+
+Caption: One scale gate and counter motif anchors resizing chapters.
+
+Overlay notes: Use as reference input for Section 10 images. Preserve gate proportions and blank counter wheels. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+
+## GFV6-SYS_5-A — SYS.5: Recurring callback: rotating bead on circular rail
+
+Family: Turning and projection observatory  
+Placement: production reference  
+Priority: system / regeneration: medium  
+API: model `gpt-image-1.5`, quality `high`, size `1024x1024`, variants `2`  
+Reference tags: SYS.5 rotating_bead  
+
+```text
+Scene: single-object observatory reference shot on charcoal paper
+Subject: one glass bead mounted on a brass circular rail with one small pivot at the center
+Conceptual action: create the reusable reference asset for rotation, projection, periodicity, and Euler motion
+Composition: circular rail centered; bead at upper-right quadrant; large clean border for cropping
+Materials / medium: brass rail, glass bead, charcoal paper, soft moonlit shadow
+Surface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.
+Use: book plate for trigonometry, periodicity, and rotation
+```
+
+Caption: One rotating bead motif anchors turning chapters.
+
+Overlay notes: Use as reference input for trigonometry and complex-number images. Preserve bead, rail radius, and shadow logic. Add exact labels, axes, theorem lines, tick marks, and equations only as vector overlays after generation.
+

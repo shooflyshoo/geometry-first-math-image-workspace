@@ -1,0 +1,159 @@
+{
+  "pilot_count": 20,
+  "full_blueprint_count": 265,
+  "priority_regen_count": 71,
+  "batch_total": 175,
+  "subsection_count": 163,
+  "extra_count": 12,
+  "pilot_all_variants_3": true,
+  "section_counts": [
+    [
+      "0",
+      8
+    ],
+    [
+      "1",
+      8
+    ],
+    [
+      "2",
+      7
+    ],
+    [
+      "3",
+      9
+    ],
+    [
+      "4",
+      10
+    ],
+    [
+      "5",
+      8
+    ],
+    [
+      "6",
+      8
+    ],
+    [
+      "7",
+      5
+    ],
+    [
+      "8",
+      5
+    ],
+    [
+      "9",
+      6
+    ],
+    [
+      "10",
+      9
+    ],
+    [
+      "11",
+      7
+    ],
+    [
+      "12",
+      8
+    ],
+    [
+      "13",
+      6
+    ],
+    [
+      "14",
+      6
+    ],
+    [
+      "15",
+      6
+    ],
+    [
+      "16",
+      10
+    ],
+    [
+      "17",
+      7
+    ],
+    [
+      "18",
+      7
+    ],
+    [
+      "19",
+      7
+    ],
+    [
+      "A",
+      8
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "EXTRA",
+      12
+    ]
+  ],
+  "format_counts": [
+    [
+      "B",
+      21
+    ],
+    [
+      "D",
+      32
+    ],
+    [
+      "F",
+      6
+    ],
+    [
+      "H",
+      61
+    ],
+    [
+      "M",
+      20
+    ],
+    [
+      "S",
+      15
+    ],
+    [
+      "V",
+      20
+    ]
+  ],
+  "manifest_file_counts": {
+    "extras.jsonl": 12,
+    "section_0.jsonl": 8,
+    "section_1.jsonl": 8,
+    "section_10.jsonl": 9,
+    "section_11.jsonl": 7,
+    "section_12.jsonl": 8,
+    "section_13.jsonl": 6,
+    "section_14.jsonl": 6,
+    "section_15.jsonl": 6,
+    "section_16.jsonl": 10,
+    "section_17.jsonl": 7,
+    "section_18.jsonl": 7,
+    "section_19.jsonl": 7,
+    "section_2.jsonl": 7,
+    "section_3.jsonl": 9,
+    "section_4.jsonl": 10,
+    "section_5.jsonl": 8,
+    "section_6.jsonl": 8,
+    "section_7.jsonl": 5,
+    "section_8.jsonl": 5,
+    "section_9.jsonl": 6,
+    "section_A.jsonl": 8,
+    "section_B.jsonl": 8
+  },
+  "errors": []
+}

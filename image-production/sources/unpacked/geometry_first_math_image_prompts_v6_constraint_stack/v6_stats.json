@@ -1,0 +1,25 @@
+{
+  "records": 265,
+  "pilot": 20,
+  "priority_regen": 71,
+  "families": {
+    "Modern map and recovery": 32,
+    "Tactile workshop realism": 36,
+    "Vellum-and-instrument geometry": 44,
+    "Transformation theatre": 63,
+    "Scale-gate and odometer": 18,
+    "Refinement optics": 38,
+    "Turning and projection observatory": 12,
+    "Field and flow": 11,
+    "Invariant architecture": 11
+  },
+  "qualities": {
+    "high": 170,
+    "medium": 95
+  },
+  "sizes": {
+    "1536x1024": 236,
+    "1024x1024": 29
+  },
+  "variants_total": 384
+}

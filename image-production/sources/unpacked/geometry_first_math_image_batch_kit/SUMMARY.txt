@@ -1,0 +1,50 @@
+Geometry-First Mathematics Image Batch Kit
+=========================================
+
+Total records: 175
+Subsections: 163
+Extras: 12
+
+Sections:
+  0: 8
+  1: 8
+  2: 7
+  3: 9
+  4: 10
+  5: 8
+  6: 8
+  7: 5
+  8: 5
+  9: 6
+  10: 9
+  11: 7
+  A: 8
+  12: 8
+  13: 6
+  B: 8
+  14: 6
+  15: 6
+  16: 10
+  17: 7
+  18: 7
+  19: 7
+  EXTRA: 12
+
+Formats:
+  H: 61 (Half-page conceptual plate)
+  D: 32 (Hybrid diagram plate; overlay exact geometry/labels later if needed)
+  S: 15 (Split-screen corrective plate)
+  V: 20 (Historical vignette)
+  M: 20 (Margin or thought-experiment sketch)
+  B: 21 (Bridge plate / wide in-flow conceptual image)
+  F: 6 (Full-page opener)
+
+Average assembled prompt length: 2273.2 characters
+
+Primary files:
+  geometry_first_math_image_jobs.json
+  geometry_first_math_image_jobs.jsonl
+  geometry_first_math_image_jobs.csv
+  manifests/
+  generate_geometry_first_math_images.py
+  README.md
