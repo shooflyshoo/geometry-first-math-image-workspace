@@ -1,0 +1,525 @@
+{
+  "source_docx": "image-production/sources/originals/Geometry_First_Mathematics_Expanded_Intuition_Edition_Fresh.docx",
+  "items": [
+    {
+      "prompt_id": "GFV6-FM_1-A",
+      "section_id": "FM.1",
+      "title": "What this revision thinks the original manuscript is really trying to do",
+      "placement": "full-width opening plate",
+      "caption": "The book's thesis is one spine, not a tour of disconnected topics.",
+      "role": "The book's thesis is one spine, not a tour of disconnected topics.",
+      "prompt": "Scene: horizontal frieze on a modular studio wall; exactly seven equal stations from left to right\nSubject: one amber thread passes through: rod comparison, arrow translation, scale gate, nested shutter, curve under lens, local field arrows, architectural prism\nConceptual action: show the book spine as one repeated move: object -> action -> relation -> refinement -> invariant\nComposition: seven stations, equal size, separated by blank gutters; each station reads as a simple icon before it reads as a scene\nMaterials / medium: graphite wall, brass instruments, vellum, glass lens, matte stone prism, warm amber thread\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: opening editorial spread for a geometry-first adult learning book",
+      "image": "image-production/output/pilot-20/GFV6-FM_1-A.png",
+      "match": {
+        "paragraph_index": 2,
+        "score": 1.0,
+        "method": "exact:What this revision thinks the original manuscript is really trying to do"
+      },
+      "excerpt_range": [
+        0,
+        4
+      ],
+      "excerpt": [
+        "Geometry-First Mathematics from the Ground Up",
+        "Further expanded intuition edition for adult learners and visual thinkers",
+        "What this revision thinks the original manuscript is really trying to do",
+        "The original V3 is not merely   \u201c geometry first. \u201d   Its deeper thesis is more radical:",
+        "Mathematics should begin with   things you can distinguish, compare, move, and preserve , not with symbol-pushing."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-FM_5-A",
+      "section_id": "FM.5",
+      "title": "The permanent scaffold",
+      "placement": "full-width anchor plate",
+      "caption": "Every later concept is a reuse of the same acts.",
+      "role": "Every later concept is a reuse of the same acts.",
+      "prompt": "Scene: long workbench divided into exactly six equal stations\nSubject: one plain object is moved, resized, turned, partitioned, refined, and tested for what stays fixed\nConceptual action: make the permanent scaffold visible as repeated actions on the same object\nComposition: six stations in a straight row; one action per station; station boundaries are blank gutters, gutter boundaries\nMaterials / medium: wood bench, brass unit stick, small turntable, scale gate, nested glass shutter, amber invariant thread\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: opening editorial spread for a geometry-first adult learning book",
+      "image": "image-production/output/pilot-20/GFV6-FM_5-A.png",
+      "match": {
+        "paragraph_index": 40,
+        "score": 1.0,
+        "method": "exact:The permanent scaffold"
+      },
+      "excerpt_range": [
+        38,
+        42
+      ],
+      "excerpt": [
+        "Derivative: picture = secants stabilizing into a tangent; action = refine local comparison; relation = stable rate; compression = f'(x).",
+        "This is not study-skills fluff. It is how mathematics is actually done when the problem is still alive. Euclid drew. Newton tracked motion. Euler compressed recurring structure into notation. Einstein asked which quantities survive a change of viewpoint.",
+        "The permanent scaffold",
+        "Keep this dictionary in front of you. It is the spine of the whole manuscript.",
+        "Objects : points, segments, directed segments, triangles, circles, areas, curves, vectors, functions, transformations, then spaces."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-0_5-A",
+      "section_id": "0.5",
+      "title": "What school usually hides here",
+      "placement": "split-panel corrective image",
+      "caption": "Most early confusion comes from collapsing several layers into one.",
+      "role": "Most early confusion comes from collapsing several layers into one.",
+      "prompt": "Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light\nSubject: a calm corrective split image.\nConceptual action: Most early confusion comes from collapsing four layers into one; on the left, show one confusing heap where point, segment, unit stick, arrow, and report token have been collapsed together\nComposition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels\nMaterials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: pedagogical editorial plate for an adult math book",
+      "image": "image-production/output/pilot-20/GFV6-0_5-A.png",
+      "match": {
+        "paragraph_index": 131,
+        "score": 1.0,
+        "method": "exact:What school usually hides here"
+      },
+      "excerpt_range": [
+        129,
+        133
+      ],
+      "excerpt": [
+        "Nothing symbolic was needed. You only needed concatenation and comparison.",
+        "Historically this matters. Early mathematics was not born from abstract numerology. It grew from practical comparisons: field boundaries, temple construction, shadows, levers, and astronomical cycles. The Greeks in particular became obsessed with what could be proven from comparison and construction alone. That obsession turned out to be generative.",
+        "0.5 What school usually hides here",
+        "At this stage, school often skips directly to the number line and says   \u201c points are numbers. \u201d   That is useful later, but too early it compresses several distinct ideas into one blur:",
+        "a point,"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-0_7-A",
+      "section_id": "0.7",
+      "title": "Thought experiments",
+      "placement": "margin prompt image",
+      "caption": "Run the idea with your hands before accepting the notation.",
+      "role": "Run the idea with your hands before accepting the notation.",
+      "prompt": "Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light\nSubject: the same unchanged object measured twice with two different unit sticks: one short brass unit repeated eight times, one longer wood unit repeated four times.\nConceptual action: Run the idea with your hands before accepting the notation; the object remains physically identical in the center while the reports are represented only by two blank tags waiting for overlay\nComposition: interactive puzzle-like still life; one object and one visible manipulation; generous empty space for margin placement\nMaterials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: small margin plate for reflective adult learning",
+      "image": "image-production/output/pilot-20/GFV6-0_7-A.png",
+      "match": {
+        "paragraph_index": 147,
+        "score": 1.0,
+        "method": "manual-index-hint"
+      },
+      "excerpt_range": [
+        145,
+        149
+      ],
+      "excerpt": [
+        "Egyptian and Mesopotamian mathematics was often computational and practical. It was excellent at solving concrete problems. Greek mathematics, especially from the classical period onward, pushed harder on justification. By the time of Eudoxus and Euclid in the fourth and third centuries BCE, geometry had become a laboratory for exact reasoning. One reason was a shock: incommensurable magnitudes, such as the diagonal of a square compared to its side, disrupted the hope that everything could be explained by ratios of whole numbers.",
+        "That crisis forced a more subtle foundation. Instead of retreating, they built one. We are heading there.",
+        "0.7 Thought experiments",
+        "Hold two pencils. Hide all labels. Ask yourself: what exactly lets you know whether they are the same length? The answer is not   \u201c counting. \u201d   It is transport and overlay.",
+        "Imagine a civilization with no written numerals but excellent carpentry. Could it still have geometry? Obviously yes. That tells you geometry is not downstream of arithmetic in any simple sense."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-1_2-A",
+      "section_id": "1.2",
+      "title": "Directed segments: where negatives actually come from",
+      "placement": "horizontal plate",
+      "caption": "Negative means opposite direction, not less-than-real.",
+      "role": "Negative means opposite direction, not less-than-real.",
+      "prompt": "Scene: quiet tabletop workshop; wood surface, vellum sheets, pins, string, calipers, and side light\nSubject: a fixed origin bead on a horizontal rail.\nConceptual action: Negative means opposite direction, opposite orientation; one arrow of a certain length points right; a matching ghost arrow of exactly the same length points left\nComposition: one physical action; top-down or shallow angle; three primary objects maximum; empty margin for later labels\nMaterials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: pedagogical editorial plate for an adult math book",
+      "image": "image-production/output/pilot-20/GFV6-1_2-A.png",
+      "match": {
+        "paragraph_index": 168,
+        "score": 1.0,
+        "method": "exact:Directed segments: where negatives actually come from"
+      },
+      "excerpt_range": [
+        166,
+        170
+      ],
+      "excerpt": [
+        "This matters because it shows that coordinates are not the world itself. They are a report relative to a frame. Change the origin or unit and the coordinate changes. The point does not.",
+        "Already you should hear an echo of later physics. Coordinates are descriptions. Invariants are what do not depend on the description.",
+        "1.2 Directed segments: where negatives actually come from",
+        "A directed segment is a segment plus an orientation. It is not just   \u201c how far \u201d   but also   \u201c which way. \u201d",
+        "If the arrow from O to P points right, call that positive. Reverse it and you get the negative of the same magnitude. So negative numbers are not   \u201c less than nothing \u201d   in the childish sense. They are the same amount in the opposite orientation."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-1_5-A",
+      "section_id": "1.5",
+      "title": "Historical note: why negatives felt suspicious",
+      "placement": "historical note plate",
+      "caption": "Negatives were suspect until number could mean directed relation.",
+      "role": "Negatives were suspect until number could mean directed relation.",
+      "prompt": "Scene: instrument-led historical still life; one era-specific work surface, closed books, blank tools only\nSubject: a historical merchant desk with physical tokens: ordinary assets sit above a reference line, debts hang below it like counterweights.\nConceptual action: Negatives were suspect until number could mean directed relation; one older ledger treats the below-line tokens as suspicious shadows; a newer geometric overlay shows them simply as opposite-directed quantities\nComposition: single still-life or one restrained historical scene; exactly one practical problem is visible through instruments\nMaterials / medium: editorial still life; brass, wood grain, linen string, matte paper, transparent vellum; 50mm lens feel; soft contact shadows\nSurface / text policy: Text layer: closed books, blank paper, abstract ticks only; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: historical editorial plate; context comes from instruments and one practical problem; restrained scene",
+      "image": "image-production/output/pilot-20/GFV6-1_5-A.jpg",
+      "match": {
+        "paragraph_index": 190,
+        "score": 1.0,
+        "method": "exact:Historical note: why negatives felt suspicious"
+      },
+      "excerpt_range": [
+        188,
+        192
+      ],
+      "excerpt": [
+        "On a road, +7 and -7 can mean seven miles east or west of a marker.",
+        "All of these are secretly the same structure: a chosen reference point plus an orientation. Geometry is not replacing these interpretations. It is exposing the common skeleton beneath them.",
+        "1.5 Historical note: why negatives felt suspicious",
+        "Negative numbers were used in Chinese mathematics well before they were fully accepted in Europe. Indian mathematicians also treated debts and fortunes with signed quantities. Yet many mathematicians for centuries distrusted negatives because they did not fit the older intuition that number meant amount of stuff. Geometry helps here by changing the question. A negative quantity need not mean   \u201c negative stuff. \u201d   It can mean directed displacement, opposite orientation, or inverse relation.",
+        "Once you see that, the sign becomes meaningful rather than embarrassing."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-4_2-A",
+      "section_id": "4.2",
+      "title": "The Eudoxus definition",
+      "placement": "hero diagram-art hybrid",
+      "caption": "Equal ratios answer every whole-number comparison the same way.",
+      "role": "Equal ratios answer every whole-number comparison the same way.",
+      "prompt": "Scene: drafting table with exactly two small balance scales side by side\nSubject: each balance receives paired stacks of segment copies; both balances tip the same way across the same trial\nConceptual action: teach Eudoxus as identical response to every finite comparison test\nComposition: two balances centered; two faint ghost trials behind them; blank top margin for vector overlay\nMaterials / medium: brass balances, wood segment copies, vellum trial cards with abstract texture only\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: diagram-art hybrid for geometry-first instruction",
+      "image": "image-production/output/pilot-20/GFV6-4_2-A.png",
+      "match": {
+        "paragraph_index": 298,
+        "score": 1.0,
+        "method": "exact:The Eudoxus definition"
+      },
+      "excerpt_range": [
+        296,
+        300
+      ],
+      "excerpt": [
+        "whole numbers.",
+        "That is exactly what Eudoxus supplied in the fourth century BCE and what Euclid later canonized in   Elements   Book V.",
+        "4.2 The Eudoxus definition",
+        "Say that",
+        "A:B = C:D"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-4_3-A",
+      "section_id": "4.3",
+      "title": "A concrete pass through the Eudoxus test",
+      "placement": "instructional plate",
+      "caption": "A single Eudoxus test is just repeated addition plus comparison.",
+      "role": "A single Eudoxus test is just repeated addition plus comparison.",
+      "prompt": "Scene: ratio-testing bench with exactly one trial in progress and two faint completed trials behind it\nSubject: the same pair of copy counts is applied to two different ratio pairs\nConceptual action: make the learner see \u201csame ratio\u201d as same comparison behavior, same comparison behavior before division syntax\nComposition: foreground trial sharp; background trials translucent; single amber result marker\nMaterials / medium: wood segment stacks, brass calipers, vellum cards with blank surfaces\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: diagram-art hybrid for geometry-first instruction",
+      "image": "image-production/output/pilot-20/GFV6-4_3-A.png",
+      "match": {
+        "paragraph_index": 298,
+        "score": 1.0,
+        "method": "exact:The Eudoxus definition"
+      },
+      "excerpt_range": [
+        296,
+        300
+      ],
+      "excerpt": [
+        "whole numbers.",
+        "That is exactly what Eudoxus supplied in the fourth century BCE and what Euclid later canonized in   Elements   Book V.",
+        "4.2 The Eudoxus definition",
+        "Say that",
+        "A:B = C:D"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-5_3-A",
+      "section_id": "5.3",
+      "title": "The similar-triangle multiplication machine",
+      "placement": "primary technical plate",
+      "caption": "Multiplication is earned by similarity and parallel transfer.",
+      "role": "Multiplication is earned by similarity and parallel transfer.",
+      "prompt": "Scene: brass drafting apparatus on translucent vellum\nSubject: two rays from one origin, one movable point on the first ray, one height point on the second ray, one parallel guide arm\nConceptual action: show multiplication as a scale transferred by similar triangles\nComposition: apparatus only; exact rays, points, and parallel lines will be drawn as vector overlay; leave wide clean margins\nMaterials / medium: brass pins, taut thread, clear guide arm, vellum layers, soft overhead light\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: diagram-art hybrid for geometry-first instruction",
+      "image": "image-production/output/pilot-20/GFV6-5_3-A.png",
+      "match": {
+        "paragraph_index": 362,
+        "score": 1.0,
+        "method": "exact:The similar-triangle multiplication machine"
+      },
+      "excerpt_range": [
+        360,
+        364
+      ],
+      "excerpt": [
+        "a as a   magnitude   has dimension.",
+        "a as   \u201c the measured value of a magnitude relative to the chosen unit \u201d   is dimensionless.",
+        "In the similar-triangle multiplication machine, the multiplier is really acting as a   dimensionless factor .",
+        "That makes the later dimension bookkeeping honest rather than merely decorative.",
+        "5.3 The similar-triangle multiplication machine"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-6-A",
+      "section_id": "6",
+      "title": "Division as inverse scaling",
+      "placement": "chapter opener",
+      "caption": "Division is one inverse relation with three different roles.",
+      "role": "Division is one inverse relation with three different roles.",
+      "prompt": "Scene: drafting table with translucent vellum, brass pins, taut thread, straightedge, compass, and controlled studio light\nSubject: a quiet three-door threshold for division, but distinguish the doors only by action: copies fitting into a whole, a whole being split into equal shares, and a slope line connecting unlike axes.\nConceptual action: Division is one inverse relation with three different roles; the same small unknown-scale token sits before all three doors\nComposition: chapter-opener plate; one dominant metaphor with two or three supporting objects; wide negative space for title overlay\nMaterials / medium: photographed construction apparatus; vellum layers, brass, graphite shadows, thread tension, glass reflections\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: opening editorial spread for a geometry-first adult learning book",
+      "image": "image-production/output/pilot-20/GFV6-6-A.png",
+      "match": {
+        "paragraph_index": 391,
+        "score": 1.0,
+        "method": "exact:Division as inverse scaling"
+      },
+      "excerpt_range": [
+        389,
+        393
+      ],
+      "excerpt": [
+        "Ask whether   \u201c multiply by 0 \u201d   means   \u201c take away everything. \u201d   Geometrically it collapses every point to the center of dilation.",
+        "Imagine zooming a photograph to 150 percent. You already know multiplication as scaling. Software just hid the geometry behind a menu.",
+        "6. Division as inverse scaling: three distinct questions in one costume",
+        "Problem this section solves.   Division is often taught as one operation when it really plays three roles.   Picture to keep in mind.   You know the before and after lengths and ask for the scaling needed to get from one to the other.   Historical pressure.   Measurement, fair sharing, and rate all use division, but they answer different kinds of questions.",
+        "6.1 The single equation behind all division"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-6_1-B",
+      "section_id": "6.1-B",
+      "title": "Division roles - restrained triptych",
+      "placement": "triptych",
+      "caption": "Division is one inverse relation with three different roles.",
+      "role": "Division is one inverse relation with three different roles.",
+      "prompt": "Scene: single tabletop divided into exactly three equal panels\nSubject: left: copy-fitting; center: fair splitting; right: slope/rate between unlike axes\nConceptual action: show the three roles of division separated into one panel each\nComposition: three panels; one role per panel; each panel has one focal object\nMaterials / medium: wood table, brass rods, ribbon strip, slope ramp, blank vellum axes\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: companion plate designed to receive exact vector diagram overlays",
+      "image": "image-production/output/pilot-20/GFV6-6_1-B.png",
+      "match": {
+        "paragraph_index": 391,
+        "score": 1.0,
+        "method": "exact:Division as inverse scaling"
+      },
+      "excerpt_range": [
+        389,
+        393
+      ],
+      "excerpt": [
+        "Ask whether   \u201c multiply by 0 \u201d   means   \u201c take away everything. \u201d   Geometrically it collapses every point to the center of dilation.",
+        "Imagine zooming a photograph to 150 percent. You already know multiplication as scaling. Software just hid the geometry behind a menu.",
+        "6. Division as inverse scaling: three distinct questions in one costume",
+        "Problem this section solves.   Division is often taught as one operation when it really plays three roles.   Picture to keep in mind.   You know the before and after lengths and ask for the scaling needed to get from one to the other.   Historical pressure.   Measurement, fair sharing, and rate all use division, but they answer different kinds of questions.",
+        "6.1 The single equation behind all division"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-6_5-A",
+      "section_id": "6.5",
+      "title": "Slope is the geometric picture of rate",
+      "placement": "technical plate",
+      "caption": "Rate is steepness in a plane whose axes carry different units.",
+      "role": "Rate is steepness in a plane whose axes carry different units.",
+      "prompt": "Scene: two-axis rate table with unlike physical rails\nSubject: one horizontal time rail and one vertical distance rail meet at an origin pin; one ramp connects origin to a journey point\nConceptual action: show rate as steepness produced by unlike magnitudes\nComposition: one slope ramp only; axes are blank rails, blank physical rails; leave endpoint label area empty\nMaterials / medium: dark table, brass rails, glass ramp, amber endpoint bead\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: diagram-art hybrid for geometry-first instruction",
+      "image": "image-production/output/pilot-20/GFV6-6_5-A.png",
+      "match": {
+        "paragraph_index": 441,
+        "score": 1.0,
+        "method": "exact:Slope is the geometric picture of rate"
+      },
+      "excerpt_range": [
+        439,
+        443
+      ],
+      "excerpt": [
+        "[L] \u00f7 [T] \u2192 [L/T].",
+        "This is not an optional edge case. Velocity, density, pressure, current, frequency, and many other essential quantities are born here.",
+        "6.5 Slope is the geometric picture of rate",
+        "Plot time on one axis and distance on another. A trip lasting two hours and covering 120 miles is represented by the point (2,120). The rate is the slope of the line from the origin to that point.",
+        "This is a fantastic bridge because it shows that rate division is already geometry. You are not just manipulating units. You are seeing steepness as a ratio of change in one quantity to change in another."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-10_1-A",
+      "section_id": "10.1",
+      "title": "The tower of operations",
+      "placement": "vertical structural diagram",
+      "caption": "Each operation level iterates the one below.",
+      "role": "Each operation level iterates the one below.",
+      "prompt": "Scene: one horizontal workbench divided into exactly three stations\nSubject: station one shows equal translation steps; station two shows equal resize gates; station three shows an odometer attached to a resize gate\nConceptual action: show iteration moving from repeated motion to repeated scaling to counting repeated scaling\nComposition: three stations, left-to-right causation, blank gutters, horizontal layout\nMaterials / medium: brass rail, matte blocks, scale gates, blank odometer wheels, soft studio light\nSurface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: editorial instructional plate for exponents and logarithms",
+      "image": "image-production/output/pilot-20/GFV6-10_1-A.jpg",
+      "match": {
+        "paragraph_index": 547,
+        "score": 1.0,
+        "method": "exact:The tower of operations"
+      },
+      "excerpt_range": [
+        545,
+        549
+      ],
+      "excerpt": [
+        "10. Exponents as iterated scaling, logarithms as counted resizings",
+        "Problem this section solves.   There is a missing floor between multiplication and calculus unless exponentials and logarithms are built conceptually.   Picture to keep in mind.   Start at 1 and repeatedly apply the same scaling.   Historical pressure.   Growth, compounding, astronomy, navigation, and calculation all forced mathematicians to tame repeated multiplication.",
+        "10.1 The tower of operations",
+        "A useful ladder:",
+        "addition combines displacements,"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-10_3-A",
+      "section_id": "10.3",
+      "title": "The exponent laws are structural facts",
+      "placement": "mechanical choreography",
+      "caption": "Exponent laws record how repeated scale actions combine.",
+      "role": "Exponent laws record how repeated scale actions combine.",
+      "prompt": "Scene: clean resizing corridor with exactly two choreographies\nSubject: left choreography joins two scale-gate chains end-to-end; right choreography repeats one boxed chain as a unit\nConceptual action: show exponent laws as arrangements of repeated resizing machines\nComposition: exactly two panels; each panel carries one law-choreography; open space above each choreography for overlay\nMaterials / medium: brushed brass gates, matte ceramic object, black tabletop, soft shadows\nSurface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: editorial instructional plate for exponents and logarithms",
+      "image": "image-production/output/pilot-20/GFV6-10_3-A.png",
+      "match": {
+        "paragraph_index": 577,
+        "score": 1.0,
+        "method": "exact:The exponent laws are structural facts"
+      },
+      "excerpt_range": [
+        575,
+        579
+      ],
+      "excerpt": [
+        "If x&gt;1, the points spread out faster and faster. If 0&lt;x&lt;1, they compress toward zero. The geometry is not additive anymore. Equal steps in exponent count correspond to equal ratios, not equal differences.",
+        "That is why exponentials feel strange to students trained only on linear movement. They live in a different geometry.",
+        "10.3 The exponent laws are structural facts",
+        "Why is x^a x^b = x^(a+b)? Because you have applied the same scaling a times and then b more times. The total count is a+b.",
+        "Why is (x a) b = x^(ab)? Because you are taking a whole block of a repeated scalings and repeating that block b times."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-10_4-A",
+      "section_id": "10.4",
+      "title": "Fractional exponents are forced, not invented for mischief",
+      "placement": "morph sequence",
+      "caption": "A fractional power is the scale step that must repeat to make the target.",
+      "role": "A fractional power is the scale step that must repeat to make the target.",
+      "prompt": "Scene: resize corridor between a starting object and a final target object\nSubject: exactly three identical small scale gates fill the gap between start and target\nConceptual action: the highlighted gate is the repeated intermediate resizing that makes the final target possible\nComposition: straight left-to-right path; start, three gates, target; only these five elements\nMaterials / medium: brass gate frames, matte objects, pale floor track, soft product lighting\nSurface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: editorial instructional plate for exponents and logarithms",
+      "image": "image-production/output/pilot-20/GFV6-10_4-A.png",
+      "match": {
+        "paragraph_index": 582,
+        "score": 1.0,
+        "method": "exact:Fractional exponents are forced, not invented for mischief"
+      },
+      "excerpt_range": [
+        580,
+        584
+      ],
+      "excerpt": [
+        "Why is (xy)^n = x^n y^n in a commutative setting? Because the rescalings by x and y can be regrouped without changing the result.",
+        "These are not notation tricks. They are direct consequences of iterated composition.",
+        "10.4 Fractional exponents are forced, not invented for mischief",
+        "If x^(1/n) is to make sense while the exponent laws remain true, it must be the factor that, repeated n times, gives x. That is exactly the n-th root.",
+        "Likewise x^(-n) must be the inverse factor 1/x^n, because adding the exponents n and -n should produce zero, and x^0 should be the identity scaling 1."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-10_5-A",
+      "section_id": "10.5",
+      "title": "Logarithms count multiplicative steps",
+      "placement": "conceptual detective image",
+      "caption": "A logarithm asks how many scale steps reach the target.",
+      "role": "A logarithm asks how many scale steps reach the target.",
+      "prompt": "Scene: close mechanical resize corridor with a small odometer mounted beside the gate path\nSubject: one object crosses identical ratio gates while a blank-notch counter advances once per gate\nConceptual action: make logarithm feel like counting how many equal scale steps happened\nComposition: counter is the focal object; three scale gates recede behind it; clear blank space for overlay\nMaterials / medium: brass counter wheels with blank notches, ceramic object, glass gate edges, warm studio reflections\nSurface / text policy: Text layer: odometer wheels use blank notches or light positions; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: editorial instructional plate for exponents and logarithms",
+      "image": "image-production/output/pilot-20/GFV6-10_5-A.jpg",
+      "match": {
+        "paragraph_index": 586,
+        "score": 1.0,
+        "method": "exact:Logarithms count multiplicative steps"
+      },
+      "excerpt_range": [
+        584,
+        588
+      ],
+      "excerpt": [
+        "Likewise x^(-n) must be the inverse factor 1/x^n, because adding the exponents n and -n should produce zero, and x^0 should be the identity scaling 1.",
+        "So negative and fractional exponents are consistency demands. They are not new arbitrary rules.",
+        "10.5 Logarithms count multiplicative steps",
+        "If exponentiation asks   \u201c what factor results from repeated scaling? \u201d , logarithm asks the inverse question:",
+        "How many times must I scale by base b to reach x?"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-11_5-A",
+      "section_id": "11.5",
+      "title": "Connection back to Eudoxus",
+      "placement": "motif callback",
+      "caption": "Proportion and real numbers both define objects by all finite tests they survive.",
+      "role": "Proportion and real numbers both define objects by all finite tests they survive.",
+      "prompt": "Scene: two-panel bridge on a black optical workbench\nSubject: left: two finite balance tests for an unseen ratio; right: nested interval shutters around one unseen point\nConceptual action: show the same logic: finite tests force an exact object\nComposition: exactly two parallel panels; amber survivor line connects the panels; each panel has one apparatus\nMaterials / medium: brass balances, glass shutters, black velvet, amber focal line\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: pedagogical concept plate for limits, completeness, and calculus",
+      "image": "image-production/output/pilot-20/GFV6-11_5-A.png",
+      "match": {
+        "paragraph_index": 631,
+        "score": 1.0,
+        "method": "exact:Connection back to Eudoxus"
+      },
+      "excerpt_range": [
+        629,
+        633
+      ],
+      "excerpt": [
+        "That number is \u221a2.",
+        "This is a much better mental model than   \u201c an irrational is a decimal that never ends. \u201d   The decimal is one way to describe the point. The deeper object is the unique survivor of an infinite refinement process.",
+        "11.4 Connection back to Eudoxus",
+        "This chapter and the Eudoxus chapter are secretly siblings.",
+        "Eudoxus defined a ratio by the total pattern of integer comparisons."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-12_7-A",
+      "section_id": "12.7",
+      "title": "Euler's formula as compressed geometry",
+      "placement": "hero plate",
+      "caption": "Euler's formula compresses continuous rotation into exponential language.",
+      "role": "Euler's formula compresses continuous rotation into exponential language.",
+      "prompt": "Scene: turntable observatory with one lamp fixed on a circular rail\nSubject: lamp rotates at constant radius while exactly two shadow sliders move on perpendicular rails\nConceptual action: show continuous rotation as bookkeeping: one circular motion, two projected components\nComposition: circle centered; two projection rails at right angle; clean empty corner for overlay\nMaterials / medium: brass turntable, glass lamp, charcoal paper, moonlit shadows\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: conceptual book illustration for transformations and functions",
+      "image": "image-production/output/pilot-20/GFV6-12_7-A.png",
+      "match": {
+        "paragraph_index": 710,
+        "score": 1.0,
+        "method": "exact:Euler's formula as compressed geometry"
+      },
+      "excerpt_range": [
+        708,
+        712
+      ],
+      "excerpt": [
+        "Now \u221a-1 means: what transformation, performed twice, produces a half-turn? A quarter-turn does. So i is the square root of -1 because a quarter-turn composed with itself is a half-turn.",
+        "Again: not algebraic black magic, but transformation composition.",
+        "12.6 Euler\u2019s formula as compressed geometry",
+        "The identity",
+        "e^(i\u03b8) = cos\u03b8 + isin\u03b8"
+      ]
+    },
+    {
+      "prompt_id": "GFV6-16_2-A",
+      "section_id": "16.2",
+      "title": "Derivative: the slope that survives zooming in",
+      "placement": "hero plate",
+      "caption": "The derivative is the stable slope revealed by infinite zoom.",
+      "role": "The derivative is the stable slope revealed by infinite zoom.",
+      "prompt": "Scene: microscope over a single curve segment on a glass slide\nSubject: one point on the curve and one nearby point approach until the curve looks locally straight\nConceptual action: show derivative as the slope that survives zooming in\nComposition: one microscope lens; one local straight segment in focus; surrounding curve fades softly\nMaterials / medium: glass lens, black slide, amber tangent strip, faint blank vellum grid\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: pedagogical concept plate for limits, completeness, and calculus",
+      "image": "image-production/output/pilot-20/GFV6-16_2-A.png",
+      "match": {
+        "paragraph_index": 847,
+        "score": 1.0,
+        "method": "exact:Derivative: the slope that survives zooming in"
+      },
+      "excerpt_range": [
+        845,
+        849
+      ],
+      "excerpt": [
+        "So calculus is not a bizarre invention. It is what happens when geometry, rate, and refinement are pushed to their limit.",
+        "Figure. Calculus keeps two pictures in play at once: derivative as local slope and integral as accumulated effect.",
+        "16.2 Derivative: the slope that survives zooming in",
+        "Take two nearby points on a curve. The secant line through them has slope",
+        "(\u0394 y)/(\u0394 x)."
+      ]
+    },
+    {
+      "prompt_id": "GFV6-16_8-A",
+      "section_id": "16.8",
+      "title": "The Fundamental Theorem of Calculus",
+      "placement": "bridge image",
+      "caption": "Rate of accumulation returns the thing being accumulated.",
+      "role": "Rate of accumulation returns the thing being accumulated.",
+      "prompt": "Scene: two linked workbenches for the same curve\nSubject: left bench accumulates thin area slices; right bench extracts the local height from the accumulated area\nConceptual action: show derivative and integral as inverse-ish operations on accumulation and rate\nComposition: exactly two benches connected by one loop arrow shape drawn as a physical rail; only these two benches\nMaterials / medium: glass slices, matte curve plate, brass rail, warm amber height marker\nSurface / text policy: Text layer: all surfaces are blank or abstract texture; generated image contains zero letters, numerals, formulas, signage, or pseudo-script.\nUse: pedagogical concept plate for limits, completeness, and calculus",
+      "image": "image-production/output/pilot-20/GFV6-16_8-A.png",
+      "match": {
+        "paragraph_index": 869,
+        "score": 1.0,
+        "method": "exact:The Fundamental Theorem of Calculus"
+      },
+      "excerpt_range": [
+        867,
+        871
+      ],
+      "excerpt": [
+        "Add them. Refine the partition. If the totals stabilize, the limiting value is the integral.",
+        "So integration is not   \u201c anti-derivative magic \u201d   first. It is refined accumulation.",
+        "16.6 The Fundamental Theorem of Calculus",
+        "Here is the miracle, though by now it should feel less like a miracle and more like a structural reconciliation:",
+        "differentiation extracts local rate,"
+      ]
+    }
+  ]
+}
